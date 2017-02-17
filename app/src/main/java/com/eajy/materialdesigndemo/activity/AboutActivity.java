@@ -41,7 +41,7 @@ public class AboutActivity extends AppCompatActivity implements View.OnClickList
         CardView card_about_2 = (CardView) findViewById(R.id.card_about_2);
         LinearLayout ll_card_about_2_shop = (LinearLayout) findViewById(R.id.ll_card_about_2_shop);
         LinearLayout ll_card_about_2_email = (LinearLayout) findViewById(R.id.ll_card_about_2_email);
-        LinearLayout ll_card_about_2_google_plus = (LinearLayout) findViewById(R.id.ll_card_about_2_google_plus);
+        LinearLayout ll_card_about_2_git_hub = (LinearLayout) findViewById(R.id.ll_card_about_2_git_hub);
 
         Animation animation = AnimationUtils.loadAnimation(this, R.anim.anim_about_card_show);
         card_about_2.startAnimation(animation);
@@ -52,7 +52,7 @@ public class AboutActivity extends AppCompatActivity implements View.OnClickList
 
         ll_card_about_2_shop.setOnClickListener(this);
         ll_card_about_2_email.setOnClickListener(this);
-        ll_card_about_2_google_plus.setOnClickListener(this);
+        ll_card_about_2_git_hub.setOnClickListener(this);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab_about_this);
         fab.setOnClickListener(this);
@@ -81,8 +81,8 @@ public class AboutActivity extends AppCompatActivity implements View.OnClickList
                 startActivity(intent);
                 break;
 
-            case R.id.ll_card_about_2_google_plus:
-                intent.setData(Uri.parse(Constant.GOOGLE_PLUS));
+            case R.id.ll_card_about_2_git_hub:
+                intent.setData(Uri.parse(Constant.GIT_HUB));
                 intent.setAction(Intent.ACTION_VIEW);
                 startActivity(intent);
                 break;

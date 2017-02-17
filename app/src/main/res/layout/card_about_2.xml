@@ -83,7 +83,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/ll_card_about_2_google_plus"
+            android:id="@+id/ll_card_about_2_git_hub"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/ll_card_about_2_email"
@@ -96,14 +96,14 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_margin="@dimen/text_margin"
-                android:src="@mipmap/google_plus" />
+                android:src="@mipmap/github" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_margin="@dimen/text_margin"
-                android:text="Google+"
+                android:text="GitHub"
                 android:textStyle="italic" />
         </LinearLayout>
 
@@ -111,7 +111,7 @@
             android:id="@+id/ll_card_about_2_location"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/ll_card_about_2_google_plus"
+            android:layout_below="@id/ll_card_about_2_git_hub"
             android:background="?android:selectableItemBackground"
             android:clickable="true"
             android:orientation="horizontal">
