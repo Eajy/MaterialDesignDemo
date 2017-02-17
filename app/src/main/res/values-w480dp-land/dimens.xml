@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_horizontal_margin">64dp</dimen>
+
+    <dimen name="card_margin_horizontal">64dp</dimen>
+
+    <dimen name="main_card_margin_horizontal">64dp</dimen>
+</resources>

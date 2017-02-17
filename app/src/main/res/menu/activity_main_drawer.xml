@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="none">
+        <item
+            android:id="@+id/nav_recycler_and_swipe_refresh"
+            android:icon="@mipmap/ic_format_line_spacing_black_24dp"
+            android:title="RecyclerView" />
+        <item
+            android:id="@+id/nav_scrolling"
+            android:icon="@mipmap/ic_file_download_black_24dp"
+            android:title="Scrolling" />
+        <item
+            android:id="@+id/nav_full_screen"
+            android:icon="@mipmap/ic_fullscreen_black_24dp"
+            android:title="FullScreen" />
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@mipmap/ic_settings_black_24dp"
+            android:title="Settings" />
+    </group>
+
+    <item android:title="About">
+        <menu>
+            <item
+                android:id="@+id/nav_about"
+                android:icon="@drawable/ic_info_black_24dp"
+                android:title="About This" />
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_feedback"
+                android:icon="@mipmap/ic_feedback_black_24dp"
+                android:title="Feedback" />
+            <item
+                android:id="@+id/nav_rate"
+                android:icon="@mipmap/ic_star_black_24dp"
+                android:title="Rate" />
+        </menu>
+    </item>
+
+</menu>

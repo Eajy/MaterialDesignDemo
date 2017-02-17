@@ -1,0 +1,27 @@
+<resources>
+    <dimen name="nav_header_vertical_spacing">16dp</dimen>
+    <dimen name="nav_header_height">160dp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="app_bar_height">180dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+    <dimen name="text_margin_small">8dp</dimen>
+    <dimen name="text_margin_very_small">4dp</dimen>
+    <dimen name="btn_padding">20dp</dimen>
+    <dimen name="btn_margin">14dp</dimen>
+
+    <dimen name="card_margin_horizontal">8dp</dimen>
+    <dimen name="card_margin_vertical">8dp</dimen>
+    <dimen name="card_recycler_corner_radius">2dp</dimen>
+    <dimen name="card_recycler_elevation">2dp</dimen>
+
+    <dimen name="main_card_margin_horizontal">8dp</dimen>
+    <dimen name="main_card_margin_vertical">8dp</dimen>
+
+    <dimen name="card_title_margin_top">24dp</dimen>
+    <dimen name="card_title_margin">16dp</dimen>
+    <dimen name="card_subtitle_margin">16dp</dimen>
+    <dimen name="card_button_margin">8dp</dimen>
+
+</resources>

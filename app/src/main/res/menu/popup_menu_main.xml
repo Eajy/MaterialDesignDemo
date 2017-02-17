@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.focus.androidnote.popupwindow.PopupWindowActivity">
+
+    <item
+        android:id="@+id/popup_menu_action_1"
+        android:orderInCategory="100"
+        android:title="action 1"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/popup_menu_action_2"
+        android:orderInCategory="100"
+        android:title="action 2"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/popup_menu_action_3"
+        android:orderInCategory="100"
+        android:title="action 3"
+        app:showAsAction="never">
+
+        <menu>
+            <item
+                android:id="@+id/popup_menu_action_4"
+                android:orderInCategory="100"
+                android:title="item 1"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/popup_menu_action_5"
+                android:orderInCategory="100"
+                android:title="item 2"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/popup_menu_action_6"
+                android:orderInCategory="100"
+                android:title="item 3"
+                app:showAsAction="never" />
+        </menu>
+
+    </item>
+</menu>
