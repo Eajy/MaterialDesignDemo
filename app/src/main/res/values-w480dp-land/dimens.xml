@@ -5,4 +5,7 @@
     <dimen name="card_margin_horizontal">64dp</dimen>
 
     <dimen name="main_card_margin_horizontal">64dp</dimen>
+
+    <dimen name="zero_horizontal_margin">48dp</dimen>
+
 </resources>

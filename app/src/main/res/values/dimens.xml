@@ -24,4 +24,6 @@
     <dimen name="card_subtitle_margin">16dp</dimen>
     <dimen name="card_button_margin">8dp</dimen>
 
+    <dimen name="zero_horizontal_margin">0dp</dimen>
+
 </resources>

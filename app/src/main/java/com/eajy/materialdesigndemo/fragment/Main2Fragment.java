@@ -1,12 +1,14 @@
 package com.eajy.materialdesigndemo.fragment;
 
 import android.app.DatePickerDialog;
+import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.app.TimePickerDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.provider.CalendarContract;
 import android.support.annotation.Nullable;
+import android.support.design.widget.BottomSheetDialog;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.NestedScrollView;
 import android.support.v7.app.AlertDialog;
@@ -20,9 +22,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TimePicker;
 
+import com.bumptech.glide.Glide;
 import com.eajy.materialdesigndemo.R;
 
 import java.util.Calendar;
@@ -32,8 +36,8 @@ import java.util.Calendar;
  */
 public class Main2Fragment extends Fragment implements View.OnClickListener {
 
-    private Button btn_dialog_1, btn_dialog_2, btn_dialog_3, btn_dialog_4,
-            btn_dialog_5, btn_dialog_6, btn_dialog_7, btn_dialog_8, btn_dialog_9;
+    private Button btn_dialog_1, btn_dialog_2, btn_dialog_3, btn_dialog_4, btn_dialog_5,
+            btn_dialog_6, btn_dialog_7, btn_dialog_8, btn_dialog_9, btn_dialog_10, btn_dialog_11;
     Calendar calendar;
 
 
@@ -51,6 +55,8 @@ public class Main2Fragment extends Fragment implements View.OnClickListener {
         btn_dialog_7 = (Button) nestedScrollView.findViewById(R.id.btn_dialog_7);
         btn_dialog_8 = (Button) nestedScrollView.findViewById(R.id.btn_dialog_8);
         btn_dialog_9 = (Button) nestedScrollView.findViewById(R.id.btn_dialog_9);
+        btn_dialog_10 = (Button) nestedScrollView.findViewById(R.id.btn_dialog_10);
+        btn_dialog_11 = (Button) nestedScrollView.findViewById(R.id.btn_dialog_11);
 
         // ViewGroup viewGroup = (ViewGroup) mRecyclerView.getParent();
         // if (viewGroup != null) { viewGroup.removeAllViews(); }
@@ -73,6 +79,8 @@ public class Main2Fragment extends Fragment implements View.OnClickListener {
         btn_dialog_7.setOnClickListener(this);
         btn_dialog_8.setOnClickListener(this);
         btn_dialog_9.setOnClickListener(this);
+        btn_dialog_10.setOnClickListener(this);
+        btn_dialog_11.setOnClickListener(this);
     }
 
     @Override
@@ -184,7 +192,44 @@ public class Main2Fragment extends Fragment implements View.OnClickListener {
                 break;
 
             case R.id.btn_dialog_9:
-                PopupMenu popupMenu = new PopupMenu(getContext(), btn_dialog_9);
+                final BottomSheetDialog mBottomSheetDialog = new BottomSheetDialog(getContext());
+                View dialogView = getActivity().getLayoutInflater().inflate(R.layout.dialog_bottom_sheet, null);
+                Button btn_dialog_bottom_sheet_ok = (Button) dialogView.findViewById(R.id.btn_dialog_bottom_sheet_ok);
+                Button btn_dialog_bottom_sheet_cancel = (Button) dialogView.findViewById(R.id.btn_dialog_bottom_sheet_cancel);
+                mBottomSheetDialog.setContentView(dialogView);
+
+                btn_dialog_bottom_sheet_ok.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        mBottomSheetDialog.dismiss();
+                    }
+                });
+                btn_dialog_bottom_sheet_cancel.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        mBottomSheetDialog.dismiss();
+                    }
+                });
+                mBottomSheetDialog.show();
+                break;
+
+            case R.id.btn_dialog_10:
+                final Dialog fullscreenDialog = new Dialog(getContext(), R.style.DialogFullscreen);
+                fullscreenDialog.setContentView(R.layout.dialog_fullscreen);
+                ImageView img_full_screen_dialog= (ImageView) fullscreenDialog.findViewById(R.id.img_full_screen_dialog);
+                Glide.with(getContext()).load(R.drawable.google_assistant).into(img_full_screen_dialog);
+                ImageView img_dialog_fullscreen_close = (ImageView) fullscreenDialog.findViewById(R.id.img_dialog_fullscreen_close);
+                img_dialog_fullscreen_close.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        fullscreenDialog.dismiss();
+                    }
+                });
+                fullscreenDialog.show();
+                break;
+
+            case R.id.btn_dialog_11:
+                PopupMenu popupMenu = new PopupMenu(getContext(), btn_dialog_11);
                 popupMenu.getMenuInflater().inflate(R.menu.popup_menu_main, popupMenu.getMenu());
                 popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
                     @Override
