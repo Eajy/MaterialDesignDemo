@@ -26,6 +26,7 @@ import android.view.animation.Animation;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 import com.eajy.materialdesigndemo.Constant;
 import com.eajy.materialdesigndemo.R;
@@ -65,7 +66,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         initViewPager();
 
         // 初始化Settings中的preferences数据。
-        PreferenceManager.setDefaultValues(this, R.xml.preferences_settings, false);
+        try {
+            PreferenceManager.setDefaultValues(this, R.xml.preferences_settings, false);
+        } catch (Exception e) {
+        }
 
         if (isShowPageStart) {
             relative_main.setVisibility(View.VISIBLE);
@@ -229,7 +233,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 intent.setData(Uri.parse(Constant.EMAIL));
                 intent.putExtra(Intent.EXTRA_SUBJECT, "Feedback:MaterialDesign");
                 //intent.putExtra(Intent.EXTRA_TEXT, "Hi,");
-                startActivity(intent);
+                try {
+                    startActivity(intent);
+                } catch (Exception e) {
+                    Toast.makeText(MainActivity.this, "Not found email app", Toast.LENGTH_SHORT).show();
+                }
                 break;
 
             case R.id.nav_rate:

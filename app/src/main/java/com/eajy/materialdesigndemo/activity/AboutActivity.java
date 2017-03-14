@@ -16,6 +16,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.eajy.materialdesigndemo.Constant;
 import com.eajy.materialdesigndemo.R;
@@ -78,7 +79,11 @@ public class AboutActivity extends AppCompatActivity implements View.OnClickList
                 intent.setAction(Intent.ACTION_SENDTO);
                 intent.setData(Uri.parse(Constant.EMAIL));
                 intent.putExtra(Intent.EXTRA_SUBJECT, "About:MaterialDesign");
-                startActivity(intent);
+                try {
+                    startActivity(intent);
+                } catch (Exception e) {
+                    Toast.makeText(AboutActivity.this, "Not found email app", Toast.LENGTH_SHORT).show();
+                }
                 break;
 
             case R.id.ll_card_about_2_git_hub:
