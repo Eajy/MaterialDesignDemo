@@ -9,8 +9,8 @@
         android:id="@+id/card_dialog_fullscreen"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:translationZ="2dp"
-        app:cardCornerRadius="0dp">
+        app:cardCornerRadius="0dp"
+        app:cardElevation="2dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -22,19 +22,20 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
+                android:layout_marginStart="12dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
                 android:clickable="true"
-                android:foreground="?attr/selectableItemBackground"
-                android:padding="16dp"
+                android:padding="4dp"
                 android:src="@mipmap/ic_close_white_24dp"
                 android:tint="@color/gray_deep" />
 
             <TextView
-                style="@style/TextAppearance.AppCompat.Large"
+                style="@style/Base.DialogWindowTitle.AppCompat"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_marginStart="16dp"
-                android:text="Fullscreen Dialog"
+                android:text="@string/main_dialog_fullscreen"
                 android:textColor="@color/gray_deep" />
         </LinearLayout>
     </android.support.v7.widget.CardView>

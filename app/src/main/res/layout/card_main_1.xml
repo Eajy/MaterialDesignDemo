@@ -8,7 +8,6 @@
     android:layout_marginLeft="@dimen/main_card_margin_horizontal"
     android:layout_marginRight="@dimen/main_card_margin_horizontal"
     android:layout_marginTop="@dimen/main_card_margin_vertical"
-    android:background="?attr/selectableItemBackground"
     android:foreground="?attr/selectableItemBackground"
     card_view:cardCornerRadius="@dimen/card_recycler_corner_radius"
     card_view:cardElevation="@dimen/card_recycler_elevation">
@@ -33,7 +32,7 @@
             android:layout_marginLeft="@dimen/card_title_margin"
             android:layout_marginRight="@dimen/card_title_margin"
             android:layout_marginTop="@dimen/card_title_margin_top"
-            android:text="Title goes here"
+            android:text="@string/main_card_title"
             android:textColor="@color/black"
             android:textSize="20sp" />
 
@@ -46,7 +45,7 @@
             android:layout_marginLeft="@dimen/card_subtitle_margin"
             android:layout_marginRight="@dimen/card_subtitle_margin"
             android:layout_marginTop="@dimen/card_button_margin"
-            android:text="Subtitle here" />
+            android:text="@string/main_card_subtitle" />
 
         <Button
             android:id="@+id/btn_card_main1_action1"
@@ -55,7 +54,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/tv_card_main1_subtitle"
             android:layout_margin="@dimen/card_button_margin"
-            android:text="ACTION 1"
+            android:text="@string/main_card_button_1"
             android:textColor="@color/colorAccent" />
 
         <Button
@@ -67,7 +66,7 @@
             android:layout_marginBottom="@dimen/card_button_margin"
             android:layout_marginTop="@dimen/card_button_margin"
             android:layout_toEndOf="@id/btn_card_main1_action1"
-            android:text="ACTION 2"
+            android:text="@string/main_card_button_2"
             android:textColor="@color/colorAccent" />
 
     </RelativeLayout>

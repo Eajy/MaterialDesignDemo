@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#F44336"
             android:padding="@dimen/btn_padding"
-            android:text="Simple dialog"
+            android:text="@string/main_dialog_simple"
             android:textColor="@color/white"
             android:textSize="14sp" />
 
@@ -31,7 +31,7 @@
             android:layout_marginTop="@dimen/btn_margin"
             android:backgroundTint="#E91E63"
             android:padding="@dimen/btn_padding"
-            android:text="Simple dialog"
+            android:text="@string/main_dialog_simple"
             android:textColor="@color/white"
             android:textSize="14sp" />
 
@@ -42,7 +42,7 @@
             android:layout_marginTop="@dimen/btn_margin"
             android:backgroundTint="#9C27B0"
             android:padding="@dimen/btn_padding"
-            android:text="Single choice dialog"
+            android:text="@string/main_dialog_single_choice"
             android:textColor="@color/white"
             android:textSize="14sp" />
 
@@ -53,7 +53,7 @@
             android:layout_marginTop="@dimen/btn_margin"
             android:backgroundTint="#3F51B5"
             android:padding="@dimen/btn_padding"
-            android:text="Multi choice dialog"
+            android:text="@string/main_dialog_multi_choice"
             android:textColor="@color/white"
             android:textSize="14sp" />
 
@@ -64,7 +64,7 @@
             android:layout_marginTop="@dimen/btn_margin"
             android:backgroundTint="#2196F3"
             android:padding="@dimen/btn_padding"
-            android:text="Progress dialog"
+            android:text="@string/main_dialog_progress"
             android:textColor="@color/white"
             android:textSize="14sp" />
 
@@ -75,7 +75,7 @@
             android:layout_marginTop="@dimen/btn_margin"
             android:backgroundTint="#009688"
             android:padding="@dimen/btn_padding"
-            android:text="Progress dialog"
+            android:text="@string/main_dialog_progress"
             android:textColor="@color/white"
             android:textSize="14sp" />
 
@@ -86,7 +86,7 @@
             android:layout_marginTop="@dimen/btn_margin"
             android:backgroundTint="#4CAF50"
             android:padding="@dimen/btn_padding"
-            android:text="Date Picker Dialog"
+            android:text="@string/main_dialog_data_picker"
             android:textColor="@color/white"
             android:textSize="14sp" />
 
@@ -97,7 +97,7 @@
             android:layout_marginTop="@dimen/btn_margin"
             android:backgroundTint="#FF9800"
             android:padding="@dimen/btn_padding"
-            android:text="Time Picker Dialog"
+            android:text="@string/main_dialog_data_time"
             android:textColor="@color/white"
             android:textSize="14sp" />
 
@@ -108,7 +108,7 @@
             android:layout_marginTop="@dimen/btn_margin"
             android:backgroundTint="#FF5722"
             android:padding="@dimen/btn_padding"
-            android:text="Bottom Dialog"
+            android:text="@string/main_dialog_bottom"
             android:textColor="@color/white"
             android:textSize="14sp" />
 
@@ -119,7 +119,7 @@
             android:layout_marginTop="@dimen/btn_margin"
             android:backgroundTint="#795548"
             android:padding="@dimen/btn_padding"
-            android:text="Fullscreen Dialog"
+            android:text="@string/main_dialog_fullscreen"
             android:textColor="@color/white"
             android:textSize="14sp" />
 
@@ -130,7 +130,7 @@
             android:layout_marginTop="@dimen/btn_margin"
             android:backgroundTint="#607D8B"
             android:padding="@dimen/btn_padding"
-            android:text="Popup Menu"
+            android:text="@string/main_popup_menu"
             android:textColor="@color/white"
             android:textSize="14sp" />
     </LinearLayout>

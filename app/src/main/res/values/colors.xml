@@ -89,6 +89,15 @@
     <color name="google_yellow">#FBBC05</color>
     <color name="google_red">#EA4335</color>
 
+    <!-- Google App Logo -->
+    <color name="app_blue">#4285f4</color>
+    <color name="app_blue_dark">#3367d6</color>
+    <color name="app_green">#0f9d58</color>
+    <color name="app_green_dark">#0b8043</color>
+    <color name="app_yellow">#f4b400</color>
+    <color name="app_yellow_dark">#f09300</color>
+    <color name="app_red">#db4437</color>
+
 
     <!-- This colours below are based on Danielle Vass colors file :
     https://gist.github.com/daniellevass/b0b8cfa773488e138037 -->

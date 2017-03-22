@@ -3,12 +3,11 @@ package com.eajy.materialdesigndemo.activity;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
-import android.graphics.Color;
 import android.net.Uri;
+import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.CardView;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
@@ -78,11 +77,11 @@ public class AboutActivity extends AppCompatActivity implements View.OnClickList
             case R.id.ll_card_about_2_email:
                 intent.setAction(Intent.ACTION_SENDTO);
                 intent.setData(Uri.parse(Constant.EMAIL));
-                intent.putExtra(Intent.EXTRA_SUBJECT, "About:MaterialDesign");
+                intent.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.about_email_intent));
                 try {
                     startActivity(intent);
                 } catch (Exception e) {
-                    Toast.makeText(AboutActivity.this, "Not found email app", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(AboutActivity.this, getString(R.string.about_not_found_email), Toast.LENGTH_SHORT).show();
                 }
                 break;
 
@@ -106,7 +105,7 @@ public class AboutActivity extends AppCompatActivity implements View.OnClickList
             PackageManager manager = this.getPackageManager();
             PackageInfo info = manager.getPackageInfo(this.getPackageName(), 0);
             String version = info.versionName;
-            return "Version: " + version;
+            return getString(R.string.about_version) + version;
         } catch (Exception e) {
             e.printStackTrace();
             return "";

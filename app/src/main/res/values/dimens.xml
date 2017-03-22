@@ -26,4 +26,6 @@
 
     <dimen name="zero_horizontal_margin">0dp</dimen>
 
+    <dimen name="start_page_image_size">144dp</dimen>
+
 </resources>

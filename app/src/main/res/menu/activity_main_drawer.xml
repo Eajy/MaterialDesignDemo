@@ -5,39 +5,39 @@
         <item
             android:id="@+id/nav_recycler_and_swipe_refresh"
             android:icon="@mipmap/ic_format_line_spacing_black_24dp"
-            android:title="RecyclerView" />
+            android:title="@string/nav_recycler_view" />
         <item
             android:id="@+id/nav_scrolling"
             android:icon="@mipmap/ic_file_download_black_24dp"
-            android:title="Scrolling" />
+            android:title="@string/nav_scrolling" />
         <item
             android:id="@+id/nav_full_screen"
             android:icon="@mipmap/ic_fullscreen_black_24dp"
-            android:title="FullScreen" />
+            android:title="@string/nav_fullscreen" />
         <item
             android:id="@+id/nav_settings"
             android:icon="@mipmap/ic_settings_black_24dp"
-            android:title="Settings" />
+            android:title="@string/nav_settings" />
     </group>
 
-    <item android:title="About">
+    <item android:title="@string/nav_group_about">
         <menu>
             <item
                 android:id="@+id/nav_about"
                 android:icon="@drawable/ic_info_black_24dp"
-                android:title="About This" />
+                android:title="@string/nav_about_this" />
             <item
                 android:id="@+id/nav_share"
                 android:icon="@drawable/ic_menu_share"
-                android:title="Share" />
+                android:title="@string/nav_share" />
             <item
                 android:id="@+id/nav_feedback"
                 android:icon="@mipmap/ic_feedback_black_24dp"
-                android:title="Feedback" />
+                android:title="@string/nav_feedback" />
             <item
                 android:id="@+id/nav_rate"
                 android:icon="@mipmap/ic_star_black_24dp"
-                android:title="Rate" />
+                android:title="@string/nav_rate" />
         </menu>
     </item>
 

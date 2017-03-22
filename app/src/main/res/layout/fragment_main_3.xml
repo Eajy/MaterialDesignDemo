@@ -17,21 +17,20 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Toggle Button"
+            android:text="@string/main_widget_toggle_button"
             android:textColor="@color/colorPrimary" />
 
         <ToggleButton
             android:id="@+id/toggleButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/text_margin_small"
-            android:text="ToggleButton" />
+            android:layout_marginTop="@dimen/text_margin_small" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/text_margin"
-            android:text="Switch"
+            android:text="@string/main_widget_switch"
             android:textColor="@color/colorPrimary" />
 
         <Switch
@@ -39,13 +38,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/text_margin_small"
-            android:text="Switch" />
+            android:text="@string/main_widget_switch" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/text_margin"
-            android:text="Check Box"
+            android:text="@string/main_widget_check_box"
             android:textColor="@color/colorPrimary" />
 
         <CheckBox
@@ -53,25 +52,25 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/text_margin_small"
-            android:text="CheckBox 1" />
+            android:text="@string/main_widget_check_box_1" />
 
         <CheckBox
             android:id="@+id/checkBox2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="CheckBox 2" />
+            android:text="@string/main_widget_check_box_2" />
 
         <CheckBox
             android:id="@+id/checkBox3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="CheckBox 3" />
+            android:text="@string/main_widget_check_box_3" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/text_margin"
-            android:text="Radio Group and Radio Buttons"
+            android:text="@string/main_widget_radio"
             android:textColor="@color/colorPrimary" />
 
         <RadioGroup
@@ -83,26 +82,26 @@
                 android:id="@+id/radioButton1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="RadioButton 1" />
+                android:text="@string/main_widget_radio_button_1" />
 
             <RadioButton
                 android:id="@+id/radioButton2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="RadioButton 2" />
+                android:text="@string/main_widget_radio_button_2" />
 
             <RadioButton
                 android:id="@+id/radioButton3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="RadioButton 3" />
+                android:text="@string/main_widget_radio_button_3" />
         </RadioGroup>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/text_margin"
-            android:text="Seek Bar"
+            android:text="@string/main_widget_seek_bar"
             android:textColor="@color/colorPrimary" />
 
         <SeekBar
@@ -115,7 +114,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/text_margin"
-            android:text="Progress Bar"
+            android:text="@string/main_widget_progress_bar"
             android:textColor="@color/colorPrimary" />
 
         <ProgressBar
@@ -130,7 +129,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/text_margin"
-            android:text="Extract Edit Text"
+            android:text="@string/main_widget_extract_edit_text"
             android:textColor="@color/colorPrimary" />
 
         <android.inputmethodservice.ExtractEditText
@@ -139,13 +138,13 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="@dimen/text_margin_small"
-            android:text="extract edit text" />
+            android:text="@string/main_widget_extract_edit_text" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/text_margin"
-            android:text="Text Input Layout"
+            android:text="@string/main_widget_text_input_layout"
             android:textColor="@color/colorPrimary" />
 
         <android.support.design.widget.TextInputLayout
@@ -157,7 +156,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="edit text"
+                android:hint="@string/main_widget_edit_text"
                 android:maxLength="20"
                 android:maxLines="1"
                 android:singleLine="true" />
@@ -167,7 +166,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/text_margin"
-            android:text="Spinner"
+            android:text="@string/main_widget_spinner"
             android:textColor="@color/colorPrimary" />
 
         <Spinner
@@ -181,7 +180,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/text_margin"
-            android:text="Date Picker"
+            android:text="@string/main_widget_data_picker"
             android:textColor="@color/colorPrimary" />
 
         <DatePicker
@@ -197,7 +196,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/text_margin"
-            android:text="Time Picker"
+            android:text="@string/main_widget_time_picker"
             android:textColor="@color/colorPrimary" />
 
         <TimePicker

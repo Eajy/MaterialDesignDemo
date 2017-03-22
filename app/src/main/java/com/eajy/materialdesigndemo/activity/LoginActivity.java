@@ -3,12 +3,11 @@ package com.eajy.materialdesigndemo.activity;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
-import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Build;
+import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.KeyEvent;
 import android.view.View;
@@ -24,7 +23,7 @@ import com.eajy.materialdesigndemo.R;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class LoginActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
 
     /**
      * A dummy authentication store containing known user names and passwords.
@@ -34,9 +33,7 @@ public class LoginActivity extends AppCompatActivity {
             "foo@example.com:hello", "bar@example.com:world"
     };
 
-    /**
-     * Keep track of the login task to ensure we can cancel it if requested.
-     */
+    // Keep track of the login task to ensure we can cancel it if requested.
     private UserLoginTask mAuthTask = null;
 
     private AutoCompleteTextView mUserNameView;
@@ -49,7 +46,6 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
         initView();
     }
 
@@ -71,31 +67,32 @@ public class LoginActivity extends AppCompatActivity {
         });
 
         login_button = (Button) findViewById(R.id.btn_login);
-        login_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                attemptLogin();
-            }
-        });
-
+        login_button.setOnClickListener(this);
         Button forgot_password = (Button) findViewById(R.id.btn_forgot_password);
-        forgot_password.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        forgot_password.setOnClickListener(this);
+        Button register = (Button) findViewById(R.id.btn_forgot_register);
+        register.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.btn_login:
+                attemptLogin();
+                break;
+
+            case R.id.btn_forgot_password:
                 Snackbar.make(v, getString(R.string.snackbar_forgot_password), Snackbar.LENGTH_LONG)
                         .setAction("^_^", null).show();
-            }
-        });
+                break;
 
-        Button register = (Button) findViewById(R.id.btn_forgot_register);
-        register.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+            case R.id.btn_forgot_register:
                 Snackbar.make(v, getString(R.string.snackbar_register), Snackbar.LENGTH_LONG)
                         .setAction("^_^", null).show();
-            }
-        });
+                break;
+        }
     }
+
 
     /**
      * Attempts to sign in or register the account specified by the login form. If there are form errors
@@ -110,7 +107,6 @@ public class LoginActivity extends AppCompatActivity {
         mUserNameView.setError(null);
         mPasswordView.setError(null);
 
-        // Store values at the time of the login attempt.
         String userName = mUserNameView.getText().toString();
         String password = mPasswordView.getText().toString();
 
@@ -136,10 +132,8 @@ public class LoginActivity extends AppCompatActivity {
         }
 
         if (cancel) {
-            // There was an error; don't attempt login and focus the first form field with an error.
             focusView.requestFocus();
         } else {
-            // Show a progress spinner, and kick off a background task to perform the user login attempt.
             hideInput(login_button);
             showProgress(true);
             mAuthTask = new UserLoginTask(userName, password);
@@ -148,9 +142,6 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private boolean isPhoneValid(String userName) {
-        //Pattern p = Pattern .compile("^((13[0-9])|(15[^4,\\D])|(18[0-9])|(17[0-9]))\\d{8}$"); It is real.
-        //Matcher m = p.matcher(userName);
-        //return m.matches();
         Pattern p = Pattern.compile("[0-9]*");
         Matcher m = p.matcher(userName);
         return m.matches() && userName.length() >= 7 && userName.length() <= 12;
@@ -193,7 +184,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
 
-    public class UserLoginTask extends AsyncTask<Void, Void, Boolean> {
+    private class UserLoginTask extends AsyncTask<Void, Void, Boolean> {
 
         private final String mPhone;
         private final String mPassword;
@@ -232,8 +223,6 @@ public class LoginActivity extends AppCompatActivity {
 
             if (success) {
                 finish();
-                //Intent intent = new Intent(LoginActivity.this, UserInfoActivity.class);
-                //startActivity(intent);
             } else {
                 mPasswordView.setError(getString(R.string.error_incorrect_password));
                 mPasswordView.requestFocus();

@@ -6,24 +6,19 @@ import android.app.ProgressDialog;
 import android.app.TimePickerDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.provider.CalendarContract;
 import android.support.annotation.Nullable;
 import android.support.design.widget.BottomSheetDialog;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.NestedScrollView;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.PopupMenu;
-import android.view.ContextMenu;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TimePicker;
 
 import com.bumptech.glide.Glide;
@@ -88,58 +83,56 @@ public class Main2Fragment extends Fragment implements View.OnClickListener {
         switch (view.getId()) {
             case R.id.btn_dialog_1:
                 new AlertDialog.Builder(getContext())
-                        .setMessage("A simple dialog")
-                        .setPositiveButton("OK", null)
+                        .setMessage(getString(R.string.main_dialog_simple_title))
+                        .setPositiveButton(getString(R.string.dialog_ok), null)
                         .show();
                 break;
 
             case R.id.btn_dialog_2:
                 new AlertDialog.Builder(getContext())
-                        .setTitle("A simple dialog")
-                        .setMessage("A material metaphor is the unifying theory of a rationalized space and a system of motion. " +
-                                "The material is grounded in tactile reality, inspired by the study of paper and ink, " +
-                                "yet technologically advanced and open to imagination and magic.")
-                        .setPositiveButton("OK", null)
-                        .setNegativeButton("CANCEL", null)
+                        .setTitle(getString(R.string.main_dialog_simple_title))
+                        .setMessage(getString(R.string.main_dialog_simple_message))
+                        .setPositiveButton(getString(R.string.dialog_ok), null)
+                        .setNegativeButton(getString(R.string.dialog_cancel), null)
                         .show();
                 break;
 
             case R.id.btn_dialog_3:
-                String[] singleChoiceItems = new String[]{"New York", "Los Angeles", "San Francisco", "Paris", "London"};
+                String[] singleChoiceItems = getResources().getStringArray(R.array.dialog_choice_array);
                 int itemSelected = 0;
                 new AlertDialog.Builder(getContext())
-                        .setTitle("Single choice dialog")
+                        .setTitle(getString(R.string.main_dialog_single_choice))
                         .setSingleChoiceItems(singleChoiceItems, itemSelected, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
                                 dialogInterface.dismiss();
                             }
                         })
-                        .setNegativeButton("CANCEL", null)
+                        .setNegativeButton(getString(R.string.dialog_cancel), null)
                         .show();
                 break;
 
             case R.id.btn_dialog_4:
-                String[] multiChoiceItems = new String[]{"New York", "Los Angeles", "San Francisco", "Paris", "London"};
+                String[] multiChoiceItems = getResources().getStringArray(R.array.dialog_choice_array);
                 boolean[] checkedItems = {true, false, false, false, false};
                 new AlertDialog.Builder(getContext())
-                        .setTitle("Multi choice dialog")
+                        .setTitle(getString(R.string.main_dialog_multi_choice))
                         .setMultiChoiceItems(multiChoiceItems, checkedItems, null)
-                        .setPositiveButton("OK", null)
-                        .setNegativeButton("CANCEL", null)
+                        .setPositiveButton(getString(R.string.dialog_ok), null)
+                        .setNegativeButton(getString(R.string.dialog_cancel), null)
                         .show();
                 break;
 
             case R.id.btn_dialog_5:
                 ProgressDialog progressDialog = new ProgressDialog(getContext());
-                progressDialog.setMessage("Progress dialog...");
+                progressDialog.setMessage(getString(R.string.main_dialog_progress_title));
                 progressDialog.show();
                 break;
 
             case R.id.btn_dialog_6:
                 final ProgressDialog horizontalProgressDialog = new ProgressDialog(getContext());
                 horizontalProgressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
-                horizontalProgressDialog.setMessage("Progress dialog...");
+                horizontalProgressDialog.setMessage(getString(R.string.main_dialog_progress_title));
                 horizontalProgressDialog.setCancelable(false);
                 horizontalProgressDialog.setMax(100);
                 horizontalProgressDialog.show();
@@ -216,7 +209,7 @@ public class Main2Fragment extends Fragment implements View.OnClickListener {
             case R.id.btn_dialog_10:
                 final Dialog fullscreenDialog = new Dialog(getContext(), R.style.DialogFullscreen);
                 fullscreenDialog.setContentView(R.layout.dialog_fullscreen);
-                ImageView img_full_screen_dialog= (ImageView) fullscreenDialog.findViewById(R.id.img_full_screen_dialog);
+                ImageView img_full_screen_dialog = (ImageView) fullscreenDialog.findViewById(R.id.img_full_screen_dialog);
                 Glide.with(getContext()).load(R.drawable.google_assistant).into(img_full_screen_dialog);
                 ImageView img_dialog_fullscreen_close = (ImageView) fullscreenDialog.findViewById(R.id.img_dialog_fullscreen_close);
                 img_dialog_fullscreen_close.setOnClickListener(new View.OnClickListener() {

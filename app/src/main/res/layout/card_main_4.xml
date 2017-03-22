@@ -36,7 +36,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignBottom="@id/img_main_card_41"
                 android:layout_margin="@dimen/card_title_margin"
-                android:text="Title"
+                android:text="@string/main_card_title_short"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
 
@@ -114,7 +114,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignBottom="@id/img_main_card_42"
                 android:layout_margin="@dimen/card_title_margin"
-                android:text="Title"
+                android:text="@string/main_card_title_short"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
 

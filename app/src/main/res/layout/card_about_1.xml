@@ -36,7 +36,7 @@
                 android:id="@+id/tv_card_about_1_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Material Design Demo"
+                android:text="@string/about_card1_title"
                 android:textColor="@color/colorPrimary"
                 android:textStyle="bold" />
 
@@ -47,7 +47,7 @@
                 android:layout_below="@id/tv_card_about_1_1"
                 android:layout_marginTop="@dimen/text_margin_small"
                 android:lineSpacingExtra="@dimen/text_margin_small"
-                android:text="Hey, glad to see you! Thanks for using the app."
+                android:text="@string/about_card1_message"
                 android:textStyle="italic" />
         </RelativeLayout>
 

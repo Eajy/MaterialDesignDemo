@@ -8,10 +8,11 @@
     android:visibility="gone">
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/img_page_start"
+        android:layout_width="144dp"
+        android:layout_height="144dp"
         android:layout_centerInParent="true"
-        android:src="@mipmap/first_page_icon" />
+        android:scaleType="fitCenter" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -19,7 +20,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="64dp"
-        android:text="Designed by Eajy in China"
+        android:text="@string/app_designed_by"
         android:textColor="@color/gray"
         android:textSize="20sp"
         android:textStyle="bold" />

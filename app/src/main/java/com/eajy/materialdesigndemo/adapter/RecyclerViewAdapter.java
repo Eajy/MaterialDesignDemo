@@ -5,13 +5,11 @@ import android.app.ActivityOptions;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.ColorStateList;
-import android.support.design.widget.FloatingActionButton;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AlphaAnimation;
-import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 import com.eajy.materialdesigndemo.R;
@@ -29,7 +27,6 @@ import java.util.List;
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.RecyclerViewHolder> implements onMoveAndSwipedListener {
 
     private Context context;
-    Intent intent = new Intent();
     private List mItems;
     private int color = 0;
 
@@ -116,13 +113,13 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     }
 
 
-    public class RecyclerViewHolder extends RecyclerView.ViewHolder {
+    class RecyclerViewHolder extends RecyclerView.ViewHolder {
 
-        public View mView;
-        public int position;
-        public RelativeLayout rela_round;
+        private View mView;
+        private int position;
+        private RelativeLayout rela_round;
 
-        public RecyclerViewHolder(View itemView) {
+        private RecyclerViewHolder(View itemView) {
             super(itemView);
             mView = itemView;
             rela_round = (RelativeLayout) itemView.findViewById(R.id.rela_round);

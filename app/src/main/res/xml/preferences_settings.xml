@@ -82,7 +82,7 @@
         android:title="Preference">
         <intent
             android:action="com.eajy.materialdesigndemo.SETTING_START_ACTIVITY"
-            android:targetClass="com.eajy.materialdesigndemo.activity.FullScreenActivity"
+            android:targetClass="com.eajy.materialdesigndemo.activity.FullscreenActivity"
             android:targetPackage="com.eajy.materialdesigndemo" />
     </Preference>
 

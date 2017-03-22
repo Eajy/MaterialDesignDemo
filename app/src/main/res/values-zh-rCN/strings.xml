@@ -1,0 +1,207 @@
+<resources>
+    <string name="app_name">Material Design</string>
+    <string name="app_designed_by">Designed by Eajy in China</string>
+
+    <!-- Strings related to Main -->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_main_settings">设置</string>
+    <string name="tab_title_main_1">卡片</string>
+    <string name="tab_title_main_2">对话框</string>
+    <string name="tab_title_main_3">控件</string>
+    <string name="main_snack_bar">这是一个 snack bar</string>
+    <string name="main_snack_bar_action">好</string>
+
+    <string name="main_card_title">标题</string>
+    <string name="main_card_title_short">标题</string>
+    <string name="main_card_subtitle">副标题</string>
+    <string name="main_card_details">详细信息</string>
+    <string name="main_card_button_1">按钮 1</string>
+    <string name="main_card_button_2">按钮 2</string>
+    <string name="main_flat_button_1_clicked">平面按钮 1</string>
+    <string name="main_flat_button_2_clicked">平面按钮 2</string>
+
+    <string name="dialog_ok">确定</string>
+    <string name="dialog_cancel">取消</string>
+    <string name="main_dialog_simple">简单对话框</string>
+    <string name="main_dialog_simple_title">简单对话框</string>
+    <string name="main_dialog_simple_message">
+    材料的比拟是合理空间和运动系统的统一理论。\n这种材料以触觉现实为基础，灵感来源于纸和油墨的研究，但技术先进，具有开放的想象力和神奇性。
+    </string>
+    <string name="main_dialog_single_choice">单选对话框</string>
+    <string name="main_dialog_multi_choice">多选对话框</string>
+    <string name="main_dialog_progress_title">进度条对话框...</string>
+    <string name="main_dialog_progress">进度条对话框</string>
+    <string name="main_dialog_data_picker">日期选择对话框</string>
+    <string name="main_dialog_data_time">时间选择对话框</string>
+    <string name="main_dialog_bottom">底部对话框</string>
+    <string name="main_dialog_fullscreen">全屏对话框</string>
+    <string name="main_popup_menu">Popup Menu</string>
+
+    <string name="main_widget_toggle_button">Toggle Button</string>
+    <string name="main_widget_switch">Switch</string>
+    <string name="main_widget_check_box">Check Box</string>
+    <string name="main_widget_check_box_1">CheckBox 1</string>
+    <string name="main_widget_check_box_2">CheckBox 2</string>
+    <string name="main_widget_check_box_3">CheckBox 3</string>
+    <string name="main_widget_radio">Radio Group and Radio Buttons</string>
+    <string name="main_widget_radio_button_1">RadioButton 1</string>
+    <string name="main_widget_radio_button_2">RadioButton 2</string>
+    <string name="main_widget_radio_button_3">RadioButton 3</string>
+    <string name="main_widget_seek_bar">Seek Bar</string>
+    <string name="main_widget_progress_bar">Progress Bar</string>
+    <string name="main_widget_extract_edit_text">Extract Edit Text</string>
+    <string name="main_widget_text_input_layout">Text Input Layout</string>
+    <string name="main_widget_edit_text">edit text</string>
+    <string name="main_widget_spinner">Spinner</string>
+    <string name="main_widget_data_picker">Date Picker</string>
+    <string name="main_widget_time_picker">Time Picker</string>
+
+    <string name="nav_header_text">点击进入登陆界面</string>
+    <string name="nav_recycler_view">RecyclerView</string>
+    <string name="nav_scrolling">Scrolling</string>
+    <string name="nav_fullscreen">全屏</string>
+    <string name="nav_settings">设置</string>
+    <string name="nav_group_about">关于</string>
+    <string name="nav_about_this">关于这个</string>
+    <string name="nav_share">分享</string>
+    <string name="nav_feedback">反馈</string>
+    <string name="nav_rate">评分</string>
+    <string name="main_feedback_email">反馈:MaterialDesign</string>
+    <string name="main_not_found_email">没有邮件程序</string>
+
+    <!-- Strings related to Scrolling -->
+    <string name="title_activity_scrolling">Scrolling</string>
+    <string name="large_text">
+        "Material is the metaphor."
+        "\n\nA material metaphor is the unifying theory of a rationalized space and a system of motion."
+        "The material is grounded in tactile reality, inspired by the study of paper and ink, yet "
+        "technologically advanced and open to imagination and magic."
+        "\nSurfaces and edges of the material provide visual cues that are grounded in reality. The "
+        "use of familiar tactile attributes helps users quickly understand affordances. Yet the "
+        "flexibility of the material creates new affordances that supercede those in the physical "
+        "world, without breaking the rules of physics."
+        "\nThe fundamentals of light, surface, and movement are key to conveying how objects move, "
+        "interact, and exist in space and in relation to each other. Realistic lighting shows "
+        "seams, divides space, and indicates moving parts."
+        "\n\nBold, graphic, intentional."
+        "\n\nThe foundational elements of print based design typography, grids, space, scale, color, "
+        "and use of imagery guide visual treatments. These elements do far more than please the "
+        "eye. They create hierarchy, meaning, and focus. Deliberate color choices, edge to edge "
+        "imagery, large scale typography, and intentional white space create a bold and graphic "
+        "interface that immerse the user in the experience."
+        "\nAn emphasis on user actions makes core functionality immediately apparent and provides "
+        "waypoints for the user."
+        "\n\nMotion provides meaning."
+        "\n\nMotion respects and reinforces the user as the prime mover. Primary user actions are "
+        "inflection points that initiate motion, transforming the whole design."
+        "\nAll action takes place in a single environment. Objects are presented to the user without "
+        "breaking the continuity of experience even as they transform and reorganize."
+        "\nMotion is meaningful and appropriate, serving to focus attention and maintain continuity. "
+        "Feedback is subtle yet clear. Transitions are efﬁcient yet coherent."
+        "\n\n3D world."
+        "\n\nThe material environment is a 3D space, which means all objects have x, y, and z "
+        "dimensions. The z-axis is perpendicularly aligned to the plane of the display, with the "
+        "positive z-axis extending towards the viewer. Every sheet of material occupies a single "
+        "position along the z-axis and has a standard 1dp thickness."
+        "\nOn the web, the z-axis is used for layering and not for perspective. The 3D world is "
+        "emulated by manipulating the y-axis."
+        "\n\nLight and shadow."
+        "\n\nWithin the material environment, virtual lights illuminate the scene. Key lights create "
+        "directional shadows, while ambient light creates soft shadows from all angles."
+        "\nShadows in the material environment are cast by these two light sources. In Android "
+        "development, shadows occur when light sources are blocked by sheets of material at "
+        "various positions along the z-axis. On the web, shadows are depicted by manipulating the "
+        "y-axis only. The following example shows the card with a height of 6dp."
+        "\n\nResting elevation."
+        "\n\nAll material objects, regardless of size, have a resting elevation, or default elevation "
+        "that does not change. If an object changes elevation, it should return to its resting "
+        "elevation as soon as possible."
+        "\n\nComponent elevations."
+        "\n\nThe resting elevation for a component type is consistent across apps (e.g., FAB elevation "
+        "does not vary from 6dp in one app to 16dp in another app)."
+        "\nComponents may have different resting elevations across platforms, depending on the depth "
+        "of the environment (e.g., TV has a greater depth than mobile or desktop)."
+        "\n\nResponsive elevation and dynamic elevation offsets."
+        "\n\nSome component types have responsive elevation, meaning they change elevation in response "
+        "to user input (e.g., normal, focused, and pressed) or system events. These elevation "
+        "changes are consistently implemented using dynamic elevation offsets."
+        "\nDynamic elevation offsets are the goal elevation that a component moves towards, relative "
+        "to the component’s resting state. They ensure that elevation changes are consistent "
+        "across actions and component types. For example, all components that lift on press have "
+        "the same elevation change relative to their resting elevation."
+        "\nOnce the input event is completed or cancelled, the component will return to its resting "
+        "elevation."
+        "\n\nAvoiding elevation interference."
+        "\n\nComponents with responsive elevations may encounter other components as they move between "
+        "their resting elevations and dynamic elevation offsets. Because material cannot pass "
+        "through other material, components avoid interfering with one another any number of ways, "
+        "whether on a per component basis or using the entire app layout."
+        "\nOn a component level, components can move or be removed before they cause interference. "
+        "For example, a floating action button (FAB) can disappear or move off screen before a "
+        "user picks up a card, or it can move if a snackbar appears."
+        "\nOn the layout level, design your app layout to minimize opportunities for interference. "
+        "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
+        "when a user tries to pick up one of cards.\n\n"
+    </string>
+
+    <!-- Strings related to Fullscreen -->
+    <string name="title_activity_fullscreen">全屏</string>
+
+    <!-- String related to RecyclerView -->
+    <string name="title_activity_recycler_view">RecyclerView</string>
+    <string name="tv_recycler_item_1">下拉刷新</string>
+    <string name="tv_recycler_item_2">左右滑动删除条目</string>
+    <string name="tv_recycler_item_3">上下拖动改变条目位置</string>
+    <string name="title_activity_share_view">Share View</string>
+    <string name="share_view_press_it">点按它</string>
+
+    <!-- String related to Login -->
+    <string name="title_activity_login">登录</string>
+    <string name="login_user_name_hint">手机号码或邮件</string>
+    <string name="login_user_name_password">密码</string>
+    <string name="action_sign_in">登录</string>
+    <string name="forgot_password">忘记密码?</string>
+    <string name="register">注册</string>
+    <string name="error_invalid_name">用户名不合法</string>
+    <string name="error_invalid_password">至少4位</string>
+    <string name="error_incorrect_password">密码错误</string>
+    <string name="error_no_name">请输入你的电话号码或邮件</string>
+    <string name="error_no_password">请输入你的密码</string>
+    <string name="snackbar_forgot_password">哦哦！</string>
+    <string name="snackbar_register">哦哦！</string>
+
+    <!-- Strings related to Settings -->
+    <string name="title_activity_settings">设置</string>
+    <string name="settings_switch_preference_title">Switch Preference</string>
+    <string name="settings_switch_preference_summary">Switch Preference 描述</string>
+    <string name="settings_check_box_preference_title">Check Box Preference</string>
+    <string name="settings_edit_text_preference_title">Edit Text Preference</string>
+    <string name="settings_edit_text_preference_default_value">Material Design</string>
+    <string name="settings_list_preference_dialog_title">List Preference</string>
+    <string name="settings_list_preference_title">List Preference</string>
+    <string name="settings_multi_select_list_preference_dialog_title">Multi Select List Preference</string>
+    <string name="settings_multi_select_list_preference_title">Multi Select List Preference</string>
+    <string name="settings_preference_click_title">OnPreferenceClickListener</string>
+    <string name="settings_preference_click_to_activity">点击跳转Activity</string>
+    <string name="pref_title_system_sync_settings">账户同步设置</string>
+    <string name="pref_title_new_message_notifications">消息通知</string>
+    <string name="pref_title_ringtone">铃声</string>
+    <string name="pref_ringtone_silent">静音</string>
+    <string name="pref_title_vibrate">震动</string>
+    <string name="pref_on_preference_click">onPreferenceClick</string>
+
+    <!-- String related to About -->
+    <string name="title_activity_about">关于这个</string>
+    <string name="about_version">版本: </string>
+    <string name="about_email_intent">关于:MaterialDesign</string>
+    <string name="about_not_found_email">没有邮件程序</string>
+    <string name="about_card1_title">Material Design Demo</string>
+    <string name="about_card1_message">嗨！很高兴见到你，感谢你使用这款App！</string>
+    <string name="about_card2_title">如果你喜欢这个Demo，欢迎和我联系！</string>
+    <string name="about_google_play">Google play</string>
+    <string name="about_email">E-mail</string>
+    <string name="about_git_hub">GitHub</string>
+    <string name="about_address">Beijing, China</string>
+
+</resources>

@@ -1,26 +1,24 @@
 package com.eajy.materialdesigndemo.activity;
 
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
-import android.support.v4.view.ViewPager;
-import android.view.View;
-import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
+import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.widget.ImageView;
@@ -28,6 +26,7 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.eajy.materialdesigndemo.Constant;
 import com.eajy.materialdesigndemo.R;
 import com.eajy.materialdesigndemo.adapter.FragmentAdapter;
@@ -45,6 +44,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private TabLayout mTabLayout;
     private ViewPager mViewPager;
     private RelativeLayout relative_main;
+    private ImageView img_page_start;
 
     private static boolean isShowPageStart = true;
 
@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         initView();
         initViewPager();
 
-        // 初始化Settings中的preferences数据。
+        // init the preferences data of Settings
         try {
             PreferenceManager.setDefaultValues(this, R.xml.preferences_settings, false);
         } catch (Exception e) {
@@ -73,6 +73,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         if (isShowPageStart) {
             relative_main.setVisibility(View.VISIBLE);
+            Glide.with(MainActivity.this).load(R.drawable.ic_launcher_big).into(img_page_start);
             showStartPage();
             isShowPageStart = false;
         }
@@ -88,8 +89,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "This is a snack bar", Snackbar.LENGTH_LONG)
-                        .setAction("Okay", new View.OnClickListener() {
+                Snackbar.make(view, getString(R.string.main_snack_bar), Snackbar.LENGTH_LONG)
+                        .setAction(getString(R.string.main_snack_bar_action), new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {
 
@@ -114,6 +115,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         });
 
         relative_main = (RelativeLayout) findViewById(R.id.relative_main);
+        img_page_start = (ImageView) findViewById(R.id.img_page_start);
     }
 
     public void initViewPager() {
@@ -206,7 +208,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 break;
 
             case R.id.nav_full_screen:
-                intent.setClass(this, FullScreenActivity.class);
+                intent.setClass(this, FullscreenActivity.class);
                 startActivity(intent);
                 break;
 
@@ -220,7 +222,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 intent.putExtra(Intent.EXTRA_TEXT, Constant.SHARE_CONTENT);
                 intent.setType("text/plain");
                 startActivity(intent);
-                //startActivity(Intent.createChooser(intent, "分享到"));
+                //startActivity(Intent.createChooser(intent, "Share To"));
                 break;
 
             case R.id.nav_about:
@@ -231,12 +233,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.nav_feedback:
                 intent.setAction(Intent.ACTION_SENDTO);
                 intent.setData(Uri.parse(Constant.EMAIL));
-                intent.putExtra(Intent.EXTRA_SUBJECT, "Feedback:MaterialDesign");
+                intent.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.main_feedback_email));
                 //intent.putExtra(Intent.EXTRA_TEXT, "Hi,");
                 try {
                     startActivity(intent);
                 } catch (Exception e) {
-                    Toast.makeText(MainActivity.this, "Not found email app", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, getString(R.string.main_not_found_email), Toast.LENGTH_SHORT).show();
                 }
                 break;
 

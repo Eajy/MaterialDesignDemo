@@ -7,7 +7,6 @@ import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.NestedScrollView;
 import android.support.v7.widget.CardView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -18,7 +17,6 @@ import android.view.animation.DecelerateInterpolator;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.eajy.materialdesigndemo.R;
@@ -35,7 +33,7 @@ public class Main1Fragment extends Fragment implements View.OnClickListener, Vie
     private ImageView img_main_card_1, img_main_card_2, img_card_main_3, img_main_card_41, img_main_card_42,
             img_main_card41_favorite, img_main_card42_favorite, img_main_card41_bookmark, img_main_card42_bookmark,
             img_main_card41_share, img_main_card42_share;
-    private CardView card_main_1_1, card_main_1_2, card_main_1_4_1, card_main_1_4_2;
+    private CardView card_main_1_1, card_main_1_2, card_main_1_3, card_main_1_4_1, card_main_1_4_2;
 
     private AlphaAnimation alphaAnimation, alphaAnimationShowIcon;
 
@@ -66,6 +64,7 @@ public class Main1Fragment extends Fragment implements View.OnClickListener, Vie
 
         card_main_1_1 = (CardView) nestedScrollView.findViewById(R.id.card_main_1_1);
         card_main_1_2 = (CardView) nestedScrollView.findViewById(R.id.card_main_1_2);
+        card_main_1_3 = (CardView) nestedScrollView.findViewById(R.id.card_main_1_3);
         card_main_1_4_1 = (CardView) nestedScrollView.findViewById(R.id.card_main_1_4_1);
         card_main_1_4_2 = (CardView) nestedScrollView.findViewById(R.id.card_main_1_4_2);
 
@@ -91,7 +90,6 @@ public class Main1Fragment extends Fragment implements View.OnClickListener, Vie
         img_main_card2_favorite.setOnClickListener(this);
         img_main_card2_share.setOnClickListener(this);
         ll_card_main3_rate.setOnClickListener(this);
-        img_card_main_3.setOnClickListener(this);
 
         img_main_card41_favorite.setOnClickListener(this);
         img_main_card42_favorite.setOnClickListener(this);
@@ -102,11 +100,13 @@ public class Main1Fragment extends Fragment implements View.OnClickListener, Vie
 
         card_main_1_1.setOnClickListener(this);
         card_main_1_2.setOnClickListener(this);
+        card_main_1_3.setOnClickListener(this);
         card_main_1_4_1.setOnClickListener(this);
         card_main_1_4_2.setOnClickListener(this);
 
         card_main_1_1.setOnTouchListener(this);
         card_main_1_2.setOnTouchListener(this);
+        card_main_1_3.setOnTouchListener(this);
         card_main_1_4_1.setOnTouchListener(this);
         card_main_1_4_2.setOnTouchListener(this);
 
@@ -125,11 +125,11 @@ public class Main1Fragment extends Fragment implements View.OnClickListener, Vie
         switch (view.getId()) {
 
             case R.id.btn_card_main1_action1:
-                Snackbar.make(view, "Flat Button 1", Snackbar.LENGTH_SHORT).show();
+                Snackbar.make(view, getString(R.string.main_flat_button_1_clicked), Snackbar.LENGTH_SHORT).show();
                 break;
 
             case R.id.btn_card_main1_action2:
-                Snackbar.make(view, "Flat Button 2", Snackbar.LENGTH_SHORT).show();
+                Snackbar.make(view, getString(R.string.main_flat_button_2_clicked), Snackbar.LENGTH_SHORT).show();
                 break;
 
             case R.id.img_main_card2_bookmark:
@@ -218,13 +218,13 @@ public class Main1Fragment extends Fragment implements View.OnClickListener, Vie
             case R.id.ll_card_main3_rate:
                 break;
 
-            case R.id.img_card_main_3:
-                break;
-
             case R.id.card_main_1_1:
                 break;
 
             case R.id.card_main_1_2:
+                break;
+
+            case R.id.card_main_1_3:
                 break;
 
             case R.id.card_main_1_4_1:
@@ -239,7 +239,7 @@ public class Main1Fragment extends Fragment implements View.OnClickListener, Vie
     public boolean onTouch(View view, MotionEvent motionEvent) {
         switch (motionEvent.getAction()) {
             case MotionEvent.ACTION_DOWN:
-                ObjectAnimator upAnim = ObjectAnimator.ofFloat(view, "translationZ", 20);
+                ObjectAnimator upAnim = ObjectAnimator.ofFloat(view, "translationZ", 16);
                 upAnim.setDuration(150);
                 upAnim.setInterpolator(new DecelerateInterpolator());
                 upAnim.start();

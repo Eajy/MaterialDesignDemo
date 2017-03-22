@@ -4,7 +4,7 @@
     <item
         android:id="@+id/action_menu_main_1"
         android:orderInCategory="1"
-        android:title="About this"
+        android:title="@string/nav_about_this"
         app:showAsAction="never" />
 
 </menu>

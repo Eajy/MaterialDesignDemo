@@ -13,7 +13,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_margin="@dimen/text_margin_small"
-        android:text="Press it" />
+        android:text="@string/share_view_press_it" />
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/app_bar_share_view"

@@ -6,12 +6,12 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.preference.ListPreference;
 import android.preference.Preference;
-import android.support.v7.app.ActionBar;
 import android.preference.PreferenceManager;
 import android.preference.RingtonePreference;
+import android.support.v4.app.NavUtils;
+import android.support.v7.app.ActionBar;
 import android.text.TextUtils;
 import android.view.MenuItem;
-import android.support.v4.app.NavUtils;
 import android.widget.Toast;
 
 import com.eajy.materialdesigndemo.R;
@@ -95,12 +95,12 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
         pref.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
             @Override
             public boolean onPreferenceClick(Preference preference) {
-                Toast.makeText(SettingsActivity.this, "onPreferenceClick", Toast.LENGTH_SHORT).show();
+                Toast.makeText(SettingsActivity.this, getString(R.string.pref_on_preference_click), Toast.LENGTH_SHORT).show();
                 return false;
             }
         });
 
-        //setHasOptionsMenu(true);//在fragment里面有
+        //setHasOptionsMenu(true); //in fragment it has
     }
 
 
