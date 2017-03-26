@@ -1,31 +1,48 @@
 package com.eajy.materialdesigndemo.activity;
 
 import android.graphics.Color;
+import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.view.animation.AlphaAnimation;
+import android.view.animation.Animation;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
+import android.widget.VideoView;
 
 import com.bumptech.glide.Glide;
 import com.eajy.materialdesigndemo.R;
 
 public class FullscreenActivity extends AppCompatActivity {
 
-    private ImageView mContentView;
+    private VideoView video_fullscreen;
+    private RelativeLayout relative_fullscreen;
+    private ProgressBar progress_fullscreen;
     private boolean isShowBar;
 
-    private final int MESSAGE_WHAT = 0x001;
+    private final int MESSAGE_HIDE_BARS = 0x001;
+    private final int MESSAGE_VIDEO_ERROR = 0x002;
     public Handler mHandler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
             switch (msg.what) {
-                case MESSAGE_WHAT:
+                case MESSAGE_HIDE_BARS:
                     hideBars();
+                    break;
+                case MESSAGE_VIDEO_ERROR:
+                    Animation animation = new AlphaAnimation(1.0f, 0.0f);
+                    animation.setDuration(500);
+                    relative_fullscreen.startAnimation(animation);
+                    relative_fullscreen.setVisibility(View.GONE);
                     break;
             }
         }
@@ -42,7 +59,7 @@ public class FullscreenActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_full_screen);
+        setContentView(R.layout.activity_fullscreen);
 
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
@@ -50,16 +67,50 @@ public class FullscreenActivity extends AppCompatActivity {
             actionBar.hide();
         }
 
-        mContentView = (ImageView) findViewById(R.id.img_full_sereen);
-        Glide.with(this).load(R.drawable.full_screen).asGif().fitCenter().into(mContentView);
-        mContentView.setOnClickListener(new View.OnClickListener() {
+        progress_fullscreen = (ProgressBar) findViewById(R.id.progress_fullscreen);
+        relative_fullscreen = (RelativeLayout) findViewById(R.id.relative_fullscreen);
+        video_fullscreen = (VideoView) findViewById(R.id.video_fullscreen);
+
+        playVideo();
+    }
+
+    private void playVideo() {
+        Uri uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.full_screen_google);
+        video_fullscreen.setVideoURI(uri);
+        video_fullscreen.start();
+
+        video_fullscreen.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
             @Override
-            public void onClick(View view) {
-                if (!isShowBar) {
-                    showBars();
-                } else {
-                    hideBars();
-                }
+            public void onPrepared(MediaPlayer mp) {
+                mHandler.sendEmptyMessageDelayed(MESSAGE_VIDEO_ERROR, 500);
+            }
+        });
+
+        video_fullscreen.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                video_fullscreen.start();
+            }
+        });
+
+        video_fullscreen.setOnErrorListener(new MediaPlayer.OnErrorListener() {
+            @Override
+            public boolean onError(MediaPlayer mp, int what, int extra) {
+                progress_fullscreen.setVisibility(View.VISIBLE);
+                return true;
+            }
+        });
+
+        video_fullscreen.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if (event.getAction() == MotionEvent.ACTION_DOWN)
+                    if (!isShowBar) {
+                        showBars();
+                    } else {
+                        hideBars();
+                    }
+                return true;
             }
         });
     }
@@ -73,21 +124,20 @@ public class FullscreenActivity extends AppCompatActivity {
 
     public void showBars() {
         isShowBar = true;
-        mContentView.setSystemUiVisibility(View.VISIBLE);
+        video_fullscreen.setSystemUiVisibility(View.VISIBLE);
+
         Window window = getWindow();
-        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-        window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION | WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-        window.setStatusBarColor(Color.LTGRAY);
+        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS
+                | WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
+        window.getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                | View.SYSTEM_UI_FLAG_LAYOUT_STABLE);
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+        window.setStatusBarColor(Color.GRAY);
+        window.setNavigationBarColor(Color.GRAY);
 
-        /*if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            View decor = getWindow().getDecorView();
-            int ui = decor.getSystemUiVisibility();
-            ui |= View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR;
-            decor.setSystemUiVisibility(ui);
-        }*/
-
-        mHandler.removeMessages(MESSAGE_WHAT);
-        mHandler.sendEmptyMessageDelayed(MESSAGE_WHAT, 2000);
+        mHandler.removeMessages(MESSAGE_HIDE_BARS);
+        mHandler.sendEmptyMessageDelayed(MESSAGE_HIDE_BARS, 2000);
 
         /*mHideHandler.removeCallbacks(mHideRunnable);
         mHideHandler.postDelayed(mHideRunnable, 2000);*/
@@ -95,9 +145,8 @@ public class FullscreenActivity extends AppCompatActivity {
 
     public void hideBars() {
         isShowBar = false;
-        mContentView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LOW_PROFILE
+        video_fullscreen.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LOW_PROFILE
                 | View.SYSTEM_UI_FLAG_FULLSCREEN
-                | View.SYSTEM_UI_FLAG_LAYOUT_STABLE
                 | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
                 | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
                 | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);

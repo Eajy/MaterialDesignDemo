@@ -1,6 +1,7 @@
 package com.eajy.materialdesigndemo.activity;
 
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
@@ -45,6 +46,17 @@ public class ScrollingActivity extends AppCompatActivity {
         image_scrolling_top = (ImageView) findViewById(R.id.image_scrolling_top);
         Glide.with(this).load(R.drawable.material_design_3).fitCenter().into(image_scrolling_top);
 
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Configuration configuration = getResources().getConfiguration();
+        if (configuration.orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            getWindow().clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
+        } else {
+            getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
+        }
     }
 
 }

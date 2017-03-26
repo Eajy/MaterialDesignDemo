@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#00B0FF</color>
-    <color name="colorPrimaryDark">#0091EA</color>
+    <color name="colorPrimary">#4285f4</color>
+    <color name="colorPrimaryDark">#3367d6</color>
     <color name="colorAccent">#FFC400</color>
 
     <color name="white">#FFFFFF</color>
@@ -15,33 +15,6 @@
     <color name="transparent">#00000000</color>
     <color name="main_background">#eeeeee</color>
     <color name="google_assistant_background">#F5F5F5</color>
-
-    <color name="colorPink">#FF4081</color>
-    <color name="colorPinkDark">#F50057</color>
-    <color name="colorPurple">#E040FB</color>
-    <color name="colorPurpleDark">#D500F9</color>
-    <color name="colorBlue">#2979FF</color>
-    <color name="colorBlueDark">#2962FF</color>
-    <color name="colorLightBlue">#00B0FF</color>
-    <color name="colorLightBlueDark">#0091EA</color>
-    <color name="colorCyan">#18FFFF</color>
-    <color name="colorCyanDark">#00E5FF</color>
-    <color name="colorTeal">#1DE9B6</color>
-    <color name="colorTealDark">#00BFA5</color>
-    <color name="colorGreen">#00E676</color>
-    <color name="colorGreenDark">#00C853</color>
-    <color name="colorLightGreen">#76FF03</color>
-    <color name="colorLightGreenDark">#64DD17</color>
-    <color name="colorLime">#C6FF00</color>
-    <color name="colorLimeDark">#AEEA00</color>
-    <color name="colorYellow">#FFEA00</color>
-    <color name="colorYellowDark">#FFD600</color>
-    <color name="colorAmber">#FFC400</color>
-    <color name="colorAmberDark">#FFAB00</color>
-    <color name="colorDeepOrange">#FF3D00</color>
-    <color name="colorDeepOrangeDark">#DD2C00</color>
-    <color name="colorBlueGrey">#607D8B</color>
-    <color name="colorBlueGreyDark">#455A64</color>
 
     <!-- Material Design Color - Color palette -->
     <color name="red_primary">#F44336</color>
@@ -83,13 +56,13 @@
     <color name="blue_grey_primary">#607D8B</color>
     <color name="blue_grey_primary_dark">#455A64</color>
 
-    <!-- Google Logo -->
+    <!-- Google Logo Color -->
     <color name="google_blue">#4285F4</color>
     <color name="google_green">#34A853</color>
     <color name="google_yellow">#FBBC05</color>
     <color name="google_red">#EA4335</color>
 
-    <!-- Google App Logo -->
+    <!-- Google Apps Color -->
     <color name="app_blue">#4285f4</color>
     <color name="app_blue_dark">#3367d6</color>
     <color name="app_green">#0f9d58</color>
