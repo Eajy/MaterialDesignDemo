@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/bottom_navigation_blue"
+        android:icon="@mipmap/ic_dashboard_black_24dp"
+        android:title="Blue" />
+
+    <item
+        android:id="@+id/bottom_navigation_green"
+        android:icon="@mipmap/ic_photo_black_24dp"
+        android:title="Green" />
+
+    <item
+        android:id="@+id/bottom_navigation_yellow"
+        android:icon="@mipmap/ic_music_note_black_24dp"
+        android:title="Yellow" />
+
+    <item
+        android:id="@+id/bottom_navigation_red"
+        android:icon="@mipmap/ic_movie_black_24dp"
+        android:title="Red" />
+</menu>

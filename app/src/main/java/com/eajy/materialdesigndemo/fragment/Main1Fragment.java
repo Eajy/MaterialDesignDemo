@@ -17,9 +17,14 @@ import android.view.animation.DecelerateInterpolator;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.eajy.materialdesigndemo.Constant;
 import com.eajy.materialdesigndemo.R;
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 
 /**
  * Created by zhang on 2016.08.07.
@@ -34,8 +39,9 @@ public class Main1Fragment extends Fragment implements View.OnClickListener, Vie
             img_main_card41_favorite, img_main_card42_favorite, img_main_card41_bookmark, img_main_card42_bookmark,
             img_main_card41_share, img_main_card42_share;
     private CardView card_main_1_1, card_main_1_2, card_main_1_3, card_main_1_4_1, card_main_1_4_2;
-
     private AlphaAnimation alphaAnimation, alphaAnimationShowIcon;
+    private TextView tv_card_main_ad;
+    private AdView adView;
 
     @Nullable
     @Override
@@ -73,6 +79,9 @@ public class Main1Fragment extends Fragment implements View.OnClickListener, Vie
         Glide.with(getContext()).load(R.drawable.material_design_11).fitCenter().into(img_card_main_3);
         Glide.with(getContext()).load(R.drawable.material_design_1).fitCenter().into(img_main_card_41);
         Glide.with(getContext()).load(R.drawable.material_design_1).fitCenter().into(img_main_card_42);
+
+        tv_card_main_ad = (TextView) nestedScrollView.findViewById(R.id.tv_card_main_ad);
+        adView = (AdView) nestedScrollView.findViewById(R.id.adView);
 
         // ViewGroup viewGroup = (ViewGroup) mRecyclerView.getParent();
         // if (viewGroup != null) { viewGroup.removeAllViews(); }
@@ -117,6 +126,17 @@ public class Main1Fragment extends Fragment implements View.OnClickListener, Vie
 
         alphaAnimationShowIcon = new AlphaAnimation(0.2f, 1.0f);
         alphaAnimationShowIcon.setDuration(500);
+
+        // Load an ad into the AdMob banner view.
+        AdRequest adRequest = new AdRequest.Builder().setRequestAgent("android_studio:ad_template").build();
+        adView.loadAd(adRequest);
+        adView.setAdListener(new AdListener() {
+            @Override
+            public void onAdLoaded() {
+                super.onAdLoaded();
+                tv_card_main_ad.setText(getString(R.string.banner_ad_text));
+            }
+        });
     }
 
 

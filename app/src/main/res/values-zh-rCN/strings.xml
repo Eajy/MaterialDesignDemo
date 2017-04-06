@@ -61,6 +61,7 @@
     <string name="nav_recycler_view">RecyclerView</string>
     <string name="nav_scrolling">Scrolling</string>
     <string name="nav_fullscreen">全屏</string>
+    <string name="nav_bottom_navigation">底部导航栏</string>
     <string name="nav_settings">设置</string>
     <string name="nav_group_about">关于</string>
     <string name="nav_about_this">关于这个</string>
@@ -203,5 +204,9 @@
     <string name="about_email">E-mail</string>
     <string name="about_git_hub">GitHub</string>
     <string name="about_address">Beijing, China</string>
+
+    <!-- String related to Ads -->
+    <string name="banner_ad_unit_id">ca-app-pub-5767334255225738/3245078201</string>
+    <string name="banner_ad_text">如果你喜欢这款应用，请点击下面的广告支持我，非常感谢！</string>
 
 </resources>

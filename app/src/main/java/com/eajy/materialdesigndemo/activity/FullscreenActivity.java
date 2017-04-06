@@ -30,7 +30,7 @@ public class FullscreenActivity extends AppCompatActivity {
     private boolean isShowBar;
 
     private final int MESSAGE_HIDE_BARS = 0x001;
-    private final int MESSAGE_VIDEO_ERROR = 0x002;
+    private final int MESSAGE_VIDEO_PREPARED = 0x002;
     public Handler mHandler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
@@ -38,7 +38,7 @@ public class FullscreenActivity extends AppCompatActivity {
                 case MESSAGE_HIDE_BARS:
                     hideBars();
                     break;
-                case MESSAGE_VIDEO_ERROR:
+                case MESSAGE_VIDEO_PREPARED:
                     Animation animation = new AlphaAnimation(1.0f, 0.0f);
                     animation.setDuration(500);
                     relative_fullscreen.startAnimation(animation);
@@ -70,8 +70,6 @@ public class FullscreenActivity extends AppCompatActivity {
         progress_fullscreen = (ProgressBar) findViewById(R.id.progress_fullscreen);
         relative_fullscreen = (RelativeLayout) findViewById(R.id.relative_fullscreen);
         video_fullscreen = (VideoView) findViewById(R.id.video_fullscreen);
-
-        playVideo();
     }
 
     private void playVideo() {
@@ -82,7 +80,7 @@ public class FullscreenActivity extends AppCompatActivity {
         video_fullscreen.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
             @Override
             public void onPrepared(MediaPlayer mp) {
-                mHandler.sendEmptyMessageDelayed(MESSAGE_VIDEO_ERROR, 500);
+                mHandler.sendEmptyMessageDelayed(MESSAGE_VIDEO_PREPARED, 500);
             }
         });
 
@@ -119,8 +117,14 @@ public class FullscreenActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         hideBars();
+        playVideo();
     }
 
+    @Override
+    protected void onStop() {
+        super.onStop();
+        relative_fullscreen.setVisibility(View.VISIBLE);
+    }
 
     public void showBars() {
         isShowBar = true;

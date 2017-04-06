@@ -15,6 +15,10 @@
             android:icon="@mipmap/ic_fullscreen_black_24dp"
             android:title="@string/nav_fullscreen" />
         <item
+            android:id="@+id/nav_bottom_navigation"
+            android:icon="@mipmap/ic_more_horiz_black_24dp"
+            android:title="@string/nav_bottom_navigation" />
+        <item
             android:id="@+id/nav_settings"
             android:icon="@mipmap/ic_settings_black_24dp"
             android:title="@string/nav_settings" />

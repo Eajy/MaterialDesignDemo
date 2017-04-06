@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
@@ -209,6 +210,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
             case R.id.nav_full_screen:
                 intent.setClass(this, FullscreenActivity.class);
+                startActivity(intent);
+                break;
+
+            case R.id.nav_bottom_navigation:
+                intent.setClass(this, BottomNavigationActivity.class);
                 startActivity(intent);
                 break;
 
