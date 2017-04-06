@@ -14,7 +14,12 @@ It covers many material design components, such as:**
 -CardView  
 -TextInputLayout  
 -BottomSheetDialog  
--SharedElementTransitions
+-SharedElementTransitions  
+-BottomNavigationView
+
+**Google Play :**  
+https://play.google.com/store/apps/details?id=com.eajy.materialdesigndemo
+
 
 ![image](https://github.com/Eajy/MaterialDesignDemo/blob/master/pictures/Screenshot_20170326-201916.png)
 ![image](https://github.com/Eajy/MaterialDesignDemo/blob/master/pictures/Screenshot_20170326-202037.png)
