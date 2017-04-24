@@ -35,7 +35,6 @@ public class Main2Fragment extends Fragment implements View.OnClickListener {
             btn_dialog_6, btn_dialog_7, btn_dialog_8, btn_dialog_9, btn_dialog_10, btn_dialog_11;
     Calendar calendar;
 
-
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -168,7 +167,7 @@ public class Main2Fragment extends Fragment implements View.OnClickListener {
                         String date = year + "-" + (monthOfYear + 1) + "-" + dayOfMonth;
                         btn_dialog_7.setText(date);
                     }
-                }, calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.DAY_OF_MONTH);
+                }, calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH));
                 datePickerDialog.show();
                 break;
 
@@ -189,6 +188,8 @@ public class Main2Fragment extends Fragment implements View.OnClickListener {
                 View dialogView = getActivity().getLayoutInflater().inflate(R.layout.dialog_bottom_sheet, null);
                 Button btn_dialog_bottom_sheet_ok = (Button) dialogView.findViewById(R.id.btn_dialog_bottom_sheet_ok);
                 Button btn_dialog_bottom_sheet_cancel = (Button) dialogView.findViewById(R.id.btn_dialog_bottom_sheet_cancel);
+                ImageView img_bottom_dialog = (ImageView) dialogView.findViewById(R.id.img_bottom_dialog);
+                Glide.with(getContext()).load(R.drawable.bottom_dialog).into(img_bottom_dialog);
                 mBottomSheetDialog.setContentView(dialogView);
 
                 btn_dialog_bottom_sheet_ok.setOnClickListener(new View.OnClickListener() {

@@ -2,10 +2,12 @@ package com.eajy.materialdesigndemo.activity;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.preference.PreferenceManager;
-import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
@@ -48,20 +50,50 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private ImageView img_page_start;
 
     private static boolean isShowPageStart = true;
+    private final int MESSAGE_SHOW_DRAWER_LAYOUT = 0x001;
+    private final int MESSAGE_SHOW_START_PAGE = 0x002;
+
+    public Handler mHandler = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+            switch (msg.what) {
+                case MESSAGE_SHOW_DRAWER_LAYOUT:
+                    drawer.openDrawer(GravityCompat.START);
+                    SharedPreferences sharedPreferences = getSharedPreferences("app", MODE_PRIVATE);
+                    SharedPreferences.Editor editor = sharedPreferences.edit();
+                    editor.putBoolean("isFirst", false);
+                    editor.apply();
+                    break;
+
+                case MESSAGE_SHOW_START_PAGE:
+                    AlphaAnimation alphaAnimation = new AlphaAnimation(1.0f, 0.0f);
+                    alphaAnimation.setDuration(300);
+                    alphaAnimation.setAnimationListener(new Animation.AnimationListener() {
+                        @Override
+                        public void onAnimationStart(Animation animation) {
+
+                        }
+
+                        @Override
+                        public void onAnimationEnd(Animation animation) {
+                            relative_main.setVisibility(View.GONE);
+                        }
+
+                        @Override
+                        public void onAnimationRepeat(Animation animation) {
+
+                        }
+                    });
+                    relative_main.startAnimation(alphaAnimation);
+                    break;
+            }
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_main);
-        setSupportActionBar(toolbar);
-
-        drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.addDrawerListener(toggle);
-        toggle.syncState();
 
         initView();
         initViewPager();
@@ -72,33 +104,33 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         } catch (Exception e) {
         }
 
+        SharedPreferences sharedPreferences = getSharedPreferences("app", MODE_PRIVATE);
+
         if (isShowPageStart) {
             relative_main.setVisibility(View.VISIBLE);
             Glide.with(MainActivity.this).load(R.drawable.ic_launcher_big).into(img_page_start);
-            showStartPage();
+            if (sharedPreferences.getBoolean("isFirst", true)) {
+                mHandler.sendEmptyMessageDelayed(MESSAGE_SHOW_START_PAGE, 2000);
+            } else {
+                mHandler.sendEmptyMessageDelayed(MESSAGE_SHOW_START_PAGE, 1000);
+            }
             isShowPageStart = false;
         }
 
-        SharedPreferences sharedPreferences = getSharedPreferences("app", MODE_PRIVATE);
         if (sharedPreferences.getBoolean("isFirst", true)) {
-            showDrawerLayout();
+            mHandler.sendEmptyMessageDelayed(MESSAGE_SHOW_DRAWER_LAYOUT, 2500);
         }
     }
 
-    public void initView() {
-        fab = (FloatingActionButton) findViewById(R.id.fab_main);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, getString(R.string.main_snack_bar), Snackbar.LENGTH_LONG)
-                        .setAction(getString(R.string.main_snack_bar_action), new View.OnClickListener() {
-                            @Override
-                            public void onClick(View view) {
+    private void initView() {
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_main);
+        setSupportActionBar(toolbar);
 
-                            }
-                        }).show();
-            }
-        });
+        drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawer.addDrawerListener(toggle);
+        toggle.syncState();
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
@@ -115,11 +147,25 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             }
         });
 
+        fab = (FloatingActionButton) findViewById(R.id.fab_main);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, getString(R.string.main_snack_bar), Snackbar.LENGTH_LONG)
+                        .setAction(getString(R.string.main_snack_bar_action), new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+
+                            }
+                        }).show();
+            }
+        });
+
         relative_main = (RelativeLayout) findViewById(R.id.relative_main);
         img_page_start = (ImageView) findViewById(R.id.img_page_start);
     }
 
-    public void initViewPager() {
+    private void initViewPager() {
         mTabLayout = (TabLayout) findViewById(R.id.tab_layout_main);
         mViewPager = (ViewPager) findViewById(R.id.view_pager_main);
 
@@ -194,7 +240,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
-
         Intent intent = new Intent();
 
         switch (item.getItemId()) {
@@ -223,14 +268,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 startActivity(intent);
                 break;
 
-            case R.id.nav_share:
-                intent.setAction(Intent.ACTION_SEND);
-                intent.putExtra(Intent.EXTRA_TEXT, Constant.SHARE_CONTENT);
-                intent.setType("text/plain");
-                startActivity(intent);
-                //startActivity(Intent.createChooser(intent, "Share To"));
-                break;
-
             case R.id.nav_about:
                 intent.setClass(this, AboutActivity.class);
                 startActivity(intent);
@@ -248,10 +285,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 }
                 break;
 
-            case R.id.nav_rate:
-                intent.setData(Uri.parse(Constant.APP_URL));
-                intent.setAction(Intent.ACTION_VIEW);
-                startActivity(intent);
+            case R.id.nav_color:
+                if (checkAppInstalled(Constant.MATERIAL_DESIGN_COLOR_PACKAGE)) {
+                    intent = getPackageManager().getLaunchIntentForPackage(Constant.MATERIAL_DESIGN_COLOR_PACKAGE);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_RESET_TASK_IF_NEEDED | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    startActivity(intent);
+                } else {
+                    intent.setData(Uri.parse(Constant.MATERIAL_DESIGN_COLOR_URL));
+                    intent.setAction(Intent.ACTION_VIEW);
+                    startActivity(intent);
+                }
                 break;
         }
 
@@ -259,76 +302,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         return true;
     }
 
-    public void showDrawerLayout() {
-        new Thread() {
-            @Override
-            public void run() {
-                super.run();
-
-                try {
-                    sleep(2600);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-
-                runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        drawer.openDrawer(GravityCompat.START);
-                        SharedPreferences sharedPreferences = getSharedPreferences("app", MODE_PRIVATE);
-                        SharedPreferences.Editor editor = sharedPreferences.edit();
-                        editor.putBoolean("isFirst", false);
-                        editor.apply();
-                    }
-                });
-
-            }
-        }.start();
-    }
-
-    public void showStartPage() {
-        new Thread() {
-            @Override
-            public void run() {
-                super.run();
-
-                try {
-                    SharedPreferences sharedPreferences = getSharedPreferences("app", MODE_PRIVATE);
-                    if (sharedPreferences.getBoolean("isFirst", true)) {
-                        sleep(2000);
-                    } else {
-                        sleep(1000);
-                    }
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-
-                runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        AlphaAnimation alphaAnimation = new AlphaAnimation(1.0f, 0.0f);
-                        alphaAnimation.setDuration(300);
-                        alphaAnimation.setAnimationListener(new Animation.AnimationListener() {
-                            @Override
-                            public void onAnimationStart(Animation animation) {
-
-                            }
-
-                            @Override
-                            public void onAnimationEnd(Animation animation) {
-                                relative_main.setVisibility(View.GONE);
-                            }
-
-                            @Override
-                            public void onAnimationRepeat(Animation animation) {
-
-                            }
-                        });
-                        relative_main.startAnimation(alphaAnimation);
-                    }
-                });
-            }
-        }.start();
+    private boolean checkAppInstalled(String packageName) {
+        try {
+            getPackageManager().getPackageInfo(packageName, PackageManager.GET_ACTIVITIES);
+            return true;
+        } catch (PackageManager.NameNotFoundException e) {
+            return false;
+        }
     }
 
 }

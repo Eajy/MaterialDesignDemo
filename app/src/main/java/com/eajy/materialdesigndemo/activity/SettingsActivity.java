@@ -100,9 +100,7 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
             }
         });
 
-        //setHasOptionsMenu(true); //in fragment it has
     }
-
 
     @Override
     public boolean onMenuItemSelected(int featureId, MenuItem item) {

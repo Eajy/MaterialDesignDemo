@@ -70,6 +70,8 @@
     <string name="nav_rate">评分</string>
     <string name="main_feedback_email">反馈:MaterialDesign</string>
     <string name="main_not_found_email">没有邮件程序</string>
+    <string name="nav_my_apps">我的应用</string>
+    <string name="nav_color">Material Design Color</string>
 
     <!-- Strings related to Scrolling -->
     <string name="title_activity_scrolling">Scrolling</string>
@@ -200,9 +202,9 @@
     <string name="about_card1_title">Material Design Demo</string>
     <string name="about_card1_message">嗨！很高兴见到你，感谢你使用这款App！</string>
     <string name="about_card2_title">如果你喜欢这个Demo，欢迎和我联系！</string>
-    <string name="about_google_play">Google play</string>
-    <string name="about_email">E-mail</string>
-    <string name="about_git_hub">GitHub</string>
+    <string name="about_google_play">评价 (Google play)</string>
+    <string name="about_email">反对 (E-mail)</string>
+    <string name="about_git_hub">源代码 (GitHub)</string>
     <string name="about_address">Beijing, China</string>
 
     <!-- String related to Ads -->

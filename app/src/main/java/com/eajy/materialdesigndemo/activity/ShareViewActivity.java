@@ -42,7 +42,7 @@ public class ShareViewActivity extends AppCompatActivity {
         initView();
     }
 
-    public void initView() {
+    private void initView() {
         CardView card_share_view = (CardView) findViewById(R.id.card_share_view);
         RelativeLayout rela_round_big = (RelativeLayout) findViewById(R.id.rela_round_big);
         tv_share_view_tip = (TextView) findViewById(R.id.tv_share_view_tip);

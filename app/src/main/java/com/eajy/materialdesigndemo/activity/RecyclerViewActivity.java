@@ -36,7 +36,7 @@ public class RecyclerViewActivity extends AppCompatActivity {
         initView();
     }
 
-    public void initView() {
+    private void initView() {
 
         final RecyclerViewAdapter adapter = new RecyclerViewAdapter(this);
         mRecyclerView = (RecyclerView) findViewById(R.id.recycler_view_recycler_view);

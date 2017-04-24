@@ -54,7 +54,7 @@ public class AboutActivity extends AppCompatActivity implements View.OnClickList
         ll_card_about_2_email.setOnClickListener(this);
         ll_card_about_2_git_hub.setOnClickListener(this);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab_about_this);
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab_about_share);
         fab.setOnClickListener(this);
 
         TextView tv_about_version = (TextView) findViewById(R.id.tv_about_version);
@@ -91,7 +91,7 @@ public class AboutActivity extends AppCompatActivity implements View.OnClickList
                 startActivity(intent);
                 break;
 
-            case R.id.fab_about_this:
+            case R.id.fab_about_share:
                 intent.setAction(Intent.ACTION_SEND);
                 intent.putExtra(Intent.EXTRA_TEXT, Constant.SHARE_CONTENT);
                 intent.setType("text/plain");

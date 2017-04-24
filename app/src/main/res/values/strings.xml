@@ -70,6 +70,8 @@
     <string name="nav_rate">Rate</string>
     <string name="main_feedback_email">Feedback:MaterialDesign</string>
     <string name="main_not_found_email">Not found email app</string>
+    <string name="nav_my_apps">My Apps</string>
+    <string name="nav_color">Material Design Color</string>
 
     <!-- Strings related to Scrolling -->
     <string name="title_activity_scrolling">Scrolling</string>
@@ -199,14 +201,14 @@
     <string name="about_not_found_email">Not found email app</string>
     <string name="about_card1_title">Material Design Demo</string>
     <string name="about_card1_message">Hey, glad to see you! Thanks for using the app.</string>
-    <string name="about_card2_title">If you like this app, welcome to contact with me.</string>
-    <string name="about_google_play">Google play</string>
-    <string name="about_email">E-mail</string>
-    <string name="about_git_hub">GitHub</string>
+    <string name="about_card2_title">If you liked the app, feel free to contact me.</string>
+    <string name="about_google_play">Rate on Google play</string>
+    <string name="about_email">Feedback by E-mail</string>
+    <string name="about_git_hub">Source code on GitHub</string>
     <string name="about_address">Beijing, China</string>
 
     <!-- String related to Ads -->
     <string name="banner_ad_unit_id">ca-app-pub-5767334255225738/3245078201</string>
-    <string name="banner_ad_text">If you like this app, please click the ads for support me. Thank you!</string>
+    <string name="banner_ad_text">If you like this app, please click the ads to support me. Thank you!</string>
 
 </resources>

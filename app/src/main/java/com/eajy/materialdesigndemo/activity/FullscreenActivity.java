@@ -14,12 +14,10 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
-import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.VideoView;
 
-import com.bumptech.glide.Glide;
 import com.eajy.materialdesigndemo.R;
 
 public class FullscreenActivity extends AppCompatActivity {
@@ -126,7 +124,7 @@ public class FullscreenActivity extends AppCompatActivity {
         relative_fullscreen.setVisibility(View.VISIBLE);
     }
 
-    public void showBars() {
+    private void showBars() {
         isShowBar = true;
         video_fullscreen.setSystemUiVisibility(View.VISIBLE);
 
@@ -147,7 +145,7 @@ public class FullscreenActivity extends AppCompatActivity {
         mHideHandler.postDelayed(mHideRunnable, 2000);*/
     }
 
-    public void hideBars() {
+    private void hideBars() {
         isShowBar = false;
         video_fullscreen.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LOW_PROFILE
                 | View.SYSTEM_UI_FLAG_FULLSCREEN

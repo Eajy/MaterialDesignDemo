@@ -18,8 +18,7 @@
             android:layout_marginBottom="16dp"
             android:layout_marginTop="16dp"
             android:adjustViewBounds="true"
-            android:scaleType="fitXY"
-            android:src="@drawable/bottom_dialog" />
+            android:scaleType="fitXY" />
 
         <RelativeLayout
             android:layout_width="match_parent"

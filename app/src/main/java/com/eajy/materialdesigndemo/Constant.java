@@ -12,4 +12,7 @@ public class Constant {
     public static String GOOGLE_PLUS = "https://plus.google.com/102787638260931600665";
     public static String GIT_HUB = "https://github.com/Eajy/MaterialDesignDemo";
 
+    public static String MATERIAL_DESIGN_COLOR_URL = "https://play.google.com/store/apps/details?id=com.eajy.materialdesigncolor";
+    public static String MATERIAL_DESIGN_COLOR_PACKAGE = "com.eajy.materialdesigncolor";
+
 }

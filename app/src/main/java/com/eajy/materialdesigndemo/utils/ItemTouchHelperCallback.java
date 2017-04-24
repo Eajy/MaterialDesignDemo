@@ -17,7 +17,6 @@ public class ItemTouchHelperCallback extends ItemTouchHelper.Callback {
         this.moveAndSwipedListener = listener;
     }
 
-    //设置拖动方向以及侧滑方向
     @Override
     public int getMovementFlags(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder) {
         if (recyclerView.getLayoutManager() instanceof LinearLayoutManager) {
@@ -33,7 +32,6 @@ public class ItemTouchHelperCallback extends ItemTouchHelper.Callback {
         }
     }
 
-    //拖动item时会调用此方法
     @Override
     public boolean onMove(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder, RecyclerView.ViewHolder target) {
         //如果两个item不是同一个类型的，不让他拖拽
@@ -44,7 +42,6 @@ public class ItemTouchHelperCallback extends ItemTouchHelper.Callback {
         return true;
     }
 
-    //侧滑item时会调用此方法
     @Override
     public void onSwiped(RecyclerView.ViewHolder viewHolder, int direction) {
         moveAndSwipedListener.onItemDismiss(viewHolder.getAdapterPosition());

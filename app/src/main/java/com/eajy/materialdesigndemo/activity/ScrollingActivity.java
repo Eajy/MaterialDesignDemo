@@ -45,7 +45,6 @@ public class ScrollingActivity extends AppCompatActivity {
 
         image_scrolling_top = (ImageView) findViewById(R.id.image_scrolling_top);
         Glide.with(this).load(R.drawable.material_design_3).fitCenter().into(image_scrolling_top);
-
     }
 
     @Override

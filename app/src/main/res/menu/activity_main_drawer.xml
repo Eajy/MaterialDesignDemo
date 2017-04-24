@@ -31,17 +31,18 @@
                 android:icon="@drawable/ic_info_black_24dp"
                 android:title="@string/nav_about_this" />
             <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="@string/nav_share" />
-            <item
                 android:id="@+id/nav_feedback"
                 android:icon="@mipmap/ic_feedback_black_24dp"
                 android:title="@string/nav_feedback" />
+        </menu>
+    </item>
+
+    <item android:title="@string/nav_my_apps">
+        <menu>
             <item
-                android:id="@+id/nav_rate"
-                android:icon="@mipmap/ic_star_black_24dp"
-                android:title="@string/nav_rate" />
+                android:id="@+id/nav_color"
+                android:icon="@mipmap/material_design_color"
+                android:title="@string/nav_color" />
         </menu>
     </item>
 
