@@ -78,6 +78,7 @@ public class AboutActivity extends AppCompatActivity implements View.OnClickList
                 intent.setAction(Intent.ACTION_SENDTO);
                 intent.setData(Uri.parse(Constant.EMAIL));
                 intent.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.about_email_intent));
+                //intent.putExtra(Intent.EXTRA_TEXT, "Hi,");
                 try {
                     startActivity(intent);
                 } catch (Exception e) {

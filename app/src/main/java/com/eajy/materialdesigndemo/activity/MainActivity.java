@@ -273,16 +273,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 startActivity(intent);
                 break;
 
-            case R.id.nav_feedback:
-                intent.setAction(Intent.ACTION_SENDTO);
-                intent.setData(Uri.parse(Constant.EMAIL));
-                intent.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.main_feedback_email));
-                //intent.putExtra(Intent.EXTRA_TEXT, "Hi,");
-                try {
-                    startActivity(intent);
-                } catch (Exception e) {
-                    Toast.makeText(MainActivity.this, getString(R.string.main_not_found_email), Toast.LENGTH_SHORT).show();
-                }
+            case R.id.nav_donate:
+                intent.setClass(this, DonateActivity.class);
+                startActivity(intent);
                 break;
 
             case R.id.nav_color:

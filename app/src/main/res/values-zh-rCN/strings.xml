@@ -64,9 +64,10 @@
     <string name="nav_bottom_navigation">底部导航栏</string>
     <string name="nav_settings">设置</string>
     <string name="nav_group_about">关于</string>
-    <string name="nav_about_this">关于这个</string>
+    <string name="nav_about_this">关于我</string>
     <string name="nav_share">分享</string>
     <string name="nav_feedback">反馈</string>
+    <string name="nav_donate">捐赠</string>
     <string name="nav_rate">评分</string>
     <string name="main_feedback_email">反馈:MaterialDesign</string>
     <string name="main_not_found_email">没有邮件程序</string>
@@ -195,7 +196,7 @@
     <string name="pref_on_preference_click">onPreferenceClick</string>
 
     <!-- String related to About -->
-    <string name="title_activity_about">关于这个</string>
+    <string name="title_activity_about">关于我</string>
     <string name="about_version">版本: </string>
     <string name="about_email_intent">关于:MaterialDesign</string>
     <string name="about_not_found_email">没有邮件程序</string>
@@ -203,12 +204,16 @@
     <string name="about_card1_message">嗨！很高兴见到你，感谢你使用这款App！</string>
     <string name="about_card2_title">如果你喜欢这个Demo，欢迎和我联系！</string>
     <string name="about_google_play">评价 (Google play)</string>
-    <string name="about_email">反对 (E-mail)</string>
+    <string name="about_email">反馈 (E-mail)</string>
     <string name="about_git_hub">源代码 (GitHub)</string>
     <string name="about_address">Beijing, China</string>
 
-    <!-- String related to Ads -->
-    <string name="banner_ad_unit_id">ca-app-pub-5767334255225738/3245078201</string>
-    <string name="banner_ad_text">如果你喜欢这款应用，请点击下面的广告支持我，非常感谢！</string>
+    <!-- String related to About -->
+    <string name="activity_donate">捐赠</string>
+    <string name="donate_title">如果您能够捐赠我，我将非常感谢！</string>
+    <string name="donate_title_after">非常感谢您的捐赠！</string>
+    <string name="donate_low">1.99 美元</string>
+    <string name="donate_high">9.99 美元</string>
+    <string name="donate_exception">抱歉，无法操作！</string>
 
 </resources>

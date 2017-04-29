@@ -31,9 +31,9 @@
                 android:icon="@drawable/ic_info_black_24dp"
                 android:title="@string/nav_about_this" />
             <item
-                android:id="@+id/nav_feedback"
-                android:icon="@mipmap/ic_feedback_black_24dp"
-                android:title="@string/nav_feedback" />
+                android:id="@+id/nav_donate"
+                android:icon="@mipmap/ic_attach_money_black_24dp"
+                android:title="@string/nav_donate" />
         </menu>
     </item>
 
