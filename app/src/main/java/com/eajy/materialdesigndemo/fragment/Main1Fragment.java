@@ -17,6 +17,8 @@ import android.view.animation.DecelerateInterpolator;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RatingBar;
+import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.eajy.materialdesigndemo.R;
@@ -28,7 +30,7 @@ public class Main1Fragment extends Fragment implements View.OnClickListener, Vie
 
     private ImageView img_main_card2_share, img_main_card2_bookmark, img_main_card2_favorite;
     private boolean isBookmarkClicked, isFavoriteClicked, isBookmark41Clicked, isBookmark42Clicked, isFavorite41Clicked, isFavorite42Clicked;
-    private LinearLayout ll_card_main3_rate;
+    private RatingBar ll_card_main3_rate;
     private Button btn_card_main1_action1, btn_card_main1_action2;
     private ImageView img_main_card_1, img_main_card_2, img_card_main_3, img_main_card_41, img_main_card_42,
             img_main_card41_favorite, img_main_card42_favorite, img_main_card41_bookmark, img_main_card42_bookmark,
@@ -46,7 +48,7 @@ public class Main1Fragment extends Fragment implements View.OnClickListener, Vie
         img_main_card2_share = (ImageView) nestedScrollView.findViewById(R.id.img_main_card2_share);
         img_main_card2_bookmark = (ImageView) nestedScrollView.findViewById(R.id.img_main_card2_bookmark);
         img_main_card2_favorite = (ImageView) nestedScrollView.findViewById(R.id.img_main_card2_favorite);
-        ll_card_main3_rate = (LinearLayout) nestedScrollView.findViewById(R.id.ll_card_main3_rate);
+        ll_card_main3_rate = (RatingBar) nestedScrollView.findViewById(R.id.ll_card_main3_rate);
 
         img_main_card_1 = (ImageView) nestedScrollView.findViewById(R.id.img_main_card_1);
         img_main_card_2 = (ImageView) nestedScrollView.findViewById(R.id.img_main_card_2);
@@ -253,5 +255,4 @@ public class Main1Fragment extends Fragment implements View.OnClickListener, Vie
         }
         return false;
     }
-
 }

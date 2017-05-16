@@ -274,8 +274,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 break;
 
             case R.id.nav_donate:
-                intent.setClass(this, DonateActivity.class);
-                startActivity(intent);
+//                intent.setClass(this, DonateActivity.class);
+//                startActivity(intent);
+                Toast.makeText(MainActivity.this, "DonateActivity.class not found", Toast.LENGTH_SHORT).show();
                 break;
 
             case R.id.nav_color:
