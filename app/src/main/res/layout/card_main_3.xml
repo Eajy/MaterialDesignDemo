@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/card_main_1_3"
     android:layout_width="match_parent"
     android:layout_height="170dp"
@@ -11,103 +13,91 @@
     card_view:cardCornerRadius="@dimen/card_recycler_corner_radius"
     card_view:cardElevation="@dimen/card_recycler_elevation">
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <TextView
-            android:id="@+id/tv_card_main_3_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/card_title_margin"
-            android:layout_marginRight="@dimen/card_title_margin"
-            android:layout_marginTop="@dimen/card_title_margin"
-            android:text="@string/main_card_title"
-            android:textColor="@color/black"
-            android:textSize="20sp" />
-
-        <TextView
-            android:id="@+id/tv_card_main3_subtitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/tv_card_main_3_title"
-            android:layout_marginLeft="@dimen/card_subtitle_margin"
-            android:layout_marginRight="@dimen/card_subtitle_margin"
-            android:layout_marginTop="@dimen/card_button_margin"
-            android:text="@string/main_card_subtitle" />
-
-        <TextView
-            android:id="@+id/tv_card_main3_details"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/tv_card_main3_subtitle"
-            android:layout_marginLeft="@dimen/card_subtitle_margin"
-            android:layout_marginRight="@dimen/card_subtitle_margin"
-            android:layout_marginTop="@dimen/card_button_margin"
-            android:text="@string/main_card_details"
-            android:textColor="@color/gray_deep" />
-
-        <View
-            android:id="@+id/view_card_main3_line"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_below="@id/tv_card_main3_details"
-            android:layout_marginTop="@dimen/card_title_margin"
-            android:background="@color/gray_light" />
-
+        android:layout_height="match_parent">
         <LinearLayout
-            android:id="@+id/ll_card_main3_rate"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_below="@id/view_card_main3_line"
-            android:background="?attr/selectableItemBackground"
-            android:clickable="true"
-            android:orientation="horizontal"
-            android:paddingEnd="@dimen/card_title_margin"
-            android:paddingStart="@dimen/card_title_margin">
+            android:layout_weight="5"
+            android:orientation="vertical">
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginRight="@dimen/card_title_margin"
-                android:src="@mipmap/ic_star_border_black_24dp" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginRight="@dimen/card_title_margin"
-                android:src="@mipmap/ic_star_border_black_24dp" />
+                <TextView
+                    android:id="@+id/tv_card_main_3_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/card_title_margin"
+                    android:layout_marginRight="@dimen/card_title_margin"
+                    android:layout_marginTop="@dimen/card_title_margin"
+                    android:text="@string/main_card_title"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginRight="@dimen/card_title_margin"
-                android:src="@mipmap/ic_star_border_black_24dp" />
+                <TextView
+                    android:id="@+id/tv_card_main3_subtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_card_main_3_title"
+                    android:layout_marginLeft="@dimen/card_subtitle_margin"
+                    android:layout_marginRight="@dimen/card_subtitle_margin"
+                    android:layout_marginTop="@dimen/card_button_margin"
+                    android:text="@string/main_card_subtitle" />
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginRight="@dimen/card_title_margin"
-                android:src="@mipmap/ic_star_border_black_24dp" />
+                <TextView
+                    android:id="@+id/tv_card_main3_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_card_main3_subtitle"
+                    android:layout_marginLeft="@dimen/card_subtitle_margin"
+                    android:layout_marginRight="@dimen/card_subtitle_margin"
+                    android:layout_marginTop="@dimen/card_button_margin"
+                    android:text="@string/main_card_details"
+                    android:textColor="@color/gray_deep" />
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginRight="@dimen/card_title_margin"
-                android:src="@mipmap/ic_star_border_black_24dp" />
+                <View
+                    android:id="@+id/view_card_main3_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/tv_card_main3_details"
+                    android:layout_marginTop="@dimen/card_title_margin"
+                    android:background="@color/gray_light" />
+
+            </RelativeLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <RatingBar
+                    android:id="@+id/ll_card_main3_rate"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:numStars="5"
+                    android:stepSize="1"
+                    android:rating="0"/>
+
+            </FrameLayout>
+
         </LinearLayout>
 
-        <ImageView
-            android:id="@+id/img_card_main_3"
-            android:layout_width="96dp"
+        <LinearLayout
+            android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_alignParentEnd="true"
-            android:scaleType="fitXY" />
+            android:layout_weight="2">
 
-    </RelativeLayout>
+            <ImageView
+                android:id="@+id/img_card_main_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:scaleType="fitXY" />
+
+        </LinearLayout>
+    </LinearLayout>
+
 </android.support.v7.widget.CardView>
