@@ -19,5 +19,8 @@
 
         <include layout="@layout/card_main_3" />
 
+        <!--<include layout="@layout/ad_banner_main" />-->
+        <include layout="@layout/ad_native_main" />
+
     </LinearLayout>
 </android.support.v4.widget.NestedScrollView>

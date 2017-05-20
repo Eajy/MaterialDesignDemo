@@ -10,6 +10,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AlphaAnimation;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.RelativeLayout;
 
 import com.eajy.materialdesigndemo.R;
@@ -60,6 +62,9 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @Override
     public void onBindViewHolder(final RecyclerViewHolder holder, int position) {
         holder.position = position;
+
+        Animation animation = AnimationUtils.loadAnimation(context, R.anim.anim_recycler_item_show);
+        holder.mView.startAnimation(animation);
 
         AlphaAnimation aa1 = new AlphaAnimation(1.0f, 0.1f);
         aa1.setDuration(400);

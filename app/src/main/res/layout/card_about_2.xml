@@ -22,7 +22,7 @@
             android:layout_height="wrap_content"
             android:padding="@dimen/text_margin"
             android:text="@string/about_card2_title"
-            android:textColor="@color/colorPrimary"
+            android:textColor="@color/colorAccent"
             android:textStyle="bold" />
 
         <View

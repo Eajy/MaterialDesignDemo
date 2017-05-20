@@ -1,6 +1,7 @@
 package com.eajy.materialdesigndemo.fragment;
 
 import android.animation.ObjectAnimator;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.Snackbar;
@@ -20,6 +21,13 @@ import android.widget.LinearLayout;
 
 import com.bumptech.glide.Glide;
 import com.eajy.materialdesigndemo.R;
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.NativeExpressAdView;
+import com.google.android.gms.ads.VideoOptions;
+
+import static android.content.Context.MODE_PRIVATE;
 
 /**
  * Created by zhang on 2016.08.07.
@@ -35,6 +43,8 @@ public class Main1Fragment extends Fragment implements View.OnClickListener, Vie
             img_main_card41_share, img_main_card42_share;
     private CardView card_main_1_1, card_main_1_2, card_main_1_3, card_main_1_4_1, card_main_1_4_2;
     private AlphaAnimation alphaAnimation, alphaAnimationShowIcon;
+    private NativeExpressAdView adView;
+    private CardView card_ad;
 
     @Nullable
     @Override
@@ -72,6 +82,9 @@ public class Main1Fragment extends Fragment implements View.OnClickListener, Vie
         Glide.with(getContext()).load(R.drawable.material_design_11).fitCenter().into(img_card_main_3);
         Glide.with(getContext()).load(R.drawable.material_design_1).fitCenter().into(img_main_card_41);
         Glide.with(getContext()).load(R.drawable.material_design_1).fitCenter().into(img_main_card_42);
+
+        adView = (NativeExpressAdView) nestedScrollView.findViewById(R.id.adView);
+        card_ad = (CardView) nestedScrollView.findViewById(R.id.card_ad);
 
         // ViewGroup viewGroup = (ViewGroup) mRecyclerView.getParent();
         // if (viewGroup != null) { viewGroup.removeAllViews(); }
@@ -116,6 +129,8 @@ public class Main1Fragment extends Fragment implements View.OnClickListener, Vie
 
         alphaAnimationShowIcon = new AlphaAnimation(0.2f, 1.0f);
         alphaAnimationShowIcon.setDuration(500);
+
+        showAd();
     }
 
     @Override
@@ -252,6 +267,16 @@ public class Main1Fragment extends Fragment implements View.OnClickListener, Vie
                 break;
         }
         return false;
+    }
+
+    public void showAd() {
+        SharedPreferences sharedPreferences = getContext().getSharedPreferences("app", MODE_PRIVATE);
+        if (!sharedPreferences.getBoolean("isDonated", false)) {
+            AdRequest request = new AdRequest.Builder().build();
+            adView.loadAd(request);
+
+            card_ad.setVisibility(View.VISIBLE);
+        }
     }
 
 }

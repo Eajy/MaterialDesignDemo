@@ -6,14 +6,14 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.CardView;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -27,9 +27,10 @@ public class AboutActivity extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
 
-        ActionBar actionBar = getSupportActionBar();
-        if (actionBar != null) {
-            actionBar.setDisplayHomeAsUpEnabled(true);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_about);
+        setSupportActionBar(toolbar);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
 
         getWindow().setNavigationBarColor(getResources().getColor(R.color.colorPrimary));
@@ -38,17 +39,13 @@ public class AboutActivity extends AppCompatActivity implements View.OnClickList
     }
 
     public void initView() {
-        CardView card_about_2 = (CardView) findViewById(R.id.card_about_2);
         LinearLayout ll_card_about_2_shop = (LinearLayout) findViewById(R.id.ll_card_about_2_shop);
         LinearLayout ll_card_about_2_email = (LinearLayout) findViewById(R.id.ll_card_about_2_email);
         LinearLayout ll_card_about_2_git_hub = (LinearLayout) findViewById(R.id.ll_card_about_2_git_hub);
+        ScrollView scroll_about = (ScrollView) findViewById(R.id.scroll_about);
 
         Animation animation = AnimationUtils.loadAnimation(this, R.anim.anim_about_card_show);
-        card_about_2.startAnimation(animation);
-
-        AlphaAnimation alphaAnimation = new AlphaAnimation(0.0f, 1.0f);
-        alphaAnimation.setDuration(300);
-        alphaAnimation.setStartOffset(1000);
+        scroll_about.startAnimation(animation);
 
         ll_card_about_2_shop.setOnClickListener(this);
         ll_card_about_2_email.setOnClickListener(this);
@@ -56,6 +53,10 @@ public class AboutActivity extends AppCompatActivity implements View.OnClickList
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab_about_share);
         fab.setOnClickListener(this);
+
+        AlphaAnimation alphaAnimation = new AlphaAnimation(0.0f, 1.0f);
+        alphaAnimation.setDuration(300);
+        alphaAnimation.setStartOffset(600);
 
         TextView tv_about_version = (TextView) findViewById(R.id.tv_about_version);
         tv_about_version.setText(getVersionName());
@@ -106,7 +107,7 @@ public class AboutActivity extends AppCompatActivity implements View.OnClickList
             PackageManager manager = this.getPackageManager();
             PackageInfo info = manager.getPackageInfo(this.getPackageName(), 0);
             String version = info.versionName;
-            return getString(R.string.about_version) + version;
+            return getString(R.string.about_version) + " " + version;
         } catch (Exception e) {
             e.printStackTrace();
             return "";
