@@ -201,7 +201,7 @@
     <string name="about_email_intent">About:MaterialDesign</string>
     <string name="about_not_found_email">Not found email app</string>
     <string name="about_card1_title">Material Design Demo</string>
-    <string name="about_card1_message">Hey, glad to see you! Thanks for using the app.</string>
+    <string name="about_card1_message">Hey, glad to see you!</string>
     <string name="about_card2_title">If you liked the app, feel free to contact me.</string>
     <string name="about_google_play">Rate on Google play</string>
     <string name="about_email">Feedback by E-mail</string>
@@ -215,5 +215,11 @@
     <string name="donate_low">1.99 USD</string>
     <string name="donate_high">9.99 USD</string>
     <string name="donate_exception">Sorry, can not do this!</string>
+
+    <!-- String related to Ad -->
+    <string name="banner_ad_loading">Ads loading …</string>
+    <string name="banner_ad_unit_id_donate">ca-app-pub-1251484082745159/2015219028</string>
+    <string name="banner_ad_unit_id_main">ca-app-pub-1251484082745159/1419789825</string>
+    <string name="native_ad_unit_id_main">ca-app-pub-1251484082745159/8449555424</string>
 
 </resources>

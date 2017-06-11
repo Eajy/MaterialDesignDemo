@@ -201,7 +201,7 @@
     <string name="about_email_intent">关于:MaterialDesign</string>
     <string name="about_not_found_email">没有邮件程序</string>
     <string name="about_card1_title">Material Design Demo</string>
-    <string name="about_card1_message">嗨！很高兴见到你，感谢你使用这款App！</string>
+    <string name="about_card1_message">嗨！很高兴见到你！</string>
     <string name="about_card2_title">如果你喜欢这个Demo，欢迎和我联系！</string>
     <string name="about_google_play">评价 (Google play)</string>
     <string name="about_email">反馈 (E-mail)</string>
@@ -215,5 +215,11 @@
     <string name="donate_low">1.99 美元</string>
     <string name="donate_high">9.99 美元</string>
     <string name="donate_exception">抱歉，无法操作！</string>
+
+    <!-- String related to Ad -->
+    <string name="banner_ad_loading">广告加载中 …</string>
+    <string name="banner_ad_unit_id_donate">ca-app-pub-1251484082745159/2015219028</string>
+    <string name="banner_ad_unit_id_main">ca-app-pub-1251484082745159/1419789825</string>
+    <string name="native_ad_unit_id_main">ca-app-pub-1251484082745159/8449555424</string>
 
 </resources>
