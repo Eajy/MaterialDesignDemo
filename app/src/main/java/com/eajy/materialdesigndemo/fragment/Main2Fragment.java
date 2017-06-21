@@ -24,6 +24,7 @@ import android.widget.TimePicker;
 import com.bumptech.glide.Glide;
 import com.eajy.materialdesigndemo.R;
 
+import java.text.DateFormat;
 import java.util.Calendar;
 
 /**
@@ -164,7 +165,7 @@ public class Main2Fragment extends Fragment implements View.OnClickListener {
                         calendar.set(Calendar.YEAR, year);
                         calendar.set(Calendar.MONTH, monthOfYear);
                         calendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
-                        String date = year + "-" + (monthOfYear + 1) + "-" + dayOfMonth;
+                        String date = DateFormat.getDateInstance(DateFormat.MEDIUM).format(calendar.getTime());
                         btn_dialog_7.setText(date);
                     }
                 }, calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH));
@@ -177,7 +178,8 @@ public class Main2Fragment extends Fragment implements View.OnClickListener {
                     public void onTimeSet(TimePicker timePicker, int i, int i1) {
                         calendar.set(Calendar.HOUR_OF_DAY, i);
                         calendar.set(Calendar.MINUTE, i1);
-                        btn_dialog_8.setText(i + ":" + i1);
+                        String time = DateFormat.getTimeInstance(DateFormat.SHORT).format(calendar.getTime());
+                        btn_dialog_8.setText(time);
                     }
                 }, calendar.get(Calendar.HOUR_OF_DAY), calendar.get(Calendar.MINUTE), true);
                 timePickerDialog.show();
