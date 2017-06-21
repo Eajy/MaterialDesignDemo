@@ -28,7 +28,7 @@ public class ShareViewActivity extends AppCompatActivity {
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_share_view);
         toolbar.setSubtitle("Shared Element Transitions");
-        toolbar.setNavigationIcon(R.mipmap.ic_close_white_24dp);
+        toolbar.setNavigationIcon(R.drawable.ic_close_white_24dp);
         setSupportActionBar(toolbar);
 
         //左上角返回按钮处理成与返回键的逻辑一样，否则会没有过渡动画

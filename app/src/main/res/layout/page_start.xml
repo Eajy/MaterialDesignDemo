@@ -9,8 +9,8 @@
 
     <ImageView
         android:id="@+id/img_page_start"
-        android:layout_width="144dp"
-        android:layout_height="144dp"
+        android:layout_width="@dimen/start_page_image_size"
+        android:layout_height="@dimen/start_page_image_size"
         android:layout_centerInParent="true"
         android:scaleType="fitCenter" />
 

@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <dimen name="app_bar_height_image_view">240dp</dimen>
+    <dimen name="app_bar_height_image_view">300dp</dimen>
 
     <dimen name="activity_horizontal_margin">64dp</dimen>
 
@@ -10,5 +9,7 @@
     <dimen name="main_card_margin_horizontal">64dp</dimen>
 
     <dimen name="zero_horizontal_margin">48dp</dimen>
+
+    <dimen name="start_page_image_size">256dp</dimen>
 
 </resources>

@@ -32,7 +32,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:padding="@dimen/text_margin"
-                android:src="@mipmap/ic_attach_money_black_24dp"
+                android:src="@drawable/ic_attach_money_black_24dp"
                 android:tint="@color/colorAccent" />
 
             <TextView
@@ -71,7 +71,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:padding="@dimen/text_margin"
-                android:src="@mipmap/ic_attach_money_black_24dp"
+                android:src="@drawable/ic_attach_money_black_24dp"
                 android:tint="@color/colorAccent" />
 
             <TextView

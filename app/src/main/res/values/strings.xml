@@ -168,7 +168,7 @@
     <string name="forgot_password">Forgot password?</string>
     <string name="register">Register</string>
     <string name="error_invalid_name">Invalid user name</string>
-    <string name="error_invalid_password">At least 4</string>
+    <string name="error_invalid_password">At least 4 characters</string>
     <string name="error_incorrect_password">Incorrect password</string>
     <string name="error_no_name">Input your phone or email</string>
     <string name="error_no_password">Input your password</string>

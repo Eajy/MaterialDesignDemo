@@ -46,7 +46,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_margin="@dimen/text_margin"
-                android:src="@mipmap/ic_shop_black_24dp" />
+                android:src="@drawable/ic_shop_black_24dp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -71,7 +71,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_margin="@dimen/text_margin"
-                android:src="@mipmap/ic_email_black_24dp" />
+                android:src="@drawable/ic_email_black_24dp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -96,7 +96,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_margin="@dimen/text_margin"
-                android:src="@mipmap/github" />
+                android:src="@drawable/github" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -121,7 +121,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_margin="@dimen/text_margin"
-                android:src="@mipmap/ic_location_on_black_24dp" />
+                android:src="@drawable/ic_location_on_black_24dp" />
 
             <TextView
                 android:layout_width="wrap_content"

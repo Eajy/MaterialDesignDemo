@@ -5,6 +5,8 @@ import android.animation.AnimatorListenerAdapter;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
+import android.support.design.widget.TextInputEditText;
+import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.KeyEvent;
@@ -35,6 +37,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private UserLoginTask mAuthTask = null;
 
     private AutoCompleteTextView mUserNameView;
+    private TextInputLayout input_user_name, input_password;
     private EditText mPasswordView;
     private View mProgressView;
     private View mLoginFormView;
@@ -51,8 +54,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         mLoginFormView = findViewById(R.id.form_login);
         mProgressView = findViewById(R.id.progress_login);
         mUserNameView = (AutoCompleteTextView) findViewById(R.id.tv_user_name);
-
         mPasswordView = (EditText) findViewById(R.id.tv_password);
+        input_user_name = (TextInputLayout) findViewById(R.id.input_user_name);
+        input_password = (TextInputLayout) findViewById(R.id.input_password);
         mPasswordView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView textView, int id, KeyEvent keyEvent) {
@@ -102,8 +106,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         }
 
         // Reset errors.
-        mUserNameView.setError(null);
-        mPasswordView.setError(null);
+        input_user_name.setError(null);
+        input_password.setError(null);
 
         String userName = mUserNameView.getText().toString();
         String password = mPasswordView.getText().toString();
@@ -112,19 +116,19 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         View focusView = null;
 
         if (TextUtils.isEmpty(userName)) {
-            mUserNameView.setError(getString(R.string.error_no_name));
+            input_user_name.setError(getString(R.string.error_no_name));
             focusView = mUserNameView;
             cancel = true;
         } else if (!isPhoneValid(userName) && !isEmailValid(userName)) {
-            mUserNameView.setError(getString(R.string.error_invalid_name));
+            input_user_name.setError(getString(R.string.error_invalid_name));
             focusView = mUserNameView;
             cancel = true;
         } else if (!TextUtils.isEmpty(password) && !isPasswordValid(password)) {
-            mPasswordView.setError(getString(R.string.error_invalid_password));
+            input_password.setError(getString(R.string.error_invalid_password));
             focusView = mPasswordView;
             cancel = true;
         } else if ((isPhoneValid(userName) || isEmailValid(userName)) && TextUtils.isEmpty(password)) {
-            mPasswordView.setError(getString(R.string.error_no_password));
+            input_password.setError(getString(R.string.error_no_password));
             focusView = mPasswordView;
             cancel = true;
         }
@@ -219,7 +223,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             if (success) {
                 finish();
             } else {
-                mPasswordView.setError(getString(R.string.error_incorrect_password));
+                input_password.setError(getString(R.string.error_incorrect_password));
                 mPasswordView.requestFocus();
             }
         }

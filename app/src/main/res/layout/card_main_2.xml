@@ -50,7 +50,7 @@
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:clickable="true"
                 android:padding="8dp"
-                android:src="@mipmap/ic_share_black_24dp" />
+                android:src="@drawable/ic_share_black_24dp" />
 
             <ImageView
                 android:id="@+id/img_main_card2_bookmark"
@@ -61,7 +61,7 @@
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:clickable="true"
                 android:padding="8dp"
-                android:src="@mipmap/ic_bookmark_border_black_24dp" />
+                android:src="@drawable/ic_bookmark_border_black_24dp" />
 
             <ImageView
                 android:id="@+id/img_main_card2_favorite"
@@ -72,7 +72,7 @@
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:clickable="true"
                 android:padding="8dp"
-                android:src="@mipmap/ic_favorite_border_black_24dp" />
+                android:src="@drawable/ic_favorite_border_black_24dp" />
         </RelativeLayout>
 
 
