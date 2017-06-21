@@ -5,6 +5,7 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="app_bar_height">180dp</dimen>
+    <dimen name="app_bar_height_image_view">180dp</dimen>
     <dimen name="text_margin">16dp</dimen>
     <dimen name="text_margin_small">8dp</dimen>
     <dimen name="text_margin_very_small">4dp</dimen>
@@ -27,5 +28,7 @@
     <dimen name="zero_horizontal_margin">0dp</dimen>
 
     <dimen name="start_page_image_size">144dp</dimen>
+
+    <dimen name="max_width">640dp</dimen>
 
 </resources>

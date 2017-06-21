@@ -1,14 +1,18 @@
 package com.eajy.materialdesigndemo.activity;
 
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.support.v7.widget.helper.ItemTouchHelper;
+import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.View;
 
 import com.eajy.materialdesigndemo.R;
@@ -38,19 +42,31 @@ public class RecyclerViewActivity extends AppCompatActivity {
 
     private void initView() {
 
+        fab = (FloatingActionButton) findViewById(R.id.fab_recycler_view);
         final RecyclerViewAdapter adapter = new RecyclerViewAdapter(this);
         mRecyclerView = (RecyclerView) findViewById(R.id.recycler_view_recycler_view);
-        final LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
-        mRecyclerView.setLayoutManager(linearLayoutManager);
-        mRecyclerView.setAdapter(adapter);
 
-        fab = (FloatingActionButton) findViewById(R.id.fab_recycler_view);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                adapter.addItem(linearLayoutManager.findFirstVisibleItemPosition() + 1);
-            }
-        });
+        if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE && getScreenSizeOfDevice() > 7.0) {
+            final GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 2);
+            mRecyclerView.setLayoutManager(gridLayoutManager);
+            fab.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    adapter.addItem(gridLayoutManager.findFirstVisibleItemPosition() + 1);
+                }
+            });
+        } else {
+            final LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
+            mRecyclerView.setLayoutManager(linearLayoutManager);
+            fab.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    adapter.addItem(linearLayoutManager.findFirstVisibleItemPosition() + 1);
+                }
+            });
+        }
+
+        mRecyclerView.setAdapter(adapter);
 
         //关联ItemTouchHelper和RecyclerView
         ItemTouchHelper.Callback callback = new ItemTouchHelperCallback(adapter);
@@ -98,6 +114,17 @@ public class RecyclerViewActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    private double getScreenSizeOfDevice() {
+        DisplayMetrics dm = getResources().getDisplayMetrics();
+        int width = dm.widthPixels;
+        int height = dm.heightPixels;
+        double x = Math.pow(width, 2);
+        double y = Math.pow(height, 2);
+        double diagonal = Math.sqrt(x + y);
+        int dens = dm.densityDpi;
+        return diagonal / (double) dens;
     }
 
 }

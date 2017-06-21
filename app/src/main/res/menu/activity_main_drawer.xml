@@ -4,23 +4,23 @@
     <group android:checkableBehavior="none">
         <item
             android:id="@+id/nav_recycler_and_swipe_refresh"
-            android:icon="@mipmap/ic_format_line_spacing_black_24dp"
+            android:icon="@drawable/ic_format_line_spacing_black_24dp"
             android:title="@string/nav_recycler_view" />
         <item
             android:id="@+id/nav_scrolling"
-            android:icon="@mipmap/ic_file_download_black_24dp"
+            android:icon="@drawable/ic_file_download_black_24dp"
             android:title="@string/nav_scrolling" />
         <item
             android:id="@+id/nav_full_screen"
-            android:icon="@mipmap/ic_fullscreen_black_24dp"
+            android:icon="@drawable/ic_fullscreen_black_24dp"
             android:title="@string/nav_fullscreen" />
         <item
             android:id="@+id/nav_bottom_navigation"
-            android:icon="@mipmap/ic_more_horiz_black_24dp"
+            android:icon="@drawable/ic_more_horiz_black_24dp"
             android:title="@string/nav_bottom_navigation" />
         <item
             android:id="@+id/nav_settings"
-            android:icon="@mipmap/ic_settings_black_24dp"
+            android:icon="@drawable/ic_settings_black_24dp"
             android:title="@string/nav_settings" />
     </group>
 
@@ -32,7 +32,7 @@
                 android:title="@string/nav_about_this" />
             <item
                 android:id="@+id/nav_donate"
-                android:icon="@mipmap/ic_attach_money_black_24dp"
+                android:icon="@drawable/ic_attach_money_black_24dp"
                 android:title="@string/nav_donate" />
         </menu>
     </item>
@@ -41,7 +41,7 @@
         <menu>
             <item
                 android:id="@+id/nav_color"
-                android:icon="@mipmap/material_design_color"
+                android:icon="@drawable/material_design_color"
                 android:title="@string/nav_color" />
         </menu>
     </item>

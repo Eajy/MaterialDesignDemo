@@ -147,11 +147,11 @@ public class Main1Fragment extends Fragment implements View.OnClickListener, Vie
 
             case R.id.img_main_card2_bookmark:
                 if (!isBookmarkClicked) {
-                    img_main_card2_bookmark.setImageResource(R.mipmap.ic_bookmark_black_24dp);
+                    img_main_card2_bookmark.setImageResource(R.drawable.ic_bookmark_black_24dp);
                     img_main_card2_bookmark.startAnimation(alphaAnimationShowIcon);
                     isBookmarkClicked = true;
                 } else {
-                    img_main_card2_bookmark.setImageResource(R.mipmap.ic_bookmark_border_black_24dp);
+                    img_main_card2_bookmark.setImageResource(R.drawable.ic_bookmark_border_black_24dp);
                     img_main_card2_bookmark.startAnimation(alphaAnimationShowIcon);
                     isBookmarkClicked = false;
                 }
@@ -159,12 +159,12 @@ public class Main1Fragment extends Fragment implements View.OnClickListener, Vie
 
             case R.id.img_main_card2_favorite:
                 if (!isFavoriteClicked) {
-                    img_main_card2_favorite.setImageResource(R.mipmap.ic_favorite_black_24dp);
+                    img_main_card2_favorite.setImageResource(R.drawable.ic_favorite_black_24dp);
                     img_main_card2_favorite.startAnimation(alphaAnimationShowIcon);
                     img_main_card2_favorite.startAnimation(alphaAnimationShowIcon);
                     isFavoriteClicked = true;
                 } else {
-                    img_main_card2_favorite.setImageResource(R.mipmap.ic_favorite_border_black_24dp);
+                    img_main_card2_favorite.setImageResource(R.drawable.ic_favorite_border_black_24dp);
                     img_main_card2_favorite.startAnimation(alphaAnimationShowIcon);
                     img_main_card2_favorite.startAnimation(alphaAnimationShowIcon);
                     isFavoriteClicked = false;
@@ -173,11 +173,11 @@ public class Main1Fragment extends Fragment implements View.OnClickListener, Vie
 
             case R.id.img_main_card41_favorite:
                 if (!isFavorite41Clicked) {
-                    img_main_card41_favorite.setImageResource(R.mipmap.ic_favorite_black_24dp);
+                    img_main_card41_favorite.setImageResource(R.drawable.ic_favorite_black_24dp);
                     img_main_card41_favorite.startAnimation(alphaAnimationShowIcon);
                     isFavorite41Clicked = true;
                 } else {
-                    img_main_card41_favorite.setImageResource(R.mipmap.ic_favorite_border_black_24dp);
+                    img_main_card41_favorite.setImageResource(R.drawable.ic_favorite_border_black_24dp);
                     img_main_card41_favorite.startAnimation(alphaAnimationShowIcon);
                     isFavorite41Clicked = false;
                 }
@@ -185,11 +185,11 @@ public class Main1Fragment extends Fragment implements View.OnClickListener, Vie
 
             case R.id.img_main_card42_favorite:
                 if (!isFavorite42Clicked) {
-                    img_main_card42_favorite.setImageResource(R.mipmap.ic_favorite_black_24dp);
+                    img_main_card42_favorite.setImageResource(R.drawable.ic_favorite_black_24dp);
                     img_main_card42_favorite.startAnimation(alphaAnimationShowIcon);
                     isFavorite42Clicked = true;
                 } else {
-                    img_main_card42_favorite.setImageResource(R.mipmap.ic_favorite_border_black_24dp);
+                    img_main_card42_favorite.setImageResource(R.drawable.ic_favorite_border_black_24dp);
                     img_main_card42_favorite.startAnimation(alphaAnimationShowIcon);
                     isFavorite42Clicked = false;
                 }
@@ -197,11 +197,11 @@ public class Main1Fragment extends Fragment implements View.OnClickListener, Vie
 
             case R.id.img_main_card41_bookmark:
                 if (!isBookmark41Clicked) {
-                    img_main_card41_bookmark.setImageResource(R.mipmap.ic_bookmark_black_24dp);
+                    img_main_card41_bookmark.setImageResource(R.drawable.ic_bookmark_black_24dp);
                     img_main_card41_bookmark.startAnimation(alphaAnimationShowIcon);
                     isBookmark41Clicked = true;
                 } else {
-                    img_main_card41_bookmark.setImageResource(R.mipmap.ic_bookmark_border_black_24dp);
+                    img_main_card41_bookmark.setImageResource(R.drawable.ic_bookmark_border_black_24dp);
                     img_main_card41_bookmark.startAnimation(alphaAnimationShowIcon);
                     isBookmark41Clicked = false;
                 }
@@ -209,11 +209,11 @@ public class Main1Fragment extends Fragment implements View.OnClickListener, Vie
 
             case R.id.img_main_card42_bookmark:
                 if (!isBookmark42Clicked) {
-                    img_main_card42_bookmark.setImageResource(R.mipmap.ic_bookmark_black_24dp);
+                    img_main_card42_bookmark.setImageResource(R.drawable.ic_bookmark_black_24dp);
                     img_main_card42_bookmark.startAnimation(alphaAnimationShowIcon);
                     isBookmark42Clicked = true;
                 } else {
-                    img_main_card42_bookmark.setImageResource(R.mipmap.ic_bookmark_border_black_24dp);
+                    img_main_card42_bookmark.setImageResource(R.drawable.ic_bookmark_border_black_24dp);
                     img_main_card42_bookmark.startAnimation(alphaAnimationShowIcon);
                     isBookmark42Clicked = false;
                 }

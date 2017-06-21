@@ -2,13 +2,16 @@
     <!-- Example customization of dimensions originally defined in res/values/dimens.xml
          (such as screen margins) for screens with more than 820dp of available width. This
          would include 7" and 10" devices in landscape (~960dp and ~1280dp respectively). -->
-    <dimen name="activity_horizontal_margin">64dp</dimen>
 
-    <dimen name="card_margin_horizontal">64dp</dimen>
+    <dimen name="app_bar_height_image_view">360dp</dimen>
 
-    <dimen name="main_card_margin_horizontal">64dp</dimen>
+    <dimen name="activity_horizontal_margin">128dp</dimen>
 
-    <dimen name="zero_horizontal_margin">48dp</dimen>
+    <dimen name="card_margin_horizontal">128dp</dimen>
+
+    <dimen name="main_card_margin_horizontal">128dp</dimen>
+
+    <dimen name="zero_horizontal_margin">112dp</dimen>
 
     <dimen name="start_page_image_size">256dp</dimen>
 

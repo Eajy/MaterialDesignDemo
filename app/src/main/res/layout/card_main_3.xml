@@ -71,35 +71,35 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_marginRight="@dimen/card_title_margin"
-                android:src="@mipmap/ic_star_border_black_24dp" />
+                android:src="@drawable/ic_star_border_black_24dp" />
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_marginRight="@dimen/card_title_margin"
-                android:src="@mipmap/ic_star_border_black_24dp" />
+                android:src="@drawable/ic_star_border_black_24dp" />
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_marginRight="@dimen/card_title_margin"
-                android:src="@mipmap/ic_star_border_black_24dp" />
+                android:src="@drawable/ic_star_border_black_24dp" />
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_marginRight="@dimen/card_title_margin"
-                android:src="@mipmap/ic_star_border_black_24dp" />
+                android:src="@drawable/ic_star_border_black_24dp" />
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_marginRight="@dimen/card_title_margin"
-                android:src="@mipmap/ic_star_border_black_24dp" />
+                android:src="@drawable/ic_star_border_black_24dp" />
         </LinearLayout>
 
         <ImageView

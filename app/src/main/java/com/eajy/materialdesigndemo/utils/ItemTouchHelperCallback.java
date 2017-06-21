@@ -1,5 +1,6 @@
 package com.eajy.materialdesigndemo.utils;
 
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.helper.ItemTouchHelper;
@@ -19,15 +20,15 @@ public class ItemTouchHelperCallback extends ItemTouchHelper.Callback {
 
     @Override
     public int getMovementFlags(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder) {
-        if (recyclerView.getLayoutManager() instanceof LinearLayoutManager) {
-            //单列的RecyclerView支持上下拖动和左右侧滑
-            final int dragFlags = ItemTouchHelper.UP | ItemTouchHelper.DOWN;
-            final int swipeFlags = ItemTouchHelper.START | ItemTouchHelper.END;
-            return makeMovementFlags(dragFlags, swipeFlags);
-        } else {
+        if (recyclerView.getLayoutManager() instanceof GridLayoutManager) {
             //多列的RecyclerView支持上下左右拖动和不支持左右侧滑
             final int dragFlags = ItemTouchHelper.UP | ItemTouchHelper.DOWN | ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT;
             final int swipeFlags = 0;
+            return makeMovementFlags(dragFlags, swipeFlags);
+        } else {
+            //单列的RecyclerView支持上下拖动和左右侧滑
+            final int dragFlags = ItemTouchHelper.UP | ItemTouchHelper.DOWN;
+            final int swipeFlags = ItemTouchHelper.START | ItemTouchHelper.END;
             return makeMovementFlags(dragFlags, swipeFlags);
         }
     }
