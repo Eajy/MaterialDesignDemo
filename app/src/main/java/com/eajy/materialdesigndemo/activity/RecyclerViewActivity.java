@@ -46,7 +46,16 @@ public class RecyclerViewActivity extends AppCompatActivity {
         final RecyclerViewAdapter adapter = new RecyclerViewAdapter(this);
         mRecyclerView = (RecyclerView) findViewById(R.id.recycler_view_recycler_view);
 
-        if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE && getScreenSizeOfDevice() > 7.0) {
+        if (getScreenWidthDp() >= 1200) {
+            final GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 3);
+            mRecyclerView.setLayoutManager(gridLayoutManager);
+            fab.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    adapter.addItem(gridLayoutManager.findFirstVisibleItemPosition() + 1);
+                }
+            });
+        } else if (getScreenWidthDp() >= 800) {
             final GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 2);
             mRecyclerView.setLayoutManager(gridLayoutManager);
             fab.setOnClickListener(new View.OnClickListener() {
@@ -116,15 +125,10 @@ public class RecyclerViewActivity extends AppCompatActivity {
 
     }
 
-    private double getScreenSizeOfDevice() {
-        DisplayMetrics dm = getResources().getDisplayMetrics();
-        int width = dm.widthPixels;
-        int height = dm.heightPixels;
-        double x = Math.pow(width, 2);
-        double y = Math.pow(height, 2);
-        double diagonal = Math.sqrt(x + y);
-        int dens = dm.densityDpi;
-        return diagonal / (double) dens;
+
+    private int getScreenWidthDp() {
+        DisplayMetrics displayMetrics = getResources().getDisplayMetrics();
+        return (int) (displayMetrics.widthPixels / displayMetrics.density);
     }
 
 }

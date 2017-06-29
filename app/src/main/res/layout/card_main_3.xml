@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="170dp"
     android:layout_marginBottom="@dimen/main_card_margin_vertical"
-    android:layout_marginLeft="@dimen/main_card_margin_horizontal"
-    android:layout_marginRight="@dimen/main_card_margin_horizontal"
+    android:layout_marginStart="@dimen/main_card_margin_horizontal"
+    android:layout_marginEnd="@dimen/main_card_margin_horizontal"
     android:foreground="?attr/selectableItemBackground"
     card_view:cardCornerRadius="@dimen/card_recycler_corner_radius"
     card_view:cardElevation="@dimen/card_recycler_elevation">
@@ -17,22 +17,22 @@
 
         <TextView
             android:id="@+id/tv_card_main_3_title"
+            style="@style/TextAppearance.AppCompat.Large"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/card_title_margin"
-            android:layout_marginRight="@dimen/card_title_margin"
+            android:layout_marginStart="@dimen/card_title_margin"
+            android:layout_marginEnd="@dimen/card_title_margin"
             android:layout_marginTop="@dimen/card_title_margin"
             android:text="@string/main_card_title"
-            android:textColor="@color/black"
-            android:textSize="20sp" />
+            android:textColor="@color/black" />
 
         <TextView
             android:id="@+id/tv_card_main3_subtitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/tv_card_main_3_title"
-            android:layout_marginLeft="@dimen/card_subtitle_margin"
-            android:layout_marginRight="@dimen/card_subtitle_margin"
+            android:layout_marginStart="@dimen/card_subtitle_margin"
+            android:layout_marginEnd="@dimen/card_subtitle_margin"
             android:layout_marginTop="@dimen/card_button_margin"
             android:text="@string/main_card_subtitle" />
 
@@ -41,8 +41,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/tv_card_main3_subtitle"
-            android:layout_marginLeft="@dimen/card_subtitle_margin"
-            android:layout_marginRight="@dimen/card_subtitle_margin"
+            android:layout_marginStart="@dimen/card_subtitle_margin"
+            android:layout_marginEnd="@dimen/card_subtitle_margin"
             android:layout_marginTop="@dimen/card_button_margin"
             android:text="@string/main_card_details"
             android:textColor="@color/gray_deep" />
@@ -70,35 +70,35 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:layout_marginRight="@dimen/card_title_margin"
+                android:layout_marginEnd="@dimen/card_title_margin"
                 android:src="@drawable/ic_star_border_black_24dp" />
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:layout_marginRight="@dimen/card_title_margin"
+                android:layout_marginEnd="@dimen/card_title_margin"
                 android:src="@drawable/ic_star_border_black_24dp" />
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:layout_marginRight="@dimen/card_title_margin"
+                android:layout_marginEnd="@dimen/card_title_margin"
                 android:src="@drawable/ic_star_border_black_24dp" />
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:layout_marginRight="@dimen/card_title_margin"
+                android:layout_marginEnd="@dimen/card_title_margin"
                 android:src="@drawable/ic_star_border_black_24dp" />
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:layout_marginRight="@dimen/card_title_margin"
+                android:layout_marginEnd="@dimen/card_title_margin"
                 android:src="@drawable/ic_star_border_black_24dp" />
         </LinearLayout>
 

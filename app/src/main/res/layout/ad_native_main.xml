@@ -25,6 +25,7 @@
         <com.google.android.gms.ads.NativeExpressAdView
             android:id="@+id/adView"
             android:layout_width="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:layout_height="wrap_content"
             ads:adSize="344x286"
             ads:adUnitId="@string/native_ad_unit_id_main" />

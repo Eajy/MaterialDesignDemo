@@ -38,6 +38,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/text_margin"
+            android:checked="true"
+            android:switchPadding="@dimen/text_margin"
             android:text="@string/main_widget_switch" />
 
         <TextView
@@ -74,6 +76,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/text_margin"
+            android:checked="true"
             android:text="@string/main_widget_check_box_1" />
 
         <CheckBox
@@ -104,6 +107,7 @@
                 android:id="@+id/radioButton1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:checked="true"
                 android:text="@string/main_widget_radio_button_1" />
 
             <RadioButton
@@ -175,8 +179,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/text_margin_small"
             android:background="@color/main_background"
-            android:elevation="@dimen/text_margin_very_small"
-            android:visibility="visible" />
+            android:elevation="@dimen/text_margin_very_small" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -192,8 +195,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/text_margin_small"
             android:background="@color/main_background"
-            android:elevation="@dimen/text_margin_very_small"
-            android:visibility="visible" />
+            android:elevation="@dimen/text_margin_very_small" />
 
     </LinearLayout>
 </android.support.v4.widget.NestedScrollView>

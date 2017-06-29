@@ -15,11 +15,18 @@
 
         <include layout="@layout/card_main_2" />
 
-        <include layout="@layout/card_main_4" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <include layout="@layout/card_main_4_1" />
+
+            <include layout="@layout/card_main_4_2" />
+        </LinearLayout>
 
         <include layout="@layout/card_main_3" />
 
-        <!--<include layout="@layout/ad_banner_main" />-->
         <include layout="@layout/ad_native_main" />
 
     </LinearLayout>

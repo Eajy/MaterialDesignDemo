@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginBottom="@dimen/main_card_margin_vertical"
-    android:layout_marginLeft="@dimen/main_card_margin_horizontal"
-    android:layout_marginRight="@dimen/main_card_margin_horizontal"
+    android:layout_marginStart="@dimen/main_card_margin_horizontal"
+    android:layout_marginEnd="@dimen/main_card_margin_horizontal"
     android:layout_marginTop="@dimen/main_card_margin_vertical"
     android:background="?attr/selectableItemBackground"
     android:foreground="?attr/selectableItemBackground"
@@ -27,13 +27,13 @@
 
         <TextView
             android:id="@+id/tv_card_main_2_title"
+            style="@style/TextAppearance.AppCompat.Large"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignBottom="@id/img_main_card_2"
             android:layout_margin="@dimen/card_title_margin"
             android:text="@string/main_card_title"
-            android:textColor="@color/white"
-            android:textSize="20sp" />
+            android:textColor="@color/white" />
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -46,7 +46,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
-                android:layout_marginRight="8dp"
+                android:layout_marginEnd="8dp"
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:clickable="true"
                 android:padding="8dp"
@@ -56,7 +56,7 @@
                 android:id="@+id/img_main_card2_bookmark"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="8dp"
+                android:layout_marginEnd="8dp"
                 android:layout_toStartOf="@id/img_main_card2_share"
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:clickable="true"
@@ -67,7 +67,7 @@
                 android:id="@+id/img_main_card2_favorite"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="8dp"
+                android:layout_marginEnd="8dp"
                 android:layout_toStartOf="@id/img_main_card2_bookmark"
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:clickable="true"

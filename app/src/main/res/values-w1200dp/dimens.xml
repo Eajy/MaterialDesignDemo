@@ -1,0 +1,24 @@
+<resources>
+
+    <dimen name="app_bar_height_image_view">420dp</dimen>
+
+    <dimen name="activity_horizontal_margin">128dp</dimen>
+    <dimen name="activity_horizontal_margin_big_activity">128dp</dimen>
+
+    <dimen name="card_margin_horizontal">128dp</dimen>
+    <dimen name="card_margin_vertical_big_activity">8dp</dimen>
+
+    <dimen name="main_card_margin_horizontal">128dp</dimen>
+    <dimen name="main_card_margin_horizontal_big_activity">128dp</dimen>
+
+    <dimen name="zero_horizontal_margin">112dp</dimen>
+
+    <dimen name="start_page_image_size">256dp</dimen>
+    <dimen name="share_view_round_margin">64dp</dimen>
+
+    <dimen name="big_activity_margin_vertical">144dp</dimen>
+    <dimen name="big_activity_margin_horizontal">128dp</dimen>
+    <dimen name="big_activity_fab_margin">36dp</dimen>
+    <dimen name="big_activity_text_margin">32dp</dimen>
+
+</resources>

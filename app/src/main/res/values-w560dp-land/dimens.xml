@@ -6,9 +6,15 @@
     <dimen name="activity_horizontal_margin">64dp</dimen>
 
     <dimen name="card_margin_horizontal">64dp</dimen>
+    <dimen name="card_margin_vertical_big_activity">4dp</dimen>
 
     <dimen name="main_card_margin_horizontal">64dp</dimen>
 
     <dimen name="zero_horizontal_margin">48dp</dimen>
+    <dimen name="zero_horizontal_margin_big_activity">48dp</dimen>
+
+    <dimen name="big_activity_margin_vertical">96dp</dimen>
+    <dimen name="big_activity_margin_horizontal">72dp</dimen>
+    <dimen name="big_activity_fab_margin">8dp</dimen>
 
 </resources>

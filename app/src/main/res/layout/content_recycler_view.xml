@@ -13,8 +13,8 @@
         android:id="@+id/recycler_view_recycler_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingStart="@dimen/zero_horizontal_margin"
-        android:paddingEnd="@dimen/zero_horizontal_margin"
+        android:paddingStart="@dimen/zero_horizontal_margin_big_activity"
+        android:paddingEnd="@dimen/zero_horizontal_margin_big_activity"
         android:background="@color/activity_background" />
 
 </android.support.v4.widget.SwipeRefreshLayout>

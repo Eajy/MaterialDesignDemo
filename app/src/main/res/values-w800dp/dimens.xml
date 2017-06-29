@@ -1,0 +1,10 @@
+<resources>
+
+    <dimen name="zero_horizontal_margin_big_activity">8dp</dimen>
+
+    <dimen name="btn_padding">24dp</dimen>
+    <dimen name="btn_margin">28dp</dimen>
+
+    <dimen name="share_view_round_margin">32dp</dimen>
+
+</resources>

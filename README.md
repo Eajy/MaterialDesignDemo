@@ -21,14 +21,17 @@ It covers many material design components, such as:**
 https://play.google.com/store/apps/details?id=com.eajy.materialdesigndemo
 
 
-![image](https://github.com/Eajy/MaterialDesignDemo/blob/master/pictures/Screenshot_20170326-201916.png)
-![image](https://github.com/Eajy/MaterialDesignDemo/blob/master/pictures/Screenshot_20170326-202037.png)
+![image](https://github.com/Eajy/MaterialDesignDemo/blob/master/pictures/1.png)
+![image](https://github.com/Eajy/MaterialDesignDemo/blob/master/pictures/2.png)
 
-![image](https://github.com/Eajy/MaterialDesignDemo/blob/master/pictures/Screenshot_20170326-202128.png)
-![image](https://github.com/Eajy/MaterialDesignDemo/blob/master/pictures/Screenshot_20170326-202207.png)
+![image](https://github.com/Eajy/MaterialDesignDemo/blob/master/pictures/3.png)
+![image](https://github.com/Eajy/MaterialDesignDemo/blob/master/pictures/4.png)
 
-![image](https://github.com/Eajy/MaterialDesignDemo/blob/master/pictures/Screenshot_20170326-202144.png)
-![image](https://github.com/Eajy/MaterialDesignDemo/blob/master/pictures/Screenshot_20170326-202227.png)
+![image](https://github.com/Eajy/MaterialDesignDemo/blob/master/pictures/5.png)
+![image](https://github.com/Eajy/MaterialDesignDemo/blob/master/pictures/6.png)
+
+![image](https://github.com/Eajy/MaterialDesignDemo/blob/master/pictures/pad_1.png)
+![image](https://github.com/Eajy/MaterialDesignDemo/blob/master/pictures/pad_2.png)
 
 
 _**- Designed by Eajy in China.**_

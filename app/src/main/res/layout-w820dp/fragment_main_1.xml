@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_background"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/card_main_1_1"
+            layout="@layout/card_main_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/text_margin"
+            android:layout_marginEnd="@dimen/text_margin_small"
+            android:layout_marginStart="@dimen/main_card_margin_horizontal_big_activity"
+            android:layout_marginTop="@dimen/text_margin_small"
+            app:layout_constraintEnd_toStartOf="@id/card_main_1_2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <include
+            android:id="@+id/card_main_1_2"
+            layout="@layout/card_main_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/text_margin"
+            android:layout_marginEnd="@dimen/main_card_margin_horizontal_big_activity"
+            android:layout_marginStart="@dimen/text_margin_small"
+            android:layout_marginTop="@dimen/text_margin_small"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/card_main_1_1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <include
+            android:id="@+id/card_main_1_4_1"
+            layout="@layout/card_main_4_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/text_margin"
+            android:layout_marginEnd="@dimen/text_margin_small"
+            android:layout_marginStart="@dimen/main_card_margin_horizontal_big_activity"
+            android:layout_marginTop="@dimen/text_margin"
+            app:layout_constraintEnd_toStartOf="@id/card_main_1_4_2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/card_main_1_1" />
+
+        <include
+            android:id="@+id/card_main_1_4_2"
+            layout="@layout/card_main_4_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/text_margin"
+            android:layout_marginEnd="@dimen/main_card_margin_horizontal_big_activity"
+            android:layout_marginStart="@dimen/text_margin_small"
+            android:layout_marginTop="@dimen/text_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/card_main_1_4_1"
+            app:layout_constraintTop_toBottomOf="@+id/card_main_1_2" />
+
+        <include
+            android:id="@+id/card_main_1_3"
+            layout="@layout/card_main_3"
+            android:layout_width="0dp"
+            android:layout_height="170dp"
+            android:layout_marginBottom="@dimen/text_margin_small"
+            android:layout_marginEnd="@dimen/text_margin_small"
+            android:layout_marginStart="@dimen/main_card_margin_horizontal_big_activity"
+            android:layout_marginTop="@dimen/text_margin"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/card_ad"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/card_main_1_4_1" />
+
+        <include
+            android:id="@+id/card_ad"
+            layout="@layout/ad_native_main"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/text_margin_small"
+            android:layout_marginEnd="@dimen/main_card_margin_horizontal_big_activity"
+            android:layout_marginStart="@dimen/text_margin_small"
+            android:layout_marginTop="@dimen/text_margin"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/card_main_1_3"
+            app:layout_constraintTop_toBottomOf="@+id/card_main_1_4_2" />
+
+    </android.support.constraint.ConstraintLayout>
+</android.support.v4.widget.NestedScrollView>
