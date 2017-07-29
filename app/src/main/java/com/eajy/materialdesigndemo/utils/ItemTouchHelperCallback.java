@@ -1,7 +1,6 @@
 package com.eajy.materialdesigndemo.utils;
 
 import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.helper.ItemTouchHelper;
 
@@ -20,13 +19,15 @@ public class ItemTouchHelperCallback extends ItemTouchHelper.Callback {
 
     @Override
     public int getMovementFlags(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder) {
+
         if (recyclerView.getLayoutManager() instanceof GridLayoutManager) {
-            //多列的RecyclerView支持上下左右拖动和不支持左右侧滑
+            // for recyclerView with gridLayoutManager, support drag all directions, not support swipe
             final int dragFlags = ItemTouchHelper.UP | ItemTouchHelper.DOWN | ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT;
             final int swipeFlags = 0;
             return makeMovementFlags(dragFlags, swipeFlags);
+
         } else {
-            //单列的RecyclerView支持上下拖动和左右侧滑
+            // for recyclerView with linearLayoutManager, support drag up and down, and swipe lift and right
             final int dragFlags = ItemTouchHelper.UP | ItemTouchHelper.DOWN;
             final int swipeFlags = ItemTouchHelper.START | ItemTouchHelper.END;
             return makeMovementFlags(dragFlags, swipeFlags);
@@ -35,7 +36,7 @@ public class ItemTouchHelperCallback extends ItemTouchHelper.Callback {
 
     @Override
     public boolean onMove(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder, RecyclerView.ViewHolder target) {
-        //如果两个item不是同一个类型的，不让他拖拽
+        // If the 2 items are not the same type, no dragging
         if (viewHolder.getItemViewType() != target.getItemViewType()) {
             return false;
         }

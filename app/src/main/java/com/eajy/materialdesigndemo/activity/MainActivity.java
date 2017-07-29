@@ -27,7 +27,6 @@ import android.view.animation.Animation;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
-import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.eajy.materialdesigndemo.Constant;
@@ -134,6 +133,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        navigationView.setItemIconTintList(null);
 
         View headerView = navigationView.getHeaderView(0);
         LinearLayout nav_header = (LinearLayout) headerView.findViewById(R.id.nav_header);

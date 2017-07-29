@@ -60,7 +60,7 @@ public class BottomNavigationActivity extends AppCompatActivity {
         navigation = (BottomNavigationView) findViewById(R.id.bottom_navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
-        //默认 >3 的选中效果会影响ViewPager的滑动切换时的效果，故利用反射去掉
+        // If BottomNavigationView has more than 3 items, using reflection to disable shift mode
         BottomNavigationViewHelper.disableShiftMode(navigation);
     }
 

@@ -4,7 +4,7 @@
     <group android:checkableBehavior="none">
         <item
             android:id="@+id/nav_recycler_and_swipe_refresh"
-            android:icon="@drawable/ic_format_line_spacing_black_24dp"
+            android:icon="@drawable/ic_format_list_bulleted_black_24dp"
             android:title="@string/nav_recycler_view" />
         <item
             android:id="@+id/nav_scrolling"
@@ -24,18 +24,16 @@
             android:title="@string/nav_settings" />
     </group>
 
-    <item android:title="@string/nav_group_about">
-        <menu>
-            <item
-                android:id="@+id/nav_about"
-                android:icon="@drawable/ic_info_black_24dp"
-                android:title="@string/nav_about_this" />
-            <item
-                android:id="@+id/nav_donate"
-                android:icon="@drawable/ic_attach_money_black_24dp"
-                android:title="@string/nav_donate" />
-        </menu>
-    </item>
+    <group android:id="@+id/group_about">
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/ic_info_black_24dp"
+            android:title="@string/nav_about" />
+        <item
+            android:id="@+id/nav_donate"
+            android:icon="@drawable/ic_monetization_on_black_24dp"
+            android:title="@string/nav_donate" />
+    </group>
 
     <item android:title="@string/nav_my_apps">
         <menu>

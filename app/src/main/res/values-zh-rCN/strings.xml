@@ -63,12 +63,8 @@
     <string name="nav_fullscreen">全屏</string>
     <string name="nav_bottom_navigation">底部导航栏</string>
     <string name="nav_settings">设置</string>
-    <string name="nav_group_about">关于</string>
-    <string name="nav_about_this">关于我</string>
-    <string name="nav_share">分享</string>
-    <string name="nav_feedback">反馈</string>
+    <string name="nav_about">关于</string>
     <string name="nav_donate">捐赠</string>
-    <string name="nav_rate">评分</string>
     <string name="main_feedback_email">反馈:MaterialDesign</string>
     <string name="main_not_found_email">没有邮件程序</string>
     <string name="nav_my_apps">我的应用</string>
@@ -158,7 +154,10 @@
     <string name="tv_recycler_item_2">左右滑动删除条目</string>
     <string name="tv_recycler_item_3">上下拖动改变条目位置</string>
     <string name="title_activity_share_view">Share View</string>
-    <string name="share_view_press_it">点按它</string>
+    <string name="share_view_press_it">你可以点按它</string>
+    <string name="no_more_data">没有更多数据了</string>
+    <string name="item_swipe_dismissed">已删除</string>
+    <string name="item_swipe_undo">撤销</string>
 
     <!-- String related to Login -->
     <string name="title_activity_login">登录</string>
@@ -207,9 +206,12 @@
     <string name="about_email">反馈 (E-mail)</string>
     <string name="about_git_hub">源代码 (GitHub)</string>
     <string name="about_address">Beijing, China</string>
+    <string name="share_with">分享方式</string>
 
-    <!-- String related to About -->
+    <!-- String related to Donate -->
     <string name="activity_donate">捐赠</string>
+    <string name="donate">捐赠</string>
+    <string name="donated">已捐赠</string>
     <string name="donate_title">如果您能够捐赠我，我将非常感谢！</string>
     <string name="donate_title_after">非常感谢您的捐赠！</string>
     <string name="donate_low">1.99 美元</string>

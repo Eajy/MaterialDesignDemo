@@ -52,7 +52,7 @@
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
                 android:layout_marginEnd="@dimen/text_margin"
-                android:text="@string/activity_donate" />
+                android:text="@string/donate" />
         </RelativeLayout>
 
         <RelativeLayout
@@ -91,7 +91,7 @@
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
                 android:layout_marginEnd="@dimen/text_margin"
-                android:text="@string/activity_donate" />
+                android:text="@string/donate" />
         </RelativeLayout>
 
         <include layout="@layout/ad_banner_donate" />

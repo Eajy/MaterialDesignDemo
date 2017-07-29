@@ -31,7 +31,7 @@ public class ShareViewActivity extends AppCompatActivity {
         toolbar.setNavigationIcon(R.drawable.ic_close_white_24dp);
         setSupportActionBar(toolbar);
 
-        //左上角返回按钮处理成与返回键的逻辑一样，否则会没有过渡动画
+        // Let the logic of click navigation arrow the same as back key , or has not the animation
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

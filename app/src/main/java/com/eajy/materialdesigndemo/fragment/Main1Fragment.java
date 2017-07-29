@@ -21,11 +21,8 @@ import android.widget.LinearLayout;
 
 import com.bumptech.glide.Glide;
 import com.eajy.materialdesigndemo.R;
-import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.NativeExpressAdView;
-import com.google.android.gms.ads.VideoOptions;
 
 import static android.content.Context.MODE_PRIVATE;
 

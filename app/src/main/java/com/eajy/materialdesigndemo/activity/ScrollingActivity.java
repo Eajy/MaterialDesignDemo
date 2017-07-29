@@ -42,7 +42,7 @@ public class ScrollingActivity extends AppCompatActivity {
                 intent.setAction(Intent.ACTION_SEND);
                 intent.putExtra(Intent.EXTRA_TEXT, Constant.SHARE_CONTENT);
                 intent.setType("text/plain");
-                startActivity(intent);
+                startActivity(Intent.createChooser(intent, getString(R.string.share_with)));
             }
         });
 
