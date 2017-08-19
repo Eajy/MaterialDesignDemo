@@ -12,49 +12,8 @@
     <color name="gray_deep">#666666</color>
     <color name="black_overlay">#66000000</color>
     <color name="activity_background">#EEEEEE</color>
-    <color name="transparent">#00000000</color>
     <color name="main_background">#eeeeee</color>
     <color name="google_assistant_background">#F5F5F5</color>
-
-    <!-- Material Design Color - Color palette -->
-    <color name="red_primary">#F44336</color>
-    <color name="red_primary_dark">#D32F2F</color>
-    <color name="pink_primary">#E91E63</color>
-    <color name="pink_primary_dark">#C2185B</color>
-    <color name="purple_primary">#9C27B0</color>
-    <color name="purple_primary_dark">#7B1FA2</color>
-    <color name="deep_purple_primary">#673AB7</color>
-    <color name="deep_purple_primary_dark">#512DA8</color>
-    <color name="indigo_primary">#3F51B5</color>
-    <color name="indigo_primary_dark">#303F9F</color>
-    <color name="blue_primary">#2196F3</color>
-    <color name="blue_primary_dark">#1976D2</color>
-    <color name="light_blue_primary">#03A9F4</color>
-    <color name="light_blue_primary_dark">#0288D1</color>
-    <color name="cyan_primary">#00BCD4</color>
-    <color name="cyan_primary_dark">#0097A7</color>
-    <color name="teal_primary">#009688</color>
-    <color name="teal_primary_dark">#00796B</color>
-    <color name="green_primary">#4CAF50</color>
-    <color name="green_primary_dark">#388E3C</color>
-    <color name="light_green_primary">#8BC34A</color>
-    <color name="light_green_primary_dark">#689F38</color>
-    <color name="lime_primary">#CDDC39</color>
-    <color name="lime_primary_dark">#AFB42B</color>
-    <color name="yellow_primary">#FFEB3B</color>
-    <color name="yellow_primary_dark">#FBC02D</color>
-    <color name="amber_primary">#FFC107</color>
-    <color name="amber_primary_dark">#FFA000</color>
-    <color name="orange_primary">#FF9800</color>
-    <color name="orange_primary_dark">#F57C00</color>
-    <color name="deep_orange_primary">#FF5722</color>
-    <color name="deep_orange_primary_dark">#E64A19</color>
-    <color name="brown_primary">#795548</color>
-    <color name="brown_primary_dark">#5D4037</color>
-    <color name="grey_primary">#9E9E9E</color>
-    <color name="grey_primary_dark">#616161</color>
-    <color name="blue_grey_primary">#607D8B</color>
-    <color name="blue_grey_primary_dark">#455A64</color>
 
     <!-- Google Logo Color -->
     <color name="google_blue">#4285F4</color>
@@ -64,11 +23,8 @@
 
     <!-- Google Apps Color -->
     <color name="app_blue">#4285f4</color>
-    <color name="app_blue_dark">#3367d6</color>
     <color name="app_green">#0f9d58</color>
-    <color name="app_green_dark">#0b8043</color>
     <color name="app_yellow">#f4b400</color>
-    <color name="app_yellow_dark">#f09300</color>
     <color name="app_red">#db4437</color>
 
 </resources>
