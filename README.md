@@ -1,6 +1,7 @@
-（[Language：简体中文](https://github.com/Eajy/MaterialDesignDemo/blob/master/README_CN.md)）
+[Language：简体中文](https://github.com/Eajy/MaterialDesignDemo/blob/master/README_CN.md)  
+---
   
-**Update log:**  
+**Update logs:**  
 V3.1:  
 Greatly optimized the display on the tablet.  
 V3.2:  
@@ -11,21 +12,21 @@ V3.2:
 **This is a demo app designed with the fascinating and modern Google's Material Design.
 It created using design support library to show how to implement material design in apps.
 It covers many material design components, such as:**  
--NavigationView  
--CoordinatorLayout  
--AppBarLayout  
--CollapsingToolbarLayout  
--NestedScrollView  
--TabLayout  
--FloatingActionButton  
--SnackBar  
--SwipeRefreshLayout  
--RecyclerView  
--CardView  
--TextInputLayout  
--BottomSheetDialog  
--SharedElementTransitions  
--BottomNavigationView
+- NavigationView  
+- CoordinatorLayout  
+- AppBarLayout  
+- CollapsingToolbarLayout  
+- NestedScrollView  
+- TabLayout  
+- FloatingActionButton  
+- SnackBar  
+- SwipeRefreshLayout  
+- RecyclerView  
+- CardView  
+- TextInputLayout  
+- BottomSheetDialog  
+- SharedElementTransitions  
+- BottomNavigationView
 
 **Google Play:**  
 https://play.google.com/store/apps/details?id=com.eajy.materialdesigndemo

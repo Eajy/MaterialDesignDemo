@@ -8,21 +8,21 @@ V3.2:
 
 **这是一个遵循Material Design设计理念的demo应用。它使用了最新的design support library，展示如何使用material design来设计app。  
 该应用涵盖了很多材料设计的组件，比如：**  
--NavigationView  
--CoordinatorLayout  
--AppBarLayout  
--CollapsingToolbarLayout  
--NestedScrollView  
--TabLayout  
--FloatingActionButton  
--SnackBar  
--SwipeRefreshLayout  
--RecyclerView  
--CardView  
--TextInputLayout  
--BottomSheetDialog  
--SharedElementTransitions  
--BottomNavigationView
+- NavigationView  
+- CoordinatorLayout  
+- AppBarLayout  
+- CollapsingToolbarLayout  
+- NestedScrollView  
+- TabLayout  
+- FloatingActionButton  
+- SnackBar  
+- SwipeRefreshLayout  
+- RecyclerView  
+- CardView  
+- TextInputLayout  
+- BottomSheetDialog  
+- SharedElementTransitions  
+- BottomNavigationView
 
 **Google Play:**  
 https://play.google.com/store/apps/details?id=com.eajy.materialdesigndemo
