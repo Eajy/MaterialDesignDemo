@@ -1,3 +1,5 @@
+（[Language：简体中文](https://github.com/Eajy/MaterialDesignDemo/blob/master/README_CN.md)）
+  
 **Update log:**  
 V3.1:  
 Greatly optimized the display on the tablet.  
@@ -25,7 +27,7 @@ It covers many material design components, such as:**
 -SharedElementTransitions  
 -BottomNavigationView
 
-**Google Play :**  
+**Google Play:**  
 https://play.google.com/store/apps/details?id=com.eajy.materialdesigndemo
 
 
