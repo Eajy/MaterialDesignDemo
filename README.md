@@ -1,7 +1,5 @@
 [Language：简体中文](https://github.com/Eajy/MaterialDesignDemo/blob/master/README_CN.md)  
 
----
-  
 **Update logs:**  
 V3.1:  
 Greatly optimized the display on the tablet.  
