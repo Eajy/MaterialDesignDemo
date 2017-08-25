@@ -5,7 +5,6 @@
     <!-- Strings related to Main -->
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="action_main_settings">设置</string>
     <string name="tab_title_main_1">卡片</string>
     <string name="tab_title_main_2">对话框</string>
     <string name="tab_title_main_3">控件</string>
@@ -50,7 +49,6 @@
     <string name="main_widget_radio_button_3">RadioButton 3</string>
     <string name="main_widget_seek_bar">Seek Bar</string>
     <string name="main_widget_progress_bar">Progress Bar</string>
-    <string name="main_widget_extract_edit_text">Extract Edit Text</string>
     <string name="main_widget_text_input_layout">Text Input Layout</string>
     <string name="main_widget_edit_text">edit text</string>
     <string name="main_widget_spinner">Spinner</string>
@@ -65,8 +63,6 @@
     <string name="nav_settings">设置</string>
     <string name="nav_about">关于</string>
     <string name="nav_donate">捐赠</string>
-    <string name="main_feedback_email">反馈:MaterialDesign</string>
-    <string name="main_not_found_email">没有邮件程序</string>
     <string name="nav_my_apps">我的应用</string>
     <string name="nav_color">Material Design Color</string>
 
@@ -146,7 +142,6 @@
     </string>
 
     <!-- Strings related to Fullscreen -->
-    <string name="title_activity_fullscreen">全屏</string>
 
     <!-- String related to RecyclerView -->
     <string name="title_activity_recycler_view">RecyclerView</string>
@@ -199,7 +194,6 @@
     <string name="about_version">版本: </string>
     <string name="about_email_intent">关于:MaterialDesign</string>
     <string name="about_not_found_email">没有邮件程序</string>
-    <string name="about_card1_title">Material Design Demo</string>
     <string name="about_card1_message">嗨！很高兴见到你！</string>
     <string name="about_card2_title">如果你喜欢这个Demo，欢迎和我联系！</string>
     <string name="about_google_play">评价 (Google play)</string>
@@ -211,17 +205,13 @@
     <!-- String related to Donate -->
     <string name="activity_donate">捐赠</string>
     <string name="donate">捐赠</string>
-    <string name="donated">已捐赠</string>
     <string name="donate_title">如果您能够捐赠我，我将非常感谢！</string>
-    <string name="donate_title_after">非常感谢您的捐赠！</string>
     <string name="donate_low">1.99 美元</string>
     <string name="donate_high">9.99 美元</string>
-    <string name="donate_exception">抱歉，无法操作！</string>
 
     <!-- String related to Ad -->
     <string name="banner_ad_loading">广告加载中 …</string>
     <string name="banner_ad_unit_id_donate">ca-app-pub-1251484082745159/2015219028</string>
-    <string name="banner_ad_unit_id_main">ca-app-pub-1251484082745159/1419789825</string>
     <string name="native_ad_unit_id_main">ca-app-pub-1251484082745159/8449555424</string>
 
 </resources>
