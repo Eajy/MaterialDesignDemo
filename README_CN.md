@@ -1,10 +1,14 @@
 #### 更新日志:  
-V3.1:  
+V 3.1:  
 大幅优化了在平板上的显示效果。  
-V3.2:  
+
+V 3.2:  
 ① RecyclerView Activity 添加了上拉加载和删除撤销以及隐藏fab的Behavior。  
-② 部分代码注释翻译成英文。  
-③ 一些细节更改。  
+② 一些细节更改。  
+
+V 3.3:  
+① Settings 页面添加了 PreferenceCategory。  
+② 添加了开源许可。  
 
 ---  
 
@@ -29,7 +33,6 @@ V3.2:
 #### Google Play:  
 https://play.google.com/store/apps/details?id=com.eajy.materialdesigndemo  
   
-
 ![image](https://github.com/Eajy/MaterialDesignDemo/blob/master/pictures/1.png)
 ![image](https://github.com/Eajy/MaterialDesignDemo/blob/master/pictures/2.png)
 
@@ -62,6 +65,5 @@ https://play.google.com/store/apps/details?id=com.eajy.materialdesigndemo
     Google Material Design Icons  
     Copyright © Google, Inc. All rights reserved.  
     https://material.io/icons/
-  
   
 _**- Designed by Eajy in China.**_

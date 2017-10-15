@@ -1,12 +1,16 @@
 [Language：简体中文](https://github.com/Eajy/MaterialDesignDemo/blob/master/README_CN.md)  
 
 #### Update logs:  
-V3.1:  
+V 3.1:  
 Greatly optimized the display on the tablet.  
-V3.2:  
+
+V 3.2:  
 ① Added "Load more" and "Undo delete" and a FabBehavior in RecyclerView Activity.  
-② Translated some code annotations into English.  
-③ Some details are optimized.  
+② Some details are optimized.  
+
+V 3.3:  
+① Added PreferenceCategory in Settings.  
+② Added Open Source Licenses.  
 
 ---  
 
@@ -32,7 +36,6 @@ It covers many material design components, such as:**
 #### Google Play:  
 https://play.google.com/store/apps/details?id=com.eajy.materialdesigndemo  
   
-
 ![image](https://github.com/Eajy/MaterialDesignDemo/blob/master/pictures/1.png)
 ![image](https://github.com/Eajy/MaterialDesignDemo/blob/master/pictures/2.png)
 
@@ -51,20 +54,19 @@ https://play.google.com/store/apps/details?id=com.eajy.materialdesigndemo
     The product includes:  
       
     Apache License, Version 2.0  
-        You may obtain a copy of the license at  
-        http://www.apache.org/licenses/LICENSE-2.0  
+    You may obtain a copy of the license at  
+    http://www.apache.org/licenses/LICENSE-2.0  
       
     Android Support Library  
-        Copyright © 2005 The Android Open Source Project. All rights reserved. 
-        http://developer.android.com/tools/extras/support-library.html  
+    Copyright © 2005 The Android Open Source Project. All rights reserved. 
+    http://developer.android.com/tools/extras/support-library.html  
       
     Glide  
-        Copyright © 2014 Google, Inc. All rights reserved.  
-        https://github.com/bumptech/glide  
+    Copyright © 2014 Google, Inc. All rights reserved.  
+    https://github.com/bumptech/glide  
       
     Google Material Design Icons  
-        Copyright © Google, Inc. All rights reserved.  
-        https://material.io/icons/
-  
+    Copyright © Google, Inc. All rights reserved.  
+    https://material.io/icons/
   
 _**- Designed by Eajy in China.**_
