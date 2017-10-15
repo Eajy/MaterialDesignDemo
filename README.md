@@ -6,7 +6,9 @@ Greatly optimized the display on the tablet.
 V3.2:  
 ① Added "Load more" and "Undo delete" and a FabBehavior in RecyclerView Activity.  
 ② Translated some code annotations into English.  
-③ Some details are optimized.
+③ Some details are optimized.  
+
+---  
 
 **This is a demo app designed with the fascinating and modern Google's Material Design.
 It created using design support library to show how to implement material design in apps.
