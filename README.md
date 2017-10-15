@@ -48,19 +48,18 @@ https://play.google.com/store/apps/details?id=com.eajy.materialdesigndemo
 ---  
 
 #### Open Source Licenses:  
->The product includes:  
-
->Apache License, Version 2.0
-You may obtain a copy of the license at 
-http://www.apache.org/licenses/LICENSE-2.0  
-Android Support Library
-Copyright © 2005 The Android Open Source Project. All rights reserved. 
-http://developer.android.com/tools/extras/support-library.html  
-Glide
-Copyright © 2014 Google, Inc. All rights reserved. 
-https://github.com/bumptech/glide  
-Google Material Design Icons
-Copyright © Google, Inc. All rights reserved. 
-https://material.io/icons/
+    The product includes:  
+    Apache License, Version 2.0  
+    You may obtain a copy of the license at  
+    http://www.apache.org/licenses/LICENSE-2.0  
+    Android Support Library  
+    Copyright © 2005 The Android Open Source Project. All rights reserved. 
+    http://developer.android.com/tools/extras/support-library.html  
+    **Glide**  
+    Copyright © 2014 Google, Inc. All rights reserved.  
+    https://github.com/bumptech/glide  
+    Google Material Design Icons  
+    Copyright © Google, Inc. All rights reserved.  
+    https://material.io/icons/
   
 _**- Designed by Eajy in China.**_
