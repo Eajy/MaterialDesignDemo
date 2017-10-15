@@ -32,9 +32,9 @@ import com.bumptech.glide.Glide;
 import com.eajy.materialdesigndemo.Constant;
 import com.eajy.materialdesigndemo.R;
 import com.eajy.materialdesigndemo.adapter.FragmentAdapter;
-import com.eajy.materialdesigndemo.fragment.Main1Fragment;
-import com.eajy.materialdesigndemo.fragment.Main2Fragment;
-import com.eajy.materialdesigndemo.fragment.Main3Fragment;
+import com.eajy.materialdesigndemo.fragment.CardsFragment;
+import com.eajy.materialdesigndemo.fragment.DialogsFragment;
+import com.eajy.materialdesigndemo.fragment.WidgetsFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -178,9 +178,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         mTabLayout.addTab(mTabLayout.newTab().setText(titles.get(2)));
 
         List<Fragment> fragments = new ArrayList<>();
-        fragments.add(new Main1Fragment());
-        fragments.add(new Main2Fragment());
-        fragments.add(new Main3Fragment());
+        fragments.add(new CardsFragment());
+        fragments.add(new DialogsFragment());
+        fragments.add(new WidgetsFragment());
 
         mViewPager.setOffscreenPageLimit(2);
 
