@@ -65,9 +65,9 @@ public class FullscreenActivity extends AppCompatActivity {
             actionBar.hide();
         }
 
-        progress_fullscreen = (ProgressBar) findViewById(R.id.progress_fullscreen);
-        relative_fullscreen = (RelativeLayout) findViewById(R.id.relative_fullscreen);
-        video_fullscreen = (VideoView) findViewById(R.id.video_fullscreen);
+        progress_fullscreen = findViewById(R.id.progress_fullscreen);
+        relative_fullscreen = findViewById(R.id.relative_fullscreen);
+        video_fullscreen = findViewById(R.id.video_fullscreen);
     }
 
     private void playVideo() {
@@ -154,5 +154,10 @@ public class FullscreenActivity extends AppCompatActivity {
                 | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
     }
 
+    @Override
+    protected void onDestroy() {
+        mHandler.removeCallbacksAndMessages(null);
+        super.onDestroy();
+    }
 }
 

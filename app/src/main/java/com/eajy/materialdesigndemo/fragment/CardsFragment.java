@@ -48,31 +48,31 @@ public class CardsFragment extends Fragment implements View.OnClickListener, Vie
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         NestedScrollView nestedScrollView = (NestedScrollView) inflater.inflate(R.layout.fragment_cards, container, false);
 
-        btn_card_main1_action1 = (Button) nestedScrollView.findViewById(R.id.btn_card_main1_action1);
-        btn_card_main1_action2 = (Button) nestedScrollView.findViewById(R.id.btn_card_main1_action2);
-        img_main_card2_share = (ImageView) nestedScrollView.findViewById(R.id.img_main_card2_share);
-        img_main_card2_bookmark = (ImageView) nestedScrollView.findViewById(R.id.img_main_card2_bookmark);
-        img_main_card2_favorite = (ImageView) nestedScrollView.findViewById(R.id.img_main_card2_favorite);
-        ll_card_main3_rate = (LinearLayout) nestedScrollView.findViewById(R.id.ll_card_main3_rate);
+        btn_card_main1_action1 = nestedScrollView.findViewById(R.id.btn_card_main1_action1);
+        btn_card_main1_action2 = nestedScrollView.findViewById(R.id.btn_card_main1_action2);
+        img_main_card2_share = nestedScrollView.findViewById(R.id.img_main_card2_share);
+        img_main_card2_bookmark = nestedScrollView.findViewById(R.id.img_main_card2_bookmark);
+        img_main_card2_favorite = nestedScrollView.findViewById(R.id.img_main_card2_favorite);
+        ll_card_main3_rate = nestedScrollView.findViewById(R.id.ll_card_main3_rate);
 
-        img_main_card_1 = (ImageView) nestedScrollView.findViewById(R.id.img_main_card_1);
-        img_main_card_2 = (ImageView) nestedScrollView.findViewById(R.id.img_main_card_2);
-        img_card_main_3 = (ImageView) nestedScrollView.findViewById(R.id.img_card_main_3);
-        img_main_card_41 = (ImageView) nestedScrollView.findViewById(R.id.img_main_card_41);
-        img_main_card_42 = (ImageView) nestedScrollView.findViewById(R.id.img_main_card_42);
+        img_main_card_1 = nestedScrollView.findViewById(R.id.img_main_card_1);
+        img_main_card_2 = nestedScrollView.findViewById(R.id.img_main_card_2);
+        img_card_main_3 = nestedScrollView.findViewById(R.id.img_card_main_3);
+        img_main_card_41 = nestedScrollView.findViewById(R.id.img_main_card_41);
+        img_main_card_42 = nestedScrollView.findViewById(R.id.img_main_card_42);
 
-        img_main_card41_favorite = (ImageView) nestedScrollView.findViewById(R.id.img_main_card41_favorite);
-        img_main_card42_favorite = (ImageView) nestedScrollView.findViewById(R.id.img_main_card42_favorite);
-        img_main_card41_bookmark = (ImageView) nestedScrollView.findViewById(R.id.img_main_card41_bookmark);
-        img_main_card42_bookmark = (ImageView) nestedScrollView.findViewById(R.id.img_main_card42_bookmark);
-        img_main_card41_share = (ImageView) nestedScrollView.findViewById(R.id.img_main_card41_share);
-        img_main_card42_share = (ImageView) nestedScrollView.findViewById(R.id.img_main_card42_share);
+        img_main_card41_favorite = nestedScrollView.findViewById(R.id.img_main_card41_favorite);
+        img_main_card42_favorite = nestedScrollView.findViewById(R.id.img_main_card42_favorite);
+        img_main_card41_bookmark = nestedScrollView.findViewById(R.id.img_main_card41_bookmark);
+        img_main_card42_bookmark = nestedScrollView.findViewById(R.id.img_main_card42_bookmark);
+        img_main_card41_share = nestedScrollView.findViewById(R.id.img_main_card41_share);
+        img_main_card42_share = nestedScrollView.findViewById(R.id.img_main_card42_share);
 
-        card_main_1_1 = (CardView) nestedScrollView.findViewById(R.id.card_main_1_1);
-        card_main_1_2 = (CardView) nestedScrollView.findViewById(R.id.card_main_1_2);
-        card_main_1_3 = (CardView) nestedScrollView.findViewById(R.id.card_main_1_3);
-        card_main_1_4_1 = (CardView) nestedScrollView.findViewById(R.id.card_main_1_4_1);
-        card_main_1_4_2 = (CardView) nestedScrollView.findViewById(R.id.card_main_1_4_2);
+        card_main_1_1 = nestedScrollView.findViewById(R.id.card_main_1_1);
+        card_main_1_2 = nestedScrollView.findViewById(R.id.card_main_1_2);
+        card_main_1_3 = nestedScrollView.findViewById(R.id.card_main_1_3);
+        card_main_1_4_1 = nestedScrollView.findViewById(R.id.card_main_1_4_1);
+        card_main_1_4_2 = nestedScrollView.findViewById(R.id.card_main_1_4_2);
 
         Glide.with(getContext()).load(R.drawable.material_design_2).fitCenter().into(img_main_card_1);
         Glide.with(getContext()).load(R.drawable.material_design_4).fitCenter().into(img_main_card_2);
@@ -80,8 +80,8 @@ public class CardsFragment extends Fragment implements View.OnClickListener, Vie
         Glide.with(getContext()).load(R.drawable.material_design_1).fitCenter().into(img_main_card_41);
         Glide.with(getContext()).load(R.drawable.material_design_1).fitCenter().into(img_main_card_42);
 
-        adView = (NativeExpressAdView) nestedScrollView.findViewById(R.id.adView);
-        card_ad = (CardView) nestedScrollView.findViewById(R.id.card_ad);
+        adView = nestedScrollView.findViewById(R.id.adView);
+        card_ad = nestedScrollView.findViewById(R.id.card_ad);
 
         // ViewGroup viewGroup = (ViewGroup) mRecyclerView.getParent();
         // if (viewGroup != null) { viewGroup.removeAllViews(); }

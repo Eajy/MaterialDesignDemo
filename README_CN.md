@@ -1,14 +1,10 @@
-#### 更新日志:  
-V 3.1:  
-大幅优化了在平板上的显示效果。  
-
-V 3.2:  
-① RecyclerView Activity 添加了上拉加载和删除撤销以及隐藏fab的Behavior。  
-② 一些细节更改。  
-
-V 3.3:  
-① Settings 页面添加了 PreferenceCategory。  
-② 添加了开源许可。  
+#### 最近更新日志:  
+- 大幅优化了在平板上的显示效果。  
+- RecyclerView Activity 添加了上拉加载和删除撤销以及隐藏fab的Behavior。  
+- Settings 页面添加了 PreferenceCategory。  
+- 添加了开源许可。  
+- 升级了 Android Studio 和 Gradle 版本。  
+- 增加了 Android O 的自适应图标。  
 
 ---  
 

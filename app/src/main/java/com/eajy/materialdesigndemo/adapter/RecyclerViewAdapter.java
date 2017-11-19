@@ -172,7 +172,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
         private RecyclerViewHolder(View itemView) {
             super(itemView);
             mView = itemView;
-            rela_round = (RelativeLayout) itemView.findViewById(R.id.rela_round);
+            rela_round = itemView.findViewById(R.id.rela_round);
         }
     }
 
@@ -181,7 +181,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
 
         private FooterViewHolder(View itemView) {
             super(itemView);
-            progress_bar_load_more = (ProgressBar) itemView.findViewById(R.id.progress_bar_load_more);
+            progress_bar_load_more = itemView.findViewById(R.id.progress_bar_load_more);
         }
     }
 

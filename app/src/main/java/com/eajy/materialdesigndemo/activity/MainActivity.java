@@ -122,32 +122,32 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
     private void initView() {
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_main);
+        Toolbar toolbar = findViewById(R.id.toolbar_main);
         setSupportActionBar(toolbar);
 
-        drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         navigationView.setItemIconTintList(null);
 
         View headerView = navigationView.getHeaderView(0);
-        LinearLayout nav_header = (LinearLayout) headerView.findViewById(R.id.nav_header);
+        LinearLayout nav_header = headerView.findViewById(R.id.nav_header);
         nav_header.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, LoginActivity.class);
                 startActivity(intent);
-                DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+                DrawerLayout drawer = findViewById(R.id.drawer_layout);
                 drawer.closeDrawer(GravityCompat.START);
             }
         });
 
-        fab = (FloatingActionButton) findViewById(R.id.fab_main);
+        fab = findViewById(R.id.fab_main);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -161,13 +161,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             }
         });
 
-        relative_main = (RelativeLayout) findViewById(R.id.relative_main);
-        img_page_start = (ImageView) findViewById(R.id.img_page_start);
+        relative_main = findViewById(R.id.relative_main);
+        img_page_start = findViewById(R.id.img_page_start);
     }
 
     private void initViewPager() {
-        mTabLayout = (TabLayout) findViewById(R.id.tab_layout_main);
-        mViewPager = (ViewPager) findViewById(R.id.view_pager_main);
+        mTabLayout = findViewById(R.id.tab_layout_main);
+        mViewPager = findViewById(R.id.view_pager_main);
 
         List<String> titles = new ArrayList<>();
         titles.add(getString(R.string.tab_title_main_1));
@@ -218,6 +218,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         } else {
             super.onBackPressed();
         }
+    }
+
+    @Override
+    protected void onDestroy() {
+        mHandler.removeCallbacksAndMessages(null);
+        super.onDestroy();
     }
 
     @Override

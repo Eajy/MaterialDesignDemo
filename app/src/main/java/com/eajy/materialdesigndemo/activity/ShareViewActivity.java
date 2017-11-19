@@ -26,7 +26,7 @@ public class ShareViewActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_share_view);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_share_view);
+        Toolbar toolbar = findViewById(R.id.toolbar_share_view);
         toolbar.setSubtitle("Shared Element Transitions");
         toolbar.setNavigationIcon(R.drawable.ic_close_white_24dp);
         setSupportActionBar(toolbar);
@@ -43,9 +43,9 @@ public class ShareViewActivity extends AppCompatActivity {
     }
 
     private void initView() {
-        CardView card_share_view = (CardView) findViewById(R.id.card_share_view);
-        RelativeLayout rela_round_big = (RelativeLayout) findViewById(R.id.rela_round_big);
-        tv_share_view_tip = (TextView) findViewById(R.id.tv_share_view_tip);
+        CardView card_share_view = findViewById(R.id.card_share_view);
+        RelativeLayout rela_round_big = findViewById(R.id.rela_round_big);
+        tv_share_view_tip = findViewById(R.id.tv_share_view_tip);
 
         if (getIntent() != null) {
             int color = getIntent().getIntExtra("color", 0);

@@ -1,16 +1,12 @@
 [Language：简体中文](https://github.com/Eajy/MaterialDesignDemo/blob/master/README_CN.md)  
 
-#### Update logs:  
-V 3.1:  
-Greatly optimized the display on the tablet.  
-
-V 3.2:  
-① Added "Load more" and "Undo delete" and a FabBehavior in RecyclerView Activity.  
-② Some details are optimized.  
-
-V 3.3:  
-① Added PreferenceCategory in Settings.  
-② Added Open Source Licenses.  
+#### Recently Updates Logs:  
+- Greatly optimized the display on the tablet.  
+- Added "Load more" and "Undo delete" and a FabBehavior in RecyclerView Activity.  
+- Added PreferenceCategory in Settings.  
+- Added Open Source Licenses.  
+- Updated Android Studio and Gradle version.  
+- Added adaptive icon for Android O.  
 
 ---  
 

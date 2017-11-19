@@ -52,12 +52,12 @@ public class BottomNavigationActivity extends AppCompatActivity {
         viewList.add(view3);
         viewList.add(view4);
 
-        viewPager = (ViewPager) findViewById(R.id.view_pager_bottom_navigation);
+        viewPager = findViewById(R.id.view_pager_bottom_navigation);
         viewPager.setAdapter(pagerAdapter);
         viewPager.addOnPageChangeListener(pageChangeListener);
         viewPager.setPageTransformer(true, new MyPageTransformer());
 
-        navigation = (BottomNavigationView) findViewById(R.id.bottom_navigation);
+        navigation = findViewById(R.id.bottom_navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
         // If BottomNavigationView has more than 3 items, using reflection to disable shift mode

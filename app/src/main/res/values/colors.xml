@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#4285f4</color>
-    <color name="colorPrimaryDark">#3367d6</color>
+    <color name="colorPrimary">#4285F4</color>
+    <color name="colorPrimaryDark">#3367D6</color>
     <color name="colorAccent">#FFC400</color>
 
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
     <color name="gray">#999999</color>
     <color name="gray_light">#CCCCCC</color>
-    <color name="gray_very_light">#e0e0e0</color>
+    <color name="gray_very_light">#E0E0E0</color>
     <color name="gray_deep">#666666</color>
     <color name="black_overlay">#66000000</color>
     <color name="activity_background">#EEEEEE</color>
     <color name="transparent">#00000000</color>
-    <color name="main_background">#eeeeee</color>
+    <color name="main_background">#EEEEEE</color>
     <color name="google_assistant_background">#F5F5F5</color>
 
     <!-- Material Design Color - Color palette -->
@@ -63,12 +63,12 @@
     <color name="google_red">#EA4335</color>
 
     <!-- Google Apps Color -->
-    <color name="app_blue">#4285f4</color>
-    <color name="app_blue_dark">#3367d6</color>
-    <color name="app_green">#0f9d58</color>
-    <color name="app_green_dark">#0b8043</color>
-    <color name="app_yellow">#f4b400</color>
-    <color name="app_yellow_dark">#f09300</color>
-    <color name="app_red">#db4437</color>
+    <color name="app_blue">#4285F4</color>
+    <color name="app_blue_dark">#3367D6</color>
+    <color name="app_green">#0F9D58</color>
+    <color name="app_green_dark">#0B8043</color>
+    <color name="app_yellow">#F4B400</color>
+    <color name="app_yellow_dark">#F09300</color>
+    <color name="app_red">#DB4437</color>
 
 </resources>

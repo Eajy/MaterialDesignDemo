@@ -52,10 +52,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     public void initView() {
         mLoginFormView = findViewById(R.id.form_login);
         mProgressView = findViewById(R.id.progress_login);
-        mUserNameView = (AutoCompleteTextView) findViewById(R.id.tv_user_name);
-        mPasswordView = (EditText) findViewById(R.id.tv_password);
-        input_user_name = (TextInputLayout) findViewById(R.id.input_user_name);
-        input_password = (TextInputLayout) findViewById(R.id.input_password);
+        mUserNameView = findViewById(R.id.tv_user_name);
+        mPasswordView = findViewById(R.id.tv_password);
+        input_user_name = findViewById(R.id.input_user_name);
+        input_password = findViewById(R.id.input_password);
         mPasswordView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView textView, int id, KeyEvent keyEvent) {
@@ -67,11 +67,11 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             }
         });
 
-        login_button = (Button) findViewById(R.id.btn_login);
+        login_button = findViewById(R.id.btn_login);
         login_button.setOnClickListener(this);
-        Button forgot_password = (Button) findViewById(R.id.btn_forgot_password);
+        Button forgot_password = findViewById(R.id.btn_forgot_password);
         forgot_password.setOnClickListener(this);
-        Button register = (Button) findViewById(R.id.btn_forgot_register);
+        Button register = findViewById(R.id.btn_forgot_register);
         register.setOnClickListener(this);
     }
 

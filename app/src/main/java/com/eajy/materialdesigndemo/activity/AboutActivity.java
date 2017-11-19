@@ -33,7 +33,7 @@ public class AboutActivity extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_about);
+        Toolbar toolbar = findViewById(R.id.toolbar_about);
         setSupportActionBar(toolbar);
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -46,26 +46,26 @@ public class AboutActivity extends AppCompatActivity implements View.OnClickList
 
     public void initView() {
         Animation animation = AnimationUtils.loadAnimation(this, R.anim.anim_about_card_show);
-        ScrollView scroll_about = (ScrollView) findViewById(R.id.scroll_about);
+        ScrollView scroll_about = findViewById(R.id.scroll_about);
         scroll_about.startAnimation(animation);
 
-        LinearLayout ll_card_about_2_shop = (LinearLayout) findViewById(R.id.ll_card_about_2_shop);
-        LinearLayout ll_card_about_2_email = (LinearLayout) findViewById(R.id.ll_card_about_2_email);
-        LinearLayout ll_card_about_2_git_hub = (LinearLayout) findViewById(R.id.ll_card_about_2_git_hub);
-        LinearLayout ll_card_about_source_licenses = (LinearLayout) findViewById(R.id.ll_card_about_source_licenses);
+        LinearLayout ll_card_about_2_shop = findViewById(R.id.ll_card_about_2_shop);
+        LinearLayout ll_card_about_2_email = findViewById(R.id.ll_card_about_2_email);
+        LinearLayout ll_card_about_2_git_hub = findViewById(R.id.ll_card_about_2_git_hub);
+        LinearLayout ll_card_about_source_licenses = findViewById(R.id.ll_card_about_source_licenses);
         ll_card_about_2_shop.setOnClickListener(this);
         ll_card_about_2_email.setOnClickListener(this);
         ll_card_about_2_git_hub.setOnClickListener(this);
         ll_card_about_source_licenses.setOnClickListener(this);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab_about_share);
+        FloatingActionButton fab = findViewById(R.id.fab_about_share);
         fab.setOnClickListener(this);
 
         AlphaAnimation alphaAnimation = new AlphaAnimation(0.0f, 1.0f);
         alphaAnimation.setDuration(300);
         alphaAnimation.setStartOffset(600);
 
-        TextView tv_about_version = (TextView) findViewById(R.id.tv_about_version);
+        TextView tv_about_version = findViewById(R.id.tv_about_version);
         tv_about_version.setText(getVersionName());
         tv_about_version.startAnimation(alphaAnimation);
     }
@@ -99,10 +99,10 @@ public class AboutActivity extends AppCompatActivity implements View.OnClickList
                 dialog.setTitle(getString(R.string.about_source_licenses));
                 dialog.setContentView(R.layout.dialog_source_licenses);
 
-                final WebView webView = (WebView) dialog.findViewById(R.id.web_source_licenses);
+                final WebView webView = dialog.findViewById(R.id.web_source_licenses);
                 webView.loadUrl("file:///android_asset/source_licenses.html");
 
-                Button btn_source_licenses_close = (Button) dialog.findViewById(R.id.btn_source_licenses_close);
+                Button btn_source_licenses_close = dialog.findViewById(R.id.btn_source_licenses_close);
                 btn_source_licenses_close.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {

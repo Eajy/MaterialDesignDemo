@@ -38,7 +38,7 @@ public class RecyclerViewActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recycler_view);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_recycler_view);
+        Toolbar toolbar = findViewById(R.id.toolbar_recycler_view);
         setSupportActionBar(toolbar);
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -59,8 +59,8 @@ public class RecyclerViewActivity extends AppCompatActivity {
     }
 
     private void initView() {
-        fab = (FloatingActionButton) findViewById(R.id.fab_recycler_view);
-        mRecyclerView = (RecyclerView) findViewById(R.id.recycler_view_recycler_view);
+        fab = findViewById(R.id.fab_recycler_view);
+        mRecyclerView = findViewById(R.id.recycler_view_recycler_view);
 
         if (getScreenWidthDp() >= 1200) {
             final GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 3);
@@ -90,7 +90,7 @@ public class RecyclerViewActivity extends AppCompatActivity {
         ItemTouchHelper mItemTouchHelper = new ItemTouchHelper(callback);
         mItemTouchHelper.attachToRecyclerView(mRecyclerView);
 
-        swipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipe_refresh_layout_recycler_view);
+        swipeRefreshLayout = findViewById(R.id.swipe_refresh_layout_recycler_view);
         swipeRefreshLayout.setColorSchemeResources(R.color.google_blue, R.color.google_green, R.color.google_red, R.color.google_yellow);
         swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override

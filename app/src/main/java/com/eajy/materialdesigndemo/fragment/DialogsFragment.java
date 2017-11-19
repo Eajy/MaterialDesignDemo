@@ -41,17 +41,17 @@ public class DialogsFragment extends Fragment implements View.OnClickListener {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         NestedScrollView nestedScrollView = (NestedScrollView) inflater.inflate(R.layout.fragment_dialogs, container, false);
 
-        btn_dialog_1 = (Button) nestedScrollView.findViewById(R.id.btn_dialog_1);
-        btn_dialog_2 = (Button) nestedScrollView.findViewById(R.id.btn_dialog_2);
-        btn_dialog_3 = (Button) nestedScrollView.findViewById(R.id.btn_dialog_3);
-        btn_dialog_4 = (Button) nestedScrollView.findViewById(R.id.btn_dialog_4);
-        btn_dialog_5 = (Button) nestedScrollView.findViewById(R.id.btn_dialog_5);
-        btn_dialog_6 = (Button) nestedScrollView.findViewById(R.id.btn_dialog_6);
-        btn_dialog_7 = (Button) nestedScrollView.findViewById(R.id.btn_dialog_7);
-        btn_dialog_8 = (Button) nestedScrollView.findViewById(R.id.btn_dialog_8);
-        btn_dialog_9 = (Button) nestedScrollView.findViewById(R.id.btn_dialog_9);
-        btn_dialog_10 = (Button) nestedScrollView.findViewById(R.id.btn_dialog_10);
-        btn_dialog_11 = (Button) nestedScrollView.findViewById(R.id.btn_dialog_11);
+        btn_dialog_1 = nestedScrollView.findViewById(R.id.btn_dialog_1);
+        btn_dialog_2 = nestedScrollView.findViewById(R.id.btn_dialog_2);
+        btn_dialog_3 = nestedScrollView.findViewById(R.id.btn_dialog_3);
+        btn_dialog_4 = nestedScrollView.findViewById(R.id.btn_dialog_4);
+        btn_dialog_5 = nestedScrollView.findViewById(R.id.btn_dialog_5);
+        btn_dialog_6 = nestedScrollView.findViewById(R.id.btn_dialog_6);
+        btn_dialog_7 = nestedScrollView.findViewById(R.id.btn_dialog_7);
+        btn_dialog_8 = nestedScrollView.findViewById(R.id.btn_dialog_8);
+        btn_dialog_9 = nestedScrollView.findViewById(R.id.btn_dialog_9);
+        btn_dialog_10 = nestedScrollView.findViewById(R.id.btn_dialog_10);
+        btn_dialog_11 = nestedScrollView.findViewById(R.id.btn_dialog_11);
 
         // ViewGroup viewGroup = (ViewGroup) mRecyclerView.getParent();
         // if (viewGroup != null) { viewGroup.removeAllViews(); }
@@ -189,9 +189,9 @@ public class DialogsFragment extends Fragment implements View.OnClickListener {
             case R.id.btn_dialog_9:
                 final BottomSheetDialog mBottomSheetDialog = new BottomSheetDialog(getContext());
                 View dialogView = getActivity().getLayoutInflater().inflate(R.layout.dialog_bottom_sheet, null);
-                Button btn_dialog_bottom_sheet_ok = (Button) dialogView.findViewById(R.id.btn_dialog_bottom_sheet_ok);
-                Button btn_dialog_bottom_sheet_cancel = (Button) dialogView.findViewById(R.id.btn_dialog_bottom_sheet_cancel);
-                ImageView img_bottom_dialog = (ImageView) dialogView.findViewById(R.id.img_bottom_dialog);
+                Button btn_dialog_bottom_sheet_ok = dialogView.findViewById(R.id.btn_dialog_bottom_sheet_ok);
+                Button btn_dialog_bottom_sheet_cancel = dialogView.findViewById(R.id.btn_dialog_bottom_sheet_cancel);
+                ImageView img_bottom_dialog = dialogView.findViewById(R.id.img_bottom_dialog);
                 Glide.with(getContext()).load(R.drawable.bottom_dialog).into(img_bottom_dialog);
                 mBottomSheetDialog.setContentView(dialogView);
 
@@ -213,9 +213,9 @@ public class DialogsFragment extends Fragment implements View.OnClickListener {
             case R.id.btn_dialog_10:
                 final Dialog fullscreenDialog = new Dialog(getContext(), R.style.DialogFullscreen);
                 fullscreenDialog.setContentView(R.layout.dialog_fullscreen);
-                ImageView img_full_screen_dialog = (ImageView) fullscreenDialog.findViewById(R.id.img_full_screen_dialog);
+                ImageView img_full_screen_dialog = fullscreenDialog.findViewById(R.id.img_full_screen_dialog);
                 Glide.with(getContext()).load(R.drawable.google_assistant).into(img_full_screen_dialog);
-                ImageView img_dialog_fullscreen_close = (ImageView) fullscreenDialog.findViewById(R.id.img_dialog_fullscreen_close);
+                ImageView img_dialog_fullscreen_close = fullscreenDialog.findViewById(R.id.img_dialog_fullscreen_close);
                 img_dialog_fullscreen_close.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
