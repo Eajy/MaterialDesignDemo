@@ -83,9 +83,6 @@ public class CardsFragment extends Fragment implements View.OnClickListener, Vie
         adView = nestedScrollView.findViewById(R.id.adView);
         card_ad = nestedScrollView.findViewById(R.id.card_ad);
 
-        // ViewGroup viewGroup = (ViewGroup) mRecyclerView.getParent();
-        // if (viewGroup != null) { viewGroup.removeAllViews(); }
-
         return nestedScrollView;
     }
 

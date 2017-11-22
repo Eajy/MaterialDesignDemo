@@ -1,7 +1,8 @@
-package com.eajy.materialdesigndemo.utils;
+package com.eajy.materialdesigndemo.view;
 
 import android.animation.Animator;
 import android.content.Context;
+import android.support.annotation.NonNull;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.view.ViewCompat;
@@ -27,15 +28,18 @@ public class FabBehavior extends FloatingActionButton.Behavior {
     }
 
     @Override
-    public boolean onStartNestedScroll(CoordinatorLayout coordinatorLayout, FloatingActionButton child, View directTargetChild, View target, int nestedScrollAxes) {
+    public boolean onStartNestedScroll(@NonNull CoordinatorLayout coordinatorLayout, @NonNull FloatingActionButton child,
+                                       @NonNull View directTargetChild, @NonNull View target, int nestedScrollAxes) {
         if (child.getVisibility() == View.VISIBLE && viewY == 0) {
             viewY = coordinatorLayout.getHeight() - child.getY();
         }
-        return nestedScrollAxes == ViewCompat.SCROLL_AXIS_VERTICAL || super.onStartNestedScroll(coordinatorLayout, child, directTargetChild, target, nestedScrollAxes);
+        return nestedScrollAxes == ViewCompat.SCROLL_AXIS_VERTICAL
+                || super.onStartNestedScroll(coordinatorLayout, child, directTargetChild, target, nestedScrollAxes);
     }
 
     @Override
-    public void onNestedPreScroll(CoordinatorLayout coordinatorLayout, FloatingActionButton child, View target, int dx, int dy, int[] consumed) {
+    public void onNestedPreScroll(@NonNull CoordinatorLayout coordinatorLayout, @NonNull FloatingActionButton child,
+                                  @NonNull View target, int dx, int dy, @NonNull int[] consumed) {
         if (dy >= 0 && !isAnimate && child.getVisibility() == View.VISIBLE) {
             hide(child);
         } else if (dy < 0 && !isAnimate && child.getVisibility() == View.INVISIBLE) {

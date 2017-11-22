@@ -22,10 +22,7 @@ public class WidgetsFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         NestedScrollView nestedScrollView = (NestedScrollView) inflater.inflate(R.layout.fragment_widgets, container, false);
-        et_main_3 = (EditText) nestedScrollView.findViewById(R.id.et_main_3);
-
-        // ViewGroup viewGroup = (ViewGroup) mRecyclerView.getParent();
-        // if (viewGroup != null) { viewGroup.removeAllViews(); }
+        et_main_3 = nestedScrollView.findViewById(R.id.et_main_3);
 
         return nestedScrollView;
     }

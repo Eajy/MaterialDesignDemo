@@ -18,8 +18,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end"
-        android:layout_marginBottom="@dimen/text_margin_small"
-        android:layout_marginEnd="@dimen/text_margin_small"
+        android:layout_marginBottom="@dimen/text_margin_very_small"
+        android:layout_marginEnd="@dimen/text_margin_very_small"
         android:text="@string/dialog_close"
         android:textColor="@color/colorAccent" />
 

@@ -2,20 +2,15 @@ package com.eajy.materialdesigndemo.activity;
 
 import android.app.Dialog;
 import android.content.Intent;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.app.AppCompatDialog;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.webkit.DownloadListener;
-import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -25,6 +20,7 @@ import android.widget.Toast;
 
 import com.eajy.materialdesigndemo.Constant;
 import com.eajy.materialdesigndemo.R;
+import com.eajy.materialdesigndemo.util.AppUtils;
 
 public class AboutActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -66,13 +62,12 @@ public class AboutActivity extends AppCompatActivity implements View.OnClickList
         alphaAnimation.setStartOffset(600);
 
         TextView tv_about_version = findViewById(R.id.tv_about_version);
-        tv_about_version.setText(getVersionName());
+        tv_about_version.setText(AppUtils.getVersionName(this));
         tv_about_version.startAnimation(alphaAnimation);
     }
 
     @Override
     public void onClick(View view) {
-
         Intent intent = new Intent();
 
         switch (view.getId()) {
@@ -125,18 +120,6 @@ public class AboutActivity extends AppCompatActivity implements View.OnClickList
                 intent.setType("text/plain");
                 startActivity(Intent.createChooser(intent, getString(R.string.share_with)));
                 break;
-        }
-    }
-
-    public String getVersionName() {
-        try {
-            PackageManager manager = this.getPackageManager();
-            PackageInfo info = manager.getPackageInfo(this.getPackageName(), 0);
-            String version = info.versionName;
-            return getString(R.string.about_version) + " " + version;
-        } catch (Exception e) {
-            e.printStackTrace();
-            return "";
         }
     }
 

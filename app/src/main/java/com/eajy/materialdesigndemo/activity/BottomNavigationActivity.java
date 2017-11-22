@@ -14,8 +14,8 @@ import android.view.Window;
 import android.view.WindowManager;
 
 import com.eajy.materialdesigndemo.R;
-import com.eajy.materialdesigndemo.utils.BottomNavigationViewHelper;
-import com.eajy.materialdesigndemo.utils.MyPageTransformer;
+import com.eajy.materialdesigndemo.view.BottomNavigationViewHelper;
+import com.eajy.materialdesigndemo.view.BottomNavigationPageTransformer;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -55,7 +55,7 @@ public class BottomNavigationActivity extends AppCompatActivity {
         viewPager = findViewById(R.id.view_pager_bottom_navigation);
         viewPager.setAdapter(pagerAdapter);
         viewPager.addOnPageChangeListener(pageChangeListener);
-        viewPager.setPageTransformer(true, new MyPageTransformer());
+        viewPager.setPageTransformer(true, new BottomNavigationPageTransformer());
 
         navigation = findViewById(R.id.bottom_navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);

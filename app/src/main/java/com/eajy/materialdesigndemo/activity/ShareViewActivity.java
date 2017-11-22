@@ -62,27 +62,7 @@ public class ShareViewActivity extends AppCompatActivity {
             }
         }
 
-        card_share_view.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View view, MotionEvent motionEvent) {
-                switch (motionEvent.getAction()) {
-                    case MotionEvent.ACTION_DOWN:
-                        ObjectAnimator upAnim = ObjectAnimator.ofFloat(view, "translationZ", 0);
-                        upAnim.setDuration(200);
-                        upAnim.setInterpolator(new DecelerateInterpolator());
-                        upAnim.start();
-                        break;
-                    case MotionEvent.ACTION_UP:
-                    case MotionEvent.ACTION_CANCEL:
-                        ObjectAnimator downAnim = ObjectAnimator.ofFloat(view, "translationZ", 20);
-                        downAnim.setDuration(200);
-                        downAnim.setInterpolator(new AccelerateInterpolator());
-                        downAnim.start();
-                        break;
-                }
-                return false;
-            }
-        });
+        card_share_view.setOnTouchListener(touchListener);
 
         AlphaAnimation alphaAnimation = new AlphaAnimation(1.0f, 0.0f);
         alphaAnimation.setDuration(1500);
@@ -105,5 +85,27 @@ public class ShareViewActivity extends AppCompatActivity {
         });
         tv_share_view_tip.startAnimation(alphaAnimation);
     }
+
+    View.OnTouchListener touchListener = new View.OnTouchListener() {
+        @Override
+        public boolean onTouch(View view, MotionEvent motionEvent) {
+            switch (motionEvent.getAction()) {
+                case MotionEvent.ACTION_DOWN:
+                    ObjectAnimator upAnim = ObjectAnimator.ofFloat(view, "translationZ", 0);
+                    upAnim.setDuration(200);
+                    upAnim.setInterpolator(new DecelerateInterpolator());
+                    upAnim.start();
+                    break;
+                case MotionEvent.ACTION_UP:
+                case MotionEvent.ACTION_CANCEL:
+                    ObjectAnimator downAnim = ObjectAnimator.ofFloat(view, "translationZ", 20);
+                    downAnim.setDuration(200);
+                    downAnim.setInterpolator(new AccelerateInterpolator());
+                    downAnim.start();
+                    break;
+            }
+            return false;
+        }
+    };
 
 }

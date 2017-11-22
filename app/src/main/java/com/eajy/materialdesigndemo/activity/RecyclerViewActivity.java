@@ -16,7 +16,7 @@ import android.view.View;
 
 import com.eajy.materialdesigndemo.R;
 import com.eajy.materialdesigndemo.adapter.RecyclerViewAdapter;
-import com.eajy.materialdesigndemo.utils.ItemTouchHelperCallback;
+import com.eajy.materialdesigndemo.view.ItemTouchHelperCallback;
 
 import java.util.ArrayList;
 import java.util.List;

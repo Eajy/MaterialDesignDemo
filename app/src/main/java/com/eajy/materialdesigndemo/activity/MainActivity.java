@@ -2,7 +2,6 @@ package com.eajy.materialdesigndemo.activity;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
@@ -35,11 +34,12 @@ import com.eajy.materialdesigndemo.adapter.FragmentAdapter;
 import com.eajy.materialdesigndemo.fragment.CardsFragment;
 import com.eajy.materialdesigndemo.fragment.DialogsFragment;
 import com.eajy.materialdesigndemo.fragment.WidgetsFragment;
+import com.eajy.materialdesigndemo.util.AppUtils;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
 
     private DrawerLayout drawer;
     private FloatingActionButton fab;
@@ -137,29 +137,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         View headerView = navigationView.getHeaderView(0);
         LinearLayout nav_header = headerView.findViewById(R.id.nav_header);
-        nav_header.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
-                startActivity(intent);
-                DrawerLayout drawer = findViewById(R.id.drawer_layout);
-                drawer.closeDrawer(GravityCompat.START);
-            }
-        });
+        nav_header.setOnClickListener(this);
 
         fab = findViewById(R.id.fab_main);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, getString(R.string.main_snack_bar), Snackbar.LENGTH_LONG)
-                        .setAction(getString(R.string.main_snack_bar_action), new View.OnClickListener() {
-                            @Override
-                            public void onClick(View view) {
-
-                            }
-                        }).show();
-            }
-        });
+        fab.setOnClickListener(this);
 
         relative_main = findViewById(R.id.relative_main);
         img_page_start = findViewById(R.id.img_page_start);
@@ -189,41 +170,50 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         mTabLayout.setupWithViewPager(mViewPager);
         mTabLayout.setTabsFromPagerAdapter(mFragmentAdapter);
 
-        mViewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-            @Override
-            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-
-            }
-
-            @Override
-            public void onPageSelected(int position) {
-                if (position == 2) {
-                    fab.show();
-                } else {
-                    fab.hide();
-                }
-            }
-
-            @Override
-            public void onPageScrollStateChanged(int state) {
-
-            }
-        });
+        mViewPager.addOnPageChangeListener(pageChangeListener);
     }
 
-    @Override
-    public void onBackPressed() {
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
-            drawer.closeDrawer(GravityCompat.START);
-        } else {
-            super.onBackPressed();
+    private ViewPager.OnPageChangeListener pageChangeListener = new ViewPager.OnPageChangeListener() {
+        @Override
+        public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
         }
-    }
+
+        @Override
+        public void onPageSelected(int position) {
+            if (position == 2) {
+                fab.show();
+            } else {
+                fab.hide();
+            }
+        }
+
+        @Override
+        public void onPageScrollStateChanged(int state) {
+
+        }
+    };
 
     @Override
-    protected void onDestroy() {
-        mHandler.removeCallbacksAndMessages(null);
-        super.onDestroy();
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.nav_header:
+                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                startActivity(intent);
+                DrawerLayout drawer = findViewById(R.id.drawer_layout);
+                drawer.closeDrawer(GravityCompat.START);
+                break;
+
+            case R.id.fab_main:
+                Snackbar.make(view, getString(R.string.main_snack_bar), Snackbar.LENGTH_LONG)
+                        .setAction(getString(R.string.main_snack_bar_action), new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+
+                            }
+                        }).show();
+                break;
+        }
     }
 
     @Override
@@ -285,9 +275,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 break;
 
             case R.id.nav_color:
-                if (checkAppInstalled(Constant.MATERIAL_DESIGN_COLOR_PACKAGE)) {
+                if (AppUtils.checkAppInstalled(this, Constant.MATERIAL_DESIGN_COLOR_PACKAGE)) {
                     intent = getPackageManager().getLaunchIntentForPackage(Constant.MATERIAL_DESIGN_COLOR_PACKAGE);
-                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_RESET_TASK_IF_NEEDED | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    if (intent != null) {
+                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_RESET_TASK_IF_NEEDED | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    }
                     startActivity(intent);
                 } else {
                     intent.setData(Uri.parse(Constant.MATERIAL_DESIGN_COLOR_URL));
@@ -301,13 +293,19 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         return true;
     }
 
-    private boolean checkAppInstalled(String packageName) {
-        try {
-            getPackageManager().getPackageInfo(packageName, PackageManager.GET_ACTIVITIES);
-            return true;
-        } catch (PackageManager.NameNotFoundException e) {
-            return false;
+    @Override
+    public void onBackPressed() {
+        if (drawer.isDrawerOpen(GravityCompat.START)) {
+            drawer.closeDrawer(GravityCompat.START);
+        } else {
+            super.onBackPressed();
         }
+    }
+
+    @Override
+    protected void onDestroy() {
+        mHandler.removeCallbacksAndMessages(null);
+        super.onDestroy();
     }
 
 }

@@ -29,6 +29,7 @@ public class FullscreenActivity extends AppCompatActivity {
 
     private final int MESSAGE_HIDE_BARS = 0x001;
     private final int MESSAGE_VIDEO_PREPARED = 0x002;
+
     public Handler mHandler = new Handler() {
         @Override
         public void handleMessage(Message msg) {

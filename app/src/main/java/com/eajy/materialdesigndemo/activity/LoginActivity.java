@@ -158,7 +158,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     public void hideInput(View view) {
         InputMethodManager inputMethodManager = (InputMethodManager) this.getSystemService(INPUT_METHOD_SERVICE);
-        inputMethodManager.hideSoftInputFromWindow(view.getWindowToken(), 0);
+        if (inputMethodManager != null) {
+            inputMethodManager.hideSoftInputFromWindow(view.getWindowToken(), 0);
+        }
     }
 
     private void showProgress(final boolean show) {

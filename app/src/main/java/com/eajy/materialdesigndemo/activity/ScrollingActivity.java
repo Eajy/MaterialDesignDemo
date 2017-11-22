@@ -19,8 +19,6 @@ import com.eajy.materialdesigndemo.R;
 
 public class ScrollingActivity extends AppCompatActivity {
 
-    private ImageView image_scrolling_top;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,13 +44,14 @@ public class ScrollingActivity extends AppCompatActivity {
             }
         });
 
-        image_scrolling_top = findViewById(R.id.image_scrolling_top);
+        ImageView image_scrolling_top = findViewById(R.id.image_scrolling_top);
         Glide.with(this).load(R.drawable.material_design_3).fitCenter().into(image_scrolling_top);
     }
 
     @Override
     protected void onResume() {
         super.onResume();
+
         Configuration configuration = getResources().getConfiguration();
         if (configuration.orientation == Configuration.ORIENTATION_LANDSCAPE) {
             getWindow().clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);

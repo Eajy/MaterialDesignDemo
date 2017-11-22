@@ -53,9 +53,6 @@ public class DialogsFragment extends Fragment implements View.OnClickListener {
         btn_dialog_10 = nestedScrollView.findViewById(R.id.btn_dialog_10);
         btn_dialog_11 = nestedScrollView.findViewById(R.id.btn_dialog_11);
 
-        // ViewGroup viewGroup = (ViewGroup) mRecyclerView.getParent();
-        // if (viewGroup != null) { viewGroup.removeAllViews(); }
-
         return nestedScrollView;
     }
 
@@ -239,4 +236,5 @@ public class DialogsFragment extends Fragment implements View.OnClickListener {
 
         }
     }
+
 }
