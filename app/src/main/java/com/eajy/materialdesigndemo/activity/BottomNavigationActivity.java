@@ -1,33 +1,39 @@
 package com.eajy.materialdesigndemo.activity;
 
 import android.graphics.Color;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
+import android.view.animation.AccelerateDecelerateInterpolator;
+import android.view.animation.Interpolator;
 
 import com.eajy.materialdesigndemo.R;
-import com.eajy.materialdesigndemo.view.BottomNavigationViewHelper;
 import com.eajy.materialdesigndemo.view.BottomNavigationPageTransformer;
+import com.eajy.materialdesigndemo.view.BottomNavigationViewHelper;
+import com.eajy.materialdesigndemo.view.FixedScroller;
 
+import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BottomNavigationActivity extends AppCompatActivity {
+public class BottomNavigationActivity extends AppCompatActivity
+{
 
     private ViewPager viewPager;
     private BottomNavigationView navigation;
     private List<View> viewList;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bottom_navigation);
 
@@ -40,7 +46,8 @@ public class BottomNavigationActivity extends AppCompatActivity {
         initView();
     }
 
-    private void initView() {
+    private void initView()
+    {
         View view1 = getLayoutInflater().inflate(R.layout.item_view_pager_1, null);
         View view2 = getLayoutInflater().inflate(R.layout.item_view_pager_2, null);
         View view3 = getLayoutInflater().inflate(R.layout.item_view_pager_3, null);
@@ -53,6 +60,7 @@ public class BottomNavigationActivity extends AppCompatActivity {
         viewList.add(view4);
 
         viewPager = findViewById(R.id.view_pager_bottom_navigation);
+        changViewpagerTime();
         viewPager.setAdapter(pagerAdapter);
         viewPager.addOnPageChangeListener(pageChangeListener);
         viewPager.setPageTransformer(true, new BottomNavigationPageTransformer());
@@ -64,15 +72,41 @@ public class BottomNavigationActivity extends AppCompatActivity {
         BottomNavigationViewHelper.disableShiftMode(navigation);
     }
 
-    private ViewPager.OnPageChangeListener pageChangeListener = new ViewPager.OnPageChangeListener() {
+    /**
+     * 改变viewpager自动播放的滑动时间为500ms 默认是250ms
+     */
+    private void changViewpagerTime()
+    {
+        try
+        {
+            Field mScroller;
+            mScroller = ViewPager.class.getDeclaredField("mScroller");
+            mScroller.setAccessible(true);
+            Interpolator sInterpolator = new AccelerateDecelerateInterpolator();
+            FixedScroller scroller = new FixedScroller(viewPager.getContext(), sInterpolator);
+            mScroller.set(viewPager, scroller);
+        } catch (NoSuchFieldException e)
+        {
+        } catch (IllegalArgumentException e)
+        {
+        } catch (IllegalAccessException e)
+        {
+        }
+    }
+
+    private ViewPager.OnPageChangeListener pageChangeListener = new ViewPager.OnPageChangeListener()
+    {
         @Override
-        public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+        public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels)
+        {
 
         }
 
         @Override
-        public void onPageSelected(int position) {
-            switch (position) {
+        public void onPageSelected(int position)
+        {
+            switch (position)
+            {
                 case 0:
                     navigation.setSelectedItemId(R.id.bottom_navigation_blue);
                     break;
@@ -89,15 +123,19 @@ public class BottomNavigationActivity extends AppCompatActivity {
         }
 
         @Override
-        public void onPageScrollStateChanged(int state) {
+        public void onPageScrollStateChanged(int state)
+        {
 
         }
     };
 
-    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
+    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener = new BottomNavigationView.OnNavigationItemSelectedListener()
+    {
         @Override
-        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-            switch (item.getItemId()) {
+        public boolean onNavigationItemSelected(@NonNull MenuItem item)
+        {
+            switch (item.getItemId())
+            {
                 case R.id.bottom_navigation_blue:
                     viewPager.setCurrentItem(0);
                     return true;
@@ -115,24 +153,29 @@ public class BottomNavigationActivity extends AppCompatActivity {
         }
     };
 
-    private PagerAdapter pagerAdapter = new PagerAdapter() {
+    private PagerAdapter pagerAdapter = new PagerAdapter()
+    {
         @Override
-        public int getCount() {
+        public int getCount()
+        {
             return viewList.size();
         }
 
         @Override
-        public boolean isViewFromObject(View view, Object object) {
+        public boolean isViewFromObject(View view, Object object)
+        {
             return view == object;
         }
 
         @Override
-        public void destroyItem(ViewGroup container, int position, Object object) {
+        public void destroyItem(ViewGroup container, int position, Object object)
+        {
             container.removeView(viewList.get(position));
         }
 
         @Override
-        public Object instantiateItem(ViewGroup container, int position) {
+        public Object instantiateItem(ViewGroup container, int position)
+        {
             container.addView(viewList.get(position));
             return viewList.get(position);
         }
