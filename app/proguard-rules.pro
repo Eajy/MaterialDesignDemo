@@ -15,3 +15,8 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
+
+#The reflection is used in class BottomNavigationViewHelper;
+-keep class android.support.design.internal.BottomNavigationMenuView{
+    private boolean mShiftingMode;
+}
