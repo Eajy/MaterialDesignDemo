@@ -78,7 +78,7 @@
 
         <include
             android:id="@+id/card_ad"
-            layout="@layout/ad_native_main"
+            layout="@layout/ad_banner_main"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/text_margin_small"

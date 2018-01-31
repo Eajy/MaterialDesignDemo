@@ -14,6 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AccelerateInterpolator;
 import android.view.animation.AlphaAnimation;
+import android.view.animation.Animation;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -22,7 +23,7 @@ import android.widget.LinearLayout;
 import com.bumptech.glide.Glide;
 import com.eajy.materialdesigndemo.R;
 import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.NativeExpressAdView;
+import com.google.android.gms.ads.AdView;
 
 import static android.content.Context.MODE_PRIVATE;
 
@@ -40,7 +41,7 @@ public class CardsFragment extends Fragment implements View.OnClickListener, Vie
             img_main_card41_share, img_main_card42_share;
     private CardView card_main_1_1, card_main_1_2, card_main_1_3, card_main_1_4_1, card_main_1_4_2;
     private AlphaAnimation alphaAnimation, alphaAnimationShowIcon;
-    private NativeExpressAdView adView;
+    private AdView ad_view;
     private CardView card_ad;
 
     @Nullable
@@ -80,7 +81,7 @@ public class CardsFragment extends Fragment implements View.OnClickListener, Vie
         Glide.with(getContext()).load(R.drawable.material_design_1).fitCenter().into(img_main_card_41);
         Glide.with(getContext()).load(R.drawable.material_design_1).fitCenter().into(img_main_card_42);
 
-        adView = nestedScrollView.findViewById(R.id.adView);
+        ad_view = nestedScrollView.findViewById(R.id.ad_view);
         card_ad = nestedScrollView.findViewById(R.id.card_ad);
 
         return nestedScrollView;
@@ -266,10 +267,13 @@ public class CardsFragment extends Fragment implements View.OnClickListener, Vie
     public void showAd() {
         SharedPreferences sharedPreferences = getContext().getSharedPreferences("app", MODE_PRIVATE);
         if (!sharedPreferences.getBoolean("isDonated", false)) {
-            AdRequest request = new AdRequest.Builder().build();
-            adView.loadAd(request);
+            AdRequest adRequest = new AdRequest.Builder().setRequestAgent("android_studio:ad_template").build();
+            ad_view.loadAd(adRequest);
 
+            Animation animation = new AlphaAnimation(0.0f, 1.0f);
+            animation.setDuration(500);
             card_ad.setVisibility(View.VISIBLE);
+            card_ad.startAnimation(animation);
         }
     }
 
