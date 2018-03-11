@@ -1,5 +1,6 @@
 package com.eajy.materialdesigndemo.activity;
 
+import android.animation.ArgbEvaluator;
 import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -55,7 +56,6 @@ public class BottomNavigationActivity extends AppCompatActivity {
         viewPager = findViewById(R.id.view_pager_bottom_navigation);
         viewPager.setAdapter(pagerAdapter);
         viewPager.addOnPageChangeListener(pageChangeListener);
-        viewPager.setPageTransformer(true, new BottomNavigationPageTransformer());
 
         navigation = findViewById(R.id.bottom_navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
@@ -67,7 +67,18 @@ public class BottomNavigationActivity extends AppCompatActivity {
     private ViewPager.OnPageChangeListener pageChangeListener = new ViewPager.OnPageChangeListener() {
         @Override
         public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-
+            ArgbEvaluator evaluator = new ArgbEvaluator();
+            int evaluate = getResources().getColor(R.color.app_blue);
+            if (position == 0) {
+                evaluate = (Integer) evaluator.evaluate(positionOffset, getResources().getColor(R.color.app_blue), getResources().getColor(R.color.app_green));
+            } else if (position == 1) {
+                evaluate = (Integer) evaluator.evaluate(positionOffset, getResources().getColor(R.color.app_green), getResources().getColor(R.color.app_yellow));
+            } else if (position == 2) {
+                evaluate = (Integer) evaluator.evaluate(positionOffset, getResources().getColor(R.color.app_yellow), getResources().getColor(R.color.app_red));
+            } else {
+                evaluate = getResources().getColor(R.color.app_red);
+            }
+            ((View) viewPager.getParent()).setBackgroundColor(evaluate);
         }
 
         @Override

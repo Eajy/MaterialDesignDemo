@@ -14,6 +14,7 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.eajy.materialdesigndemo.Constant;
 import com.eajy.materialdesigndemo.R;
 
@@ -45,7 +46,7 @@ public class ScrollingActivity extends AppCompatActivity {
         });
 
         ImageView image_scrolling_top = findViewById(R.id.image_scrolling_top);
-        Glide.with(this).load(R.drawable.material_design_3).fitCenter().into(image_scrolling_top);
+        Glide.with(this).load(R.drawable.material_design_3).apply(new RequestOptions().fitCenter()).into(image_scrolling_top);
     }
 
     @Override

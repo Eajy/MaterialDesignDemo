@@ -21,6 +21,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.eajy.materialdesigndemo.R;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
@@ -75,11 +76,11 @@ public class CardsFragment extends Fragment implements View.OnClickListener, Vie
         card_main_1_4_1 = nestedScrollView.findViewById(R.id.card_main_1_4_1);
         card_main_1_4_2 = nestedScrollView.findViewById(R.id.card_main_1_4_2);
 
-        Glide.with(getContext()).load(R.drawable.material_design_2).fitCenter().into(img_main_card_1);
-        Glide.with(getContext()).load(R.drawable.material_design_4).fitCenter().into(img_main_card_2);
-        Glide.with(getContext()).load(R.drawable.material_design_11).fitCenter().into(img_card_main_3);
-        Glide.with(getContext()).load(R.drawable.material_design_1).fitCenter().into(img_main_card_41);
-        Glide.with(getContext()).load(R.drawable.material_design_1).fitCenter().into(img_main_card_42);
+        Glide.with(getContext()).load(R.drawable.material_design_2).apply(new RequestOptions().fitCenter()).into(img_main_card_1);
+        Glide.with(getContext()).load(R.drawable.material_design_4).apply(new RequestOptions().fitCenter()).into(img_main_card_2);
+        Glide.with(getContext()).load(R.drawable.material_design_11).apply(new RequestOptions().fitCenter()).into(img_card_main_3);
+        Glide.with(getContext()).load(R.drawable.material_design_1).apply(new RequestOptions().fitCenter()).into(img_main_card_41);
+        Glide.with(getContext()).load(R.drawable.material_design_1).apply(new RequestOptions().fitCenter()).into(img_main_card_42);
 
         ad_view = nestedScrollView.findViewById(R.id.ad_view);
         card_ad = nestedScrollView.findViewById(R.id.card_ad);
