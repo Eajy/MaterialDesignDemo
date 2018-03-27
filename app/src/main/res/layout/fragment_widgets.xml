@@ -197,5 +197,17 @@
             android:background="@color/main_background"
             android:elevation="@dimen/text_margin_very_small" />
 
+        <TextView
+            android:id="@+id/tv_ad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/text_margin_small"
+            android:layout_marginTop="@dimen/text_margin"
+            android:text="@string/banner_ad_title"
+            android:textColor="@color/colorPrimary"
+            android:visibility="gone" />
+
+        <include layout="@layout/ad_banner_main_widget" />
+
     </LinearLayout>
 </android.support.v4.widget.NestedScrollView>

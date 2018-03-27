@@ -16,7 +16,6 @@ import android.view.WindowManager;
 
 import com.eajy.materialdesigndemo.R;
 import com.eajy.materialdesigndemo.view.BottomNavigationViewHelper;
-import com.eajy.materialdesigndemo.view.BottomNavigationPageTransformer;
 
 import java.util.ArrayList;
 import java.util.List;

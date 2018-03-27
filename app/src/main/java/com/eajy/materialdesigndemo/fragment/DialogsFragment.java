@@ -5,17 +5,21 @@ import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.app.TimePickerDialog;
 import android.content.DialogInterface;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.BottomSheetDialog;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.NestedScrollView;
 import android.support.v7.app.AlertDialog;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.PopupMenu;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AlphaAnimation;
+import android.view.animation.Animation;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.ImageView;
@@ -23,9 +27,13 @@ import android.widget.TimePicker;
 
 import com.bumptech.glide.Glide;
 import com.eajy.materialdesigndemo.R;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 
 import java.text.DateFormat;
 import java.util.Calendar;
+
+import static android.content.Context.MODE_PRIVATE;
 
 /**
  * Created by zhang on 2016.08.07.
@@ -35,6 +43,8 @@ public class DialogsFragment extends Fragment implements View.OnClickListener {
     private Button btn_dialog_1, btn_dialog_2, btn_dialog_3, btn_dialog_4, btn_dialog_5,
             btn_dialog_6, btn_dialog_7, btn_dialog_8, btn_dialog_9, btn_dialog_10, btn_dialog_11;
     Calendar calendar;
+    private AdView ad_view_dialog;
+    private CardView card_ad_dialog;
 
     @Nullable
     @Override
@@ -52,6 +62,9 @@ public class DialogsFragment extends Fragment implements View.OnClickListener {
         btn_dialog_9 = nestedScrollView.findViewById(R.id.btn_dialog_9);
         btn_dialog_10 = nestedScrollView.findViewById(R.id.btn_dialog_10);
         btn_dialog_11 = nestedScrollView.findViewById(R.id.btn_dialog_11);
+
+        ad_view_dialog = nestedScrollView.findViewById(R.id.ad_view_dialog);
+        card_ad_dialog = nestedScrollView.findViewById(R.id.card_ad_dialog);
 
         return nestedScrollView;
     }
@@ -73,6 +86,8 @@ public class DialogsFragment extends Fragment implements View.OnClickListener {
         btn_dialog_9.setOnClickListener(this);
         btn_dialog_10.setOnClickListener(this);
         btn_dialog_11.setOnClickListener(this);
+
+        showAd();
     }
 
     @Override
@@ -234,6 +249,19 @@ public class DialogsFragment extends Fragment implements View.OnClickListener {
                 popupMenu.show();
                 break;
 
+        }
+    }
+
+    public void showAd() {
+        SharedPreferences sharedPreferences = getContext().getSharedPreferences("app", MODE_PRIVATE);
+        if (!sharedPreferences.getBoolean("isDonated", false)) {
+            AdRequest adRequest = new AdRequest.Builder().setRequestAgent("android_studio:ad_template").build();
+            ad_view_dialog.loadAd(adRequest);
+
+            Animation animation = new AlphaAnimation(0.0f, 1.0f);
+            animation.setDuration(500);
+            card_ad_dialog.setVisibility(View.VISIBLE);
+            card_ad_dialog.startAnimation(animation);
         }
     }
 

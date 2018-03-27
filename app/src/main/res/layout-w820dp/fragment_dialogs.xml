@@ -174,5 +174,11 @@
             app:layout_constraintEnd_toEndOf="@id/btn_dialog_9"
             app:layout_constraintStart_toStartOf="@id/btn_dialog_9"
             app:layout_constraintTop_toBottomOf="@id/btn_dialog_9" />
+
+        <include layout="@layout/ad_banner_main_card"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btn_dialog_11"
+            app:layout_constraintTop_toBottomOf="@id/btn_dialog_10" />
+
     </android.support.constraint.ConstraintLayout>
 </android.support.v4.widget.NestedScrollView>

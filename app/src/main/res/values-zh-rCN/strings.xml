@@ -225,9 +225,7 @@
     <string name="donate_exception">抱歉，无法操作！</string>
 
     <!-- String related to Ad -->
+    <string name="banner_ad_title">广告</string>
     <string name="banner_ad_loading">广告加载中 …</string>
-    <string name="banner_ad_unit_id_donate">ca-app-pub-1251484082745159/2015219028</string>
-    <string name="banner_ad_unit_id_main">ca-app-pub-1251484082745159/1419789825</string>
-    <string name="native_ad_unit_id_main">ca-app-pub-1251484082745159/8449555424</string>
 
 </resources>

@@ -8,8 +8,8 @@ android {
         applicationId "com.eajy.materialdesigndemo"
         minSdkVersion 21
         targetSdkVersion 26
-        versionCode 29
-        versionName "3.8"
+        versionCode 30
+        versionName "3.9"
     }
 
     buildTypes {
@@ -36,5 +36,5 @@ dependencies {
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
 
     compile 'com.github.bumptech.glide:glide:4.1.1'
-    compile 'com.google.android.gms:play-services-ads:11.8.0'
+    compile 'com.google.android.gms:play-services-ads:12.0.0'
 }

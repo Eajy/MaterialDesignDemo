@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_ad_dialog"
+    cardCornerRadius="@dimen/card_recycler_corner_radius"
+    cardElevation="@dimen/card_recycler_elevation"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_centerHorizontal="true"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginBottom="@dimen/text_margin_small"
+    android:layout_marginTop="@dimen/btn_margin"
+    android:visibility="gone">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/banner_ad_loading" />
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/ad_view_dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            ads:adSize="BANNER"
+            ads:adUnitId="@string/banner_ad_unit_id_main_dialog" />
+
+    </FrameLayout>
+</android.support.v7.widget.CardView>

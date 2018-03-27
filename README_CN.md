@@ -1,11 +1,4 @@
-#### 最近更新日志:  
-- 大幅优化了在平板上的显示效果。  
-- RecyclerView Activity 添加了上拉加载和删除撤销以及隐藏fab的Behavior。  
-- Settings 页面添加了 PreferenceCategory。  
-- 添加了开源许可。  
-- 升级了 Android Studio 和 Gradle 版本。  
-- 增加了 Android O 的自适应图标。  
-
+  
 ---  
 
 **这是一个遵循Material Design设计理念的demo应用。它使用了最新的design support library，展示如何使用material design来设计app。  
@@ -24,7 +17,8 @@
 - TextInputLayout  
 - BottomSheetDialog  
 - SharedElementTransitions  
-- BottomNavigationView
+- BottomNavigationView  
+- Adaptive icon  
 
 #### Google Play:  
 https://play.google.com/store/apps/details?id=com.eajy.materialdesigndemo  
@@ -42,6 +36,8 @@ https://play.google.com/store/apps/details?id=com.eajy.materialdesigndemo
 ---  
 
 #### 开源许可:  
+    Copyright 2016 Eajy  
+      
     The product includes:  
       
     Apache License, Version 2.0  

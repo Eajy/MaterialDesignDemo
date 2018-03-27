@@ -95,7 +95,7 @@ public class AboutActivity extends AppCompatActivity implements View.OnClickList
                 dialog.setContentView(R.layout.dialog_source_licenses);
 
                 final WebView webView = dialog.findViewById(R.id.web_source_licenses);
-                webView.loadUrl("file:///android_asset/source_licenses.html");
+                webView.loadUrl("file:///android_asset/open_source_license.html");
 
                 Button btn_source_licenses_close = dialog.findViewById(R.id.btn_source_licenses_close);
                 btn_source_licenses_close.setOnClickListener(new View.OnClickListener() {

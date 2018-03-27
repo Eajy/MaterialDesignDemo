@@ -1,13 +1,5 @@
 [Language：简体中文](https://github.com/Eajy/MaterialDesignDemo/blob/master/README_CN.md)  
-
-#### Recently Updates Logs:  
-- Greatly optimized the display on the tablet.  
-- Added "Load more" and "Undo delete" and a FabBehavior in RecyclerView Activity.  
-- Added PreferenceCategory in Settings.  
-- Added Open Source Licenses.  
-- Updated Android Studio and Gradle version.  
-- Added adaptive icon for Android O.  
-
+  
 ---  
 
 **This is a demo app designed with the fascinating and modern Google's Material Design.
@@ -27,7 +19,8 @@ It covers many material design components, such as:**
 - TextInputLayout  
 - BottomSheetDialog  
 - SharedElementTransitions  
-- BottomNavigationView
+- BottomNavigationView  
+- Adaptive icon  
 
 #### Google Play:  
 https://play.google.com/store/apps/details?id=com.eajy.materialdesigndemo  
@@ -45,6 +38,8 @@ https://play.google.com/store/apps/details?id=com.eajy.materialdesigndemo
 ---  
 
 #### Open Source Licenses:  
+    Copyright 2016 Eajy  
+      
     The product includes:  
       
     Apache License, Version 2.0  
