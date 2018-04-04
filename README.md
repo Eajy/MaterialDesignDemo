@@ -21,6 +21,7 @@ It covers many material design components, such as:**
 - SharedElementTransitions  
 - BottomNavigationView  
 - Adaptive icon  
+- App shortcuts  
 
 #### Google Play:  
 https://play.google.com/store/apps/details?id=com.eajy.materialdesigndemo  

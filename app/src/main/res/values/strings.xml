@@ -233,4 +233,9 @@
     <string name="banner_ad_unit_id_main_dialog" translatable="false">ca-app-pub-1251484082745159/2227788617</string>
     <string name="banner_ad_unit_id_main_widget" translatable="false">ca-app-pub-1251484082745159/3516394521</string>
 
+    <!-- String related to app short cuts -->
+    <string name="shortcut_label_recycler">Recycler View</string>
+    <string name="shortcut_label_scrolling">Scrolling</string>
+    <string name="shortcut_label_about">About</string>
+
 </resources>

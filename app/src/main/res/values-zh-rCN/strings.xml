@@ -60,7 +60,7 @@
     <string name="main_widget_time_picker">Time Picker</string>
 
     <string name="nav_header_text">点击进入登陆界面</string>
-    <string name="nav_recycler_view">RecyclerView</string>
+    <string name="nav_recycler_view">Recycler View</string>
     <string name="nav_scrolling">Scrolling</string>
     <string name="nav_fullscreen">全屏</string>
     <string name="nav_bottom_navigation">底部导航栏</string>
@@ -227,5 +227,10 @@
     <!-- String related to Ad -->
     <string name="banner_ad_title">广告</string>
     <string name="banner_ad_loading">广告加载中 …</string>
+
+    <!-- String related to app short cuts -->
+    <string name="shortcut_label_recycler">Recycler View</string>
+    <string name="shortcut_label_scrolling">Scrolling</string>
+    <string name="shortcut_label_about">关于</string>
 
 </resources>

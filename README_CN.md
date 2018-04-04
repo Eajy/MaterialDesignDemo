@@ -19,6 +19,7 @@
 - SharedElementTransitions  
 - BottomNavigationView  
 - Adaptive icon  
+- App shortcuts  
 
 #### Google Play:  
 https://play.google.com/store/apps/details?id=com.eajy.materialdesigndemo  

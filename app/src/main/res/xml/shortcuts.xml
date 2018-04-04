@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <shortcut
+        android:icon="@mipmap/ic_shortcut_recycler"
+        android:shortcutId="shortcut_recycler"
+        android:shortcutShortLabel="@string/shortcut_label_recycler">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetClass="com.eajy.materialdesigndemo.activity.RecyclerViewActivity"
+            android:targetPackage="com.eajy.materialdesigndemo" />
+    </shortcut>
+
+    <shortcut
+        android:icon="@mipmap/ic_shortcut_scrolling"
+        android:shortcutId="shortcut_scrolling"
+        android:shortcutShortLabel="@string/shortcut_label_scrolling">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetClass="com.eajy.materialdesigndemo.activity.ScrollingActivity"
+            android:targetPackage="com.eajy.materialdesigndemo" />
+    </shortcut>
+
+    <shortcut
+        android:icon="@mipmap/ic_shortcut_about"
+        android:shortcutId="shortcut_about"
+        android:shortcutShortLabel="@string/shortcut_label_about">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetClass="com.eajy.materialdesigndemo.activity.AboutActivity"
+            android:targetPackage="com.eajy.materialdesigndemo" />
+    </shortcut>
+
+</shortcuts>
