@@ -5,6 +5,14 @@
     android:layout_height="match_parent"
     android:background="@color/colorPrimary">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:textColor="@color/gray_light"
+        android:padding="@dimen/text_margin_small"
+        android:text="@string/app_designed_by" />
+
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar_about"
         android:layout_width="match_parent"
@@ -27,8 +35,6 @@
             <include layout="@layout/card_about_1" />
 
             <include layout="@layout/card_about_2" />
-
-            <include layout="@layout/card_about_source_licenses" />
 
         </LinearLayout>
     </ScrollView>

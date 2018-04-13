@@ -4,7 +4,7 @@
     android:id="@+id/card_about_2"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="@dimen/main_card_margin_vertical"
+    android:layout_marginBottom="32dp"
     android:layout_marginLeft="@dimen/main_card_margin_horizontal"
     android:layout_marginRight="@dimen/main_card_margin_horizontal"
     android:layout_marginTop="@dimen/main_card_margin_vertical"
@@ -12,9 +12,10 @@
     card_view:cardCornerRadius="2dp"
     card_view:cardElevation="2dp">
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/tv_card_about_2_1"
@@ -29,14 +30,12 @@
             android:id="@+id/view_card_about_2_line"
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:layout_below="@id/tv_card_about_2_1"
             android:background="@color/main_background" />
 
         <LinearLayout
             android:id="@+id/ll_card_about_2_shop"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/view_card_about_2_line"
             android:background="?android:selectableItemBackground"
             android:clickable="true"
             android:orientation="horizontal">
@@ -61,7 +60,6 @@
             android:id="@+id/ll_card_about_2_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/ll_card_about_2_shop"
             android:background="?android:selectableItemBackground"
             android:clickable="true"
             android:orientation="horizontal">
@@ -86,7 +84,6 @@
             android:id="@+id/ll_card_about_2_git_hub"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/ll_card_about_2_email"
             android:background="?android:selectableItemBackground"
             android:clickable="true"
             android:orientation="horizontal">
@@ -108,10 +105,9 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/ll_card_about_2_location"
+            android:id="@+id/ll_card_about_2_website"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/ll_card_about_2_git_hub"
             android:background="?android:selectableItemBackground"
             android:clickable="true"
             android:orientation="horizontal">
@@ -121,16 +117,40 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_margin="@dimen/text_margin"
-                android:src="@drawable/ic_location_on_black_24dp" />
+                android:src="@drawable/ic_web_white_24dp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_margin="@dimen/text_margin"
-                android:text="@string/about_address"
+                android:text="@string/about_website"
                 android:textStyle="italic" />
         </LinearLayout>
 
-    </RelativeLayout>
+        <LinearLayout
+            android:id="@+id/ll_card_about_source_licenses"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?android:selectableItemBackground"
+            android:clickable="true"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="@dimen/text_margin"
+                android:src="@drawable/ic_copyright_black_24dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="@dimen/text_margin"
+                android:text="@string/about_source_licenses"
+                android:textStyle="italic" />
+        </LinearLayout>
+
+    </LinearLayout>
 </android.support.v7.widget.CardView>

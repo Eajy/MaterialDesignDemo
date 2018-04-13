@@ -211,6 +211,7 @@
     <string name="about_email">Feedback by E-mail</string>
     <string name="about_git_hub">Source code on GitHub</string>
     <string name="about_address">Beijing, China</string>
+    <string name="about_website">View my website</string>
     <string name="about_source_licenses">Open source licenses</string>
     <string name="share_with">Share with</string>
 

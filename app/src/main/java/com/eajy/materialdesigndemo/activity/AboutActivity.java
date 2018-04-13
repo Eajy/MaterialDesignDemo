@@ -48,10 +48,12 @@ public class AboutActivity extends AppCompatActivity implements View.OnClickList
         LinearLayout ll_card_about_2_shop = findViewById(R.id.ll_card_about_2_shop);
         LinearLayout ll_card_about_2_email = findViewById(R.id.ll_card_about_2_email);
         LinearLayout ll_card_about_2_git_hub = findViewById(R.id.ll_card_about_2_git_hub);
+        LinearLayout ll_card_about_2_website = findViewById(R.id.ll_card_about_2_website);
         LinearLayout ll_card_about_source_licenses = findViewById(R.id.ll_card_about_source_licenses);
         ll_card_about_2_shop.setOnClickListener(this);
         ll_card_about_2_email.setOnClickListener(this);
         ll_card_about_2_git_hub.setOnClickListener(this);
+        ll_card_about_2_website.setOnClickListener(this);
         ll_card_about_source_licenses.setOnClickListener(this);
 
         FloatingActionButton fab = findViewById(R.id.fab_about_share);
@@ -110,6 +112,12 @@ public class AboutActivity extends AppCompatActivity implements View.OnClickList
 
             case R.id.ll_card_about_2_git_hub:
                 intent.setData(Uri.parse(Constant.GIT_HUB));
+                intent.setAction(Intent.ACTION_VIEW);
+                startActivity(intent);
+                break;
+
+            case R.id.ll_card_about_2_website:
+                intent.setData(Uri.parse(Constant.MY_WEBSITE));
                 intent.setAction(Intent.ACTION_VIEW);
                 startActivity(intent);
                 break;

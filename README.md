@@ -59,4 +59,4 @@ https://play.google.com/store/apps/details?id=com.eajy.materialdesigndemo
     Copyright © Google, Inc. All rights reserved.  
     https://material.io/icons/
   
-_**- Designed by Eajy in China.**_
+[_**- Designed by Eajy in China.**_](https://sites.google.com/view/eajy)

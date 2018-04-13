@@ -211,6 +211,7 @@
     <string name="about_email">反馈 (E-mail)</string>
     <string name="about_git_hub">源代码 (GitHub)</string>
     <string name="about_address">Beijing, China</string>
+    <string name="about_website">我的网站</string>
     <string name="about_source_licenses">开源许可</string>
     <string name="share_with">分享方式</string>
 
