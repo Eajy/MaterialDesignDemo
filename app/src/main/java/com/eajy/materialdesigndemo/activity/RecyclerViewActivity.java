@@ -75,6 +75,7 @@ public class RecyclerViewActivity extends AppCompatActivity {
 
         adapter = new RecyclerViewAdapter(this);
         mRecyclerView.setAdapter(adapter);
+        adapter.addHeader();
         adapter.setItems(data);
         adapter.addFooter();
 
