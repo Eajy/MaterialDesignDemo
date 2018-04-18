@@ -64,7 +64,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
 
     public void addHeader() {
         this.mItems.add(HEADER);
-        notifyItemInserted(mItems.size() -1);
+        notifyItemInserted(mItems.size() - 1);
     }
 
     public void addFooter() {

@@ -11,6 +11,8 @@ import com.eajy.materialdesigndemo.interf.onMoveAndSwipedListener;
  */
 public class ItemTouchHelperCallback extends ItemTouchHelper.Callback {
 
+    private final int TYPE_NORMAL = 1;
+
     private onMoveAndSwipedListener moveAndSwipedListener;
 
     public ItemTouchHelperCallback(onMoveAndSwipedListener listener) {
@@ -28,9 +30,13 @@ public class ItemTouchHelperCallback extends ItemTouchHelper.Callback {
 
         } else {
             // for recyclerView with linearLayoutManager, support drag up and down, and swipe lift and right
-            final int dragFlags = ItemTouchHelper.UP | ItemTouchHelper.DOWN;
-            final int swipeFlags = ItemTouchHelper.START | ItemTouchHelper.END;
-            return makeMovementFlags(dragFlags, swipeFlags);
+            if (viewHolder.getItemViewType() == TYPE_NORMAL) {
+                final int dragFlags = ItemTouchHelper.UP | ItemTouchHelper.DOWN;
+                final int swipeFlags = ItemTouchHelper.START | ItemTouchHelper.END;
+                return makeMovementFlags(dragFlags, swipeFlags);
+            } else {
+                return 0;
+            }
         }
     }
 

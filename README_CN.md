@@ -36,6 +36,9 @@ https://play.google.com/store/apps/details?id=com.eajy.materialdesigndemo
   
 ---  
 
+#### 贡献者  
+- [Gurupreet](https://github.com/Gurupreet)  
+
 #### 开源许可:  
     Copyright 2016 Eajy  
       
