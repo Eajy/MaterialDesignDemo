@@ -253,15 +253,19 @@ public class DialogsFragment extends Fragment implements View.OnClickListener {
     }
 
     public void showAd() {
-        SharedPreferences sharedPreferences = getContext().getSharedPreferences("app", MODE_PRIVATE);
-        if (!sharedPreferences.getBoolean("isDonated", false)) {
-            AdRequest adRequest = new AdRequest.Builder().setRequestAgent("android_studio:ad_template").build();
-            ad_view_dialog.loadAd(adRequest);
+        try {
+            SharedPreferences sharedPreferences = getContext().getSharedPreferences("app", MODE_PRIVATE);
+            if (!sharedPreferences.getBoolean("isDonated", false)) {
+                AdRequest adRequest = new AdRequest.Builder().setRequestAgent("android_studio:ad_template").build();
+                ad_view_dialog.loadAd(adRequest);
 
-            Animation animation = new AlphaAnimation(0.0f, 1.0f);
-            animation.setDuration(500);
-            card_ad_dialog.setVisibility(View.VISIBLE);
-            card_ad_dialog.startAnimation(animation);
+                Animation animation = new AlphaAnimation(0.0f, 1.0f);
+                animation.setDuration(500);
+                card_ad_dialog.setVisibility(View.VISIBLE);
+                card_ad_dialog.startAnimation(animation);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 

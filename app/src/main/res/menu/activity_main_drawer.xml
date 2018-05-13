@@ -33,15 +33,10 @@
             android:id="@+id/nav_donate"
             android:icon="@drawable/ic_monetization_on_black_24dp"
             android:title="@string/nav_donate" />
+        <item
+            android:id="@+id/nav_my_apps"
+            android:icon="@drawable/ic_apps_black_24dp"
+            android:title="@string/nav_my_apps" />
     </group>
-
-    <item android:title="@string/nav_my_apps">
-        <menu>
-            <item
-                android:id="@+id/nav_color"
-                android:icon="@drawable/material_design_color"
-                android:title="@string/nav_color" />
-        </menu>
-    </item>
 
 </menu>

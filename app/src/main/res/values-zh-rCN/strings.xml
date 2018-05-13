@@ -70,7 +70,6 @@
     <string name="main_feedback_email">反馈:MaterialDesign</string>
     <string name="main_not_found_email">没有邮件程序</string>
     <string name="nav_my_apps">我的应用</string>
-    <string name="nav_color">Material Design Color</string>
 
     <!-- Strings related to Scrolling -->
     <string name="title_activity_scrolling">Scrolling</string>
@@ -234,4 +233,6 @@
     <string name="shortcut_label_scrolling">Scrolling</string>
     <string name="shortcut_label_about">关于</string>
 
+    <!-- String related to My Apps -->
+    <string name="activity_my_apps">我的应用</string>
 </resources>

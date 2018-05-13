@@ -12,6 +12,8 @@
     <dimen name="text_margin_very_small">4dp</dimen>
     <dimen name="btn_padding">20dp</dimen>
     <dimen name="btn_margin">14dp</dimen>
+    <dimen name="my_app_bar_height">128dp</dimen>
+    <dimen name="my_app_bar_overlap">56dp</dimen>
 
     <dimen name="card_margin_horizontal">8dp</dimen>
     <dimen name="card_margin_vertical">8dp</dimen>

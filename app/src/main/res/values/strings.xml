@@ -70,7 +70,6 @@
     <string name="main_feedback_email">Feedback:MaterialDesign</string>
     <string name="main_not_found_email">Not found email app</string>
     <string name="nav_my_apps">My Apps</string>
-    <string name="nav_color">Material Design Color</string>
 
     <!-- Strings related to Scrolling -->
     <string name="title_activity_scrolling">Scrolling</string>
@@ -239,4 +238,6 @@
     <string name="shortcut_label_scrolling">Scrolling</string>
     <string name="shortcut_label_about">About</string>
 
+    <!-- String related to My Apps -->
+    <string name="activity_my_apps">My Apps</string>
 </resources>

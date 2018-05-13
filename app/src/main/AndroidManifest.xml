@@ -12,7 +12,6 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
         <activity
             android:name=".activity.MainActivity"
             android:label="@string/app_name"
@@ -23,11 +22,11 @@
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
             <meta-data
                 android:name="android.app.shortcuts"
                 android:resource="@xml/shortcuts" />
         </activity>
-
         <activity
             android:name=".activity.LoginActivity"
             android:label="@string/title_activity_login"
@@ -62,16 +61,21 @@
             android:label="@string/title_activity_about"
             android:parentActivityName=".activity.MainActivity"
             android:theme="@style/AppTheme.NoActionBar_StatusBar" />
-
         <activity
             android:name=".activity.DonateActivity"
             android:label="@string/activity_donate"
             android:parentActivityName=".activity.MainActivity"
             android:theme="@style/AppTheme.NoActionBar_StatusBar" />
 
+        <activity android:name=".activity.MyAppsActivity"
+            android:label="@string/activity_my_apps"
+            android:parentActivityName=".activity.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar_StatusBar"/>
+
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
+
         <activity
             android:name="com.google.android.gms.ads.AdActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"

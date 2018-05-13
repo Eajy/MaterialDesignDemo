@@ -52,17 +52,21 @@ public class WidgetsFragment extends Fragment {
     }
 
     public void showAd() {
-        SharedPreferences sharedPreferences = getContext().getSharedPreferences("app", MODE_PRIVATE);
-        if (!sharedPreferences.getBoolean("isDonated", false)) {
-            AdRequest adRequest = new AdRequest.Builder().setRequestAgent("android_studio:ad_template").build();
-            ad_view_widget.loadAd(adRequest);
+        try {
+            SharedPreferences sharedPreferences = getContext().getSharedPreferences("app", MODE_PRIVATE);
+            if (!sharedPreferences.getBoolean("isDonated", false)) {
+                AdRequest adRequest = new AdRequest.Builder().setRequestAgent("android_studio:ad_template").build();
+                ad_view_widget.loadAd(adRequest);
 
-            Animation animation = new AlphaAnimation(0.0f, 1.0f);
-            animation.setDuration(500);
-            tv_ad.setVisibility(View.VISIBLE);
-            tv_ad.startAnimation(animation);
-            card_ad_widget.setVisibility(View.VISIBLE);
-            card_ad_widget.startAnimation(animation);
+                Animation animation = new AlphaAnimation(0.0f, 1.0f);
+                animation.setDuration(500);
+                tv_ad.setVisibility(View.VISIBLE);
+                tv_ad.startAnimation(animation);
+                card_ad_widget.setVisibility(View.VISIBLE);
+                card_ad_widget.startAnimation(animation);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
