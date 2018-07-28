@@ -27,4 +27,9 @@ public class Constant {
     public static String FLUTTER_DEMO_URL = "https://play.google.com/store/apps/details?id=com.eajy.flutterdemo";
     public static String FLUTTER_DEMO_PACKAGE = "com.eajy.flutterdemo";
 
+    public static String X_LAUNCHER = "X Launcher";
+    public static String X_LAUNCHER_DESCRIPTION = "A beautiful Pixel-Launcher-liked launcher with simplify.";
+    public static String X_LAUNCHER_URL = "https://play.google.com/store/apps/details?id=com.eajy.launcher";
+    public static String X_LAUNCHER_PACKAGE = "com.eajy.launcher";
+
 }

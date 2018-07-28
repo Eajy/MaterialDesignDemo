@@ -8,6 +8,7 @@
     <dimen name="card_margin_vertical_big_activity">8dp</dimen>
 
     <dimen name="main_card_margin_horizontal">64dp</dimen>
+    <dimen name="my_apps_card_margin_horizontal">64dp</dimen>
 
     <dimen name="zero_horizontal_margin">48dp</dimen>
     <dimen name="zero_horizontal_margin_big_activity">48dp</dimen>

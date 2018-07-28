@@ -53,6 +53,14 @@ public class MyAppsActivity extends AppCompatActivity {
         model2.setImageUrl("flutter_demo");
         lists.add(model2);
 
+        MyAppsModel model3 = new MyAppsModel();
+        model3.setName(Constant.X_LAUNCHER);
+        model3.setDescription(Constant.X_LAUNCHER_DESCRIPTION);
+        model3.setPackageName(Constant.X_LAUNCHER_PACKAGE);
+        model3.setGooglePlayUrl(Constant.X_LAUNCHER_URL);
+        model3.setImageUrl("x_launcher");
+        lists.add(model3);
+
         return lists;
     }
 }
