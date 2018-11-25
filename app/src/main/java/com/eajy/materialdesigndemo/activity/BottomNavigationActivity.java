@@ -15,7 +15,6 @@ import android.view.Window;
 import android.view.WindowManager;
 
 import com.eajy.materialdesigndemo.R;
-import com.eajy.materialdesigndemo.view.BottomNavigationViewHelper;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -58,9 +57,6 @@ public class BottomNavigationActivity extends AppCompatActivity {
 
         navigation = findViewById(R.id.bottom_navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
-
-        // If BottomNavigationView has more than 3 items, using reflection to disable shift mode
-        BottomNavigationViewHelper.disableShiftMode(navigation);
     }
 
     private ViewPager.OnPageChangeListener pageChangeListener = new ViewPager.OnPageChangeListener() {

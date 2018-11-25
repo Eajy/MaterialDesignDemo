@@ -22,7 +22,6 @@
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
             <meta-data
                 android:name="android.app.shortcuts"
                 android:resource="@xml/shortcuts" />
@@ -66,21 +65,23 @@
             android:label="@string/activity_donate"
             android:parentActivityName=".activity.MainActivity"
             android:theme="@style/AppTheme.NoActionBar_StatusBar" />
-
-        <activity android:name=".activity.MyAppsActivity"
+        <activity
+            android:name=".activity.MyAppsActivity"
             android:label="@string/activity_my_apps"
             android:parentActivityName=".activity.MainActivity"
-            android:theme="@style/AppTheme.NoActionBar_StatusBar"/>
+            android:theme="@style/AppTheme.NoActionBar_StatusBar" />
 
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/admob_app_id" />
 
         <activity
             android:name="com.google.android.gms.ads.AdActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
             android:theme="@android:style/Theme.Translucent" />
-
     </application>
 
 </manifest>

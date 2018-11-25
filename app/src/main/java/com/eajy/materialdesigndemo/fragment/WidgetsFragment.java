@@ -55,7 +55,7 @@ public class WidgetsFragment extends Fragment {
         try {
             SharedPreferences sharedPreferences = getContext().getSharedPreferences("app", MODE_PRIVATE);
             if (!sharedPreferences.getBoolean("isDonated", false)) {
-                AdRequest adRequest = new AdRequest.Builder().setRequestAgent("android_studio:ad_template").build();
+                AdRequest adRequest = new AdRequest.Builder().build();
                 ad_view_widget.loadAd(adRequest);
 
                 Animation animation = new AlphaAnimation(0.0f, 1.0f);

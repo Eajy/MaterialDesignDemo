@@ -2,9 +2,18 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/action_menu_main_1"
+        android:id="@+id/action_menu_main_about"
         android:orderInCategory="1"
         android:title="@string/nav_about"
         app:showAsAction="never" />
-
+    <item
+        android:id="@+id/action_menu_main_donate"
+        android:orderInCategory="2"
+        android:title="@string/nav_donate"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_menu_main_my_app"
+        android:orderInCategory="3"
+        android:title="@string/nav_my_apps"
+        app:showAsAction="never" />
 </menu>
