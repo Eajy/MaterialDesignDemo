@@ -9,14 +9,66 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:paddingBottom="@dimen/activity_vertical_margin"
         android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
-        android:paddingTop="@dimen/activity_vertical_margin">
+        android:paddingBottom="@dimen/activity_vertical_margin">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="@string/main_widget_material_button"
+            android:textColor="@color/colorPrimary" />
+
+        <android.support.design.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/text_margin"
+            android:clickable="true"
+            android:paddingStart="16dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="8dp"
+            android:text="@string/main_widget_material_button"
+            android:textAppearance="?android:attr/textAppearanceButton"
+            android:textColor="@color/white"
+            app:cornerRadius="18dp" />
+
+        <android.support.design.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/text_margin"
+            android:clickable="true"
+            android:paddingStart="16dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="8dp"
+            android:text="@string/main_widget_material_button"
+            android:textAppearance="?android:attr/textAppearanceButton"
+            android:textColor="@color/white"
+            app:strokeColor="@color/colorPrimary"
+            app:strokeWidth="2dp" />
+
+        <android.support.design.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/text_margin"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="8dp"
+            android:text="@string/main_widget_material_button"
+            android:textAppearance="?android:attr/textAppearanceButton"
+            android:textColor="@color/white"
+            app:icon="@drawable/ic_photo_black_24dp"
+            app:rippleColor="@color/color_ripple" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/text_margin"
             android:text="@string/main_widget_toggle_button"
             android:textColor="@color/colorPrimary" />
 
@@ -25,6 +77,71 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/text_margin" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/text_margin"
+            android:text="@string/main_widget_chip"
+            android:textColor="@color/colorPrimary" />
+
+        <android.support.design.chip.ChipGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/text_margin"
+            app:chipSpacing="16dp"
+            app:singleSelection="false">
+
+            <android.support.design.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:clickable="true"
+                android:text="Checkable"
+                android:textAppearance="?android:attr/textAppearance"
+                app:chipBackgroundColor="@color/colorAccent" />
+
+            <android.support.design.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:clickable="true"
+                android:text="Stroke"
+                android:textAppearance="?android:attr/textAppearance"
+                app:chipStrokeColor="@color/colorAccent"
+                app:chipStrokeWidth="2dp" />
+
+            <android.support.design.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:clickable="true"
+                android:text="Corner Radius"
+                android:textAppearance="?android:attr/textAppearance"
+                app:checkedIconVisible="false"
+                app:chipCornerRadius="4dp" />
+
+            <android.support.design.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:text="Chip Icon"
+                android:textAppearance="?android:attr/textAppearance"
+                app:chipIcon="@drawable/ic_photo_black_24dp"
+                app:chipIconEnabled="true"
+                app:chipIconTint="@color/gray_deep"
+                app:iconStartPadding="8dp"
+                app:rippleColor="@color/colorAccent" />
+
+            <android.support.design.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:text="Close Icon"
+                android:textAppearance="?android:attr/textAppearance"
+                app:closeIconEnabled="true"
+                app:rippleColor="@color/colorAccent" />
+        </android.support.design.chip.ChipGroup>
 
         <TextView
             android:layout_width="wrap_content"
@@ -166,43 +283,11 @@
             android:entries="@array/spinner_array" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/text_margin_small"
-            android:layout_marginTop="@dimen/text_margin"
-            android:text="@string/main_widget_data_picker"
-            android:textColor="@color/colorPrimary" />
-
-        <DatePicker
-            android:id="@+id/datePicker"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/text_margin_small"
-            android:background="@color/main_background"
-            android:elevation="@dimen/text_margin_very_small" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/text_margin_small"
-            android:layout_marginTop="@dimen/text_margin"
-            android:text="@string/main_widget_time_picker"
-            android:textColor="@color/colorPrimary" />
-
-        <TimePicker
-            android:id="@+id/timePicker"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/text_margin_small"
-            android:background="@color/main_background"
-            android:elevation="@dimen/text_margin_very_small" />
-
-        <TextView
             android:id="@+id/tv_ad"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/text_margin_small"
             android:layout_marginTop="@dimen/text_margin"
+            android:layout_marginBottom="@dimen/text_margin_small"
             android:text="@string/banner_ad_title"
             android:textColor="@color/colorPrimary"
             android:visibility="gone" />

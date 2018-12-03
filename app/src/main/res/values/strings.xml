@@ -40,6 +40,7 @@
     <string name="main_dialog_fullscreen">Fullscreen Dialog</string>
     <string name="main_popup_menu">Popup Menu</string>
 
+    <string name="main_widget_material_button">Material Buttons</string>
     <string name="main_widget_toggle_button">Toggle Button</string>
     <string name="main_widget_switch">Switch</string>
     <string name="main_widget_check_box">Check Box</string>
@@ -58,6 +59,7 @@
     <string name="main_widget_spinner">Spinner</string>
     <string name="main_widget_data_picker">Date Picker</string>
     <string name="main_widget_time_picker">Time Picker</string>
+    <string name="main_widget_chip">Chips</string>
 
     <string name="nav_header_text">Click to start login activity</string>
     <string name="nav_recycler_view">Recycler View</string>

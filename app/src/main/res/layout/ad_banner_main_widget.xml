@@ -9,8 +9,8 @@
     android:layout_alignParentBottom="true"
     android:layout_centerHorizontal="true"
     android:layout_gravity="center_horizontal"
-    android:layout_marginBottom="@dimen/text_margin_small"
     android:layout_marginTop="@dimen/text_margin_small"
+    android:layout_marginBottom="@dimen/text_margin_small"
     android:visibility="gone">
 
     <FrameLayout
@@ -21,6 +21,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:paddingStart="16dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="8dp"
             android:text="@string/banner_ad_loading" />
 
         <com.google.android.gms.ads.AdView

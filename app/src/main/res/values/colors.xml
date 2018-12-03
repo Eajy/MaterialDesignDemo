@@ -15,6 +15,7 @@
     <color name="transparent">#00000000</color>
     <color name="main_background">#EEEEEE</color>
     <color name="google_assistant_background">#F5F5F5</color>
+    <color name="color_ripple">#13000000</color>
 
     <!-- Material Design Color - Color palette -->
     <color name="red_primary">#F44336</color>
