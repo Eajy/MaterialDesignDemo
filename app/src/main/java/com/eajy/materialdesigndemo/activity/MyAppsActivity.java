@@ -61,6 +61,14 @@ public class MyAppsActivity extends AppCompatActivity {
         model3.setImageUrl("x_launcher");
         lists.add(model3);
 
+        MyAppsModel model4 = new MyAppsModel();
+        model4.setName(Constant.ALL_MESSENGER);
+        model4.setDescription(Constant.ALL_MESSENGER_DESCRIPTION);
+        model4.setPackageName(Constant.ALL_MESSENGER_PACKAGE);
+        model4.setGooglePlayUrl(Constant.ALL_MESSENGER_URL);
+        model4.setImageUrl("all_messenger");
+        lists.add(model4);
+
         return lists;
     }
 }

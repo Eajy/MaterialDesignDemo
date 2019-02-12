@@ -40,7 +40,7 @@ public class MyAppsAdapter extends RecyclerView.Adapter<MyAppsAdapter.MyAppsHold
         holder.setIsRecyclable(false);
 
         final MyAppsModel model = items.get(holder.getAdapterPosition());
-        int resId=context.getResources().getIdentifier(model.getImageUrl(),"drawable",context.getPackageName());
+        int resId = context.getResources().getIdentifier(model.getImageUrl(), "drawable", context.getPackageName());
         Glide.with(context).load(resId).into(holder.image_app);
         holder.tv_app_name.setText(model.getName());
         holder.tv_app_description.setText(model.getDescription());

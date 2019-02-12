@@ -32,4 +32,8 @@ public class Constant {
     public static String X_LAUNCHER_URL = "https://play.google.com/store/apps/details?id=com.eajy.launcher";
     public static String X_LAUNCHER_PACKAGE = "com.eajy.launcher";
 
+    public static String ALL_MESSENGER = "All Messenger";
+    public static String ALL_MESSENGER_DESCRIPTION = "Messengers all in one.";
+    public static String ALL_MESSENGER_URL = "https://play.google.com/store/apps/details?id=messenger.all.messengerall";
+    public static String ALL_MESSENGER_PACKAGE = "messenger.all.messengerall";
 }
