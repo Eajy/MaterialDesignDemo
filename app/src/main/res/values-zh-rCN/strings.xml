@@ -67,6 +67,7 @@
     <string name="nav_fullscreen">全屏</string>
     <string name="nav_bottom_navigation">底部导航栏</string>
     <string name="nav_settings">设置</string>
+    <string name="nav_bottom_appbar">Bottom Appbar</string>
     <string name="nav_about">关于</string>
     <string name="nav_donate">捐赠</string>
     <string name="main_feedback_email">反馈:MaterialDesign</string>

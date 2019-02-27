@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.preference.PreferenceManager;
+import android.support.design.bottomappbar.BottomAppBar;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
@@ -267,6 +268,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
             case R.id.nav_bottom_navigation:
                 intent.setClass(this, BottomNavigationActivity.class);
+                startActivity(intent);
+                break;
+
+            case R.id.nav_bottom_appbar:
+                intent.setClass(this, BottomAppBarActivity.class);
                 startActivity(intent);
                 break;
 
