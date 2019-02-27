@@ -239,10 +239,18 @@
     <!-- String related to My Apps -->
     <string name="activity_my_apps">My Apps</string>
 
+    <!-- String related to BottomAppBar -->
+    <string name="change_bottom_bar_text">Change bottom bar cutout properties:</string>
+    <string name="right_align">Right Align</string>
+    <string name="zero_radius">Zero Radius</string>
+    <string name="zero_margin">Zero Margin</string>
+    <string name="show_title">Show Title</string>
+
     <string name="admob_app_id">ca-app-pub-9736354689104503~4386315533</string>
     <string name="banner_ad_unit_id_donate">ca-app-pub-3940256099942544/6300978111</string>
     <string name="banner_ad_unit_id_main_card">ca-app-pub-3940256099942544/6300978111</string>
     <string name="banner_ad_unit_id_main_dialog">ca-app-pub-3940256099942544/6300978111</string>
     <string name="banner_ad_unit_id_main_widget">ca-app-pub-3940256099942544/6300978111</string>
     <string name="native_ad_unit_id_main">ca-app-pub-3940256099942544/6300978111</string>
+
 </resources>

@@ -20,7 +20,7 @@
             android:title="@string/nav_bottom_navigation" />
         <item
             android:id="@+id/nav_bottom_appbar"
-            android:icon="@drawable/ic_settings_black_24dp"
+            android:icon="@drawable/ic_bottom_appbar"
             android:title="@string/nav_bottom_appbar" />
         <item
             android:id="@+id/nav_settings"
