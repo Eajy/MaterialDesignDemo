@@ -18,6 +18,9 @@
 - BottomSheetDialog  
 - SharedElementTransitions  
 - BottomNavigationView  
+- Chips  
+- BottomAppBar  
+- Material Buttons  
 - Adaptive icon  
 - App shortcuts  
 

@@ -1,69 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout
-    android:id="@+id/main_wrapper"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_wrapper"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent">
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/change_bottom_bar_text"
             android:padding="@dimen/text_margin"
+            android:text="@string/change_bottom_bar_text"
             android:textStyle="bold" />
 
         <android.support.design.chip.ChipGroup
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/text_margin"
+            android:layout_marginBottom="@dimen/text_margin"
+            android:paddingStart="@dimen/text_margin"
+            android:paddingEnd="@dimen/text_margin"
             app:chipSpacing="16dp"
-            app:singleSelection="false" >
+            app:singleSelection="false">
 
-        <android.support.design.chip.Chip
-            android:id="@+id/position_chip"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:checkable="true"
-            android:clickable="true"
-            android:text="@string/right_align"
-            android:textAppearance="?android:attr/textAppearance"
-            app:chipBackgroundColor="@color/gray_light" />
+            <android.support.design.chip.Chip
+                android:id="@+id/position_chip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:clickable="true"
+                android:text="@string/right_align"
+                android:textAppearance="?android:attr/textAppearance"
+                app:chipBackgroundColor="@color/gray_light" />
 
-        <android.support.design.chip.Chip
-            android:id="@+id/radius_chip"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:checkable="true"
-            android:clickable="true"
-            android:text="@string/zero_radius"
-            android:textAppearance="?android:attr/textAppearance"
-            app:chipBackgroundColor="@color/gray_light" />
+            <android.support.design.chip.Chip
+                android:id="@+id/radius_chip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:clickable="true"
+                android:text="@string/zero_radius"
+                android:textAppearance="?android:attr/textAppearance"
+                app:chipBackgroundColor="@color/gray_light" />
 
-        <android.support.design.chip.Chip
-            android:id="@+id/margin_chip"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:checkable="true"
-            android:clickable="true"
-            android:text="@string/zero_margin"
-            android:textAppearance="?android:attr/textAppearance"
-            app:chipBackgroundColor="@color/gray_light" />
+            <android.support.design.chip.Chip
+                android:id="@+id/margin_chip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:clickable="true"
+                android:text="@string/zero_margin"
+                android:textAppearance="?android:attr/textAppearance"
+                app:chipBackgroundColor="@color/gray_light" />
 
-        <android.support.design.chip.Chip
-            android:id="@+id/show_title_chip"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:checkable="true"
-            android:clickable="true"
-            android:text="@string/show_title"
-            android:textAppearance="?android:attr/textAppearance"
-            app:chipBackgroundColor="@color/gray_light" />
+            <android.support.design.chip.Chip
+                android:id="@+id/show_title_chip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:clickable="true"
+                android:text="@string/show_title"
+                android:textAppearance="?android:attr/textAppearance"
+                app:chipBackgroundColor="@color/gray_light" />
 
         </android.support.design.chip.ChipGroup>
 
@@ -79,9 +80,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:clickable="true"
-        app:fabSize="normal"
         android:src="@drawable/ic_add_white_24dp"
-        app:layout_anchor="@id/bottom_App_bar"/>
+        app:fabSize="normal"
+        app:layout_anchor="@id/bottom_App_bar" />
 
     <android.support.design.bottomappbar.BottomAppBar
         android:id="@+id/bottom_App_bar"
@@ -89,23 +90,22 @@
         android:layout_height="?android:actionBarSize"
         android:layout_gravity="bottom"
         android:backgroundTint="@color/colorPrimary"
-        android:title="App bar title"
+        android:theme="@style/AppTheme.AppBarOverlay"
         app:buttonGravity="bottom|top"
         app:fabAlignmentMode="center"
         app:hideOnScroll="true"
-        app:layout_scrollFlags="scroll|enterAlways" >
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:popupTheme="@style/AppTheme.PopupOverlay">
 
         <TextView
             android:id="@+id/bottom_app_bar_title"
-            android:text="Bottom App bar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:padding="8dp"
-            android:visibility="gone"
+            android:text="@string/nav_bottom_appbar"
             android:textStyle="bold"
-            android:textColor="@color/black"
-            android:gravity="center" />
-
+            android:visibility="gone" />
     </android.support.design.bottomappbar.BottomAppBar>
 
 </android.support.design.widget.CoordinatorLayout>

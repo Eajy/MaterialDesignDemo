@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="admob_app_id" translatable="false">ca-app-pub-9736354689104503~4386315533</string>
+    <string name="banner_ad_unit_id_donate" translatable="false">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="banner_ad_unit_id_main_card" translatable="false">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="banner_ad_unit_id_main_dialog" translatable="false">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="banner_ad_unit_id_main_widget" translatable="false">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="native_ad_unit_id_main" translatable="false">ca-app-pub-3940256099942544/6300978111</string>
+
+</resources>

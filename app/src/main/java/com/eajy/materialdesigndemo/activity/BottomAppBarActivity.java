@@ -9,7 +9,6 @@ import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.DisplayMetrics;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -51,7 +50,7 @@ public class BottomAppBarActivity extends AppCompatActivity {
     private void initData() {
         data = new ArrayList<>();
         for (int i = 1; i <= 20; i++) {
-            data.add("List item row: "+i);
+            data.add("List item row: " + i);
         }
     }
 

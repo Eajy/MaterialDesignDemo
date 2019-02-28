@@ -67,7 +67,7 @@
     <string name="nav_fullscreen">全屏</string>
     <string name="nav_bottom_navigation">底部导航栏</string>
     <string name="nav_settings">设置</string>
-    <string name="nav_bottom_appbar">Bottom Appbar</string>
+    <string name="nav_bottom_appbar">底部 App Bar</string>
     <string name="nav_about">关于</string>
     <string name="nav_donate">捐赠</string>
     <string name="main_feedback_email">反馈:MaterialDesign</string>
@@ -240,17 +240,10 @@
     <string name="activity_my_apps">我的应用</string>
 
     <!-- String related to BottomAppBar -->
-    <string name="change_bottom_bar_text">Change bottom bar cutout properties:</string>
-    <string name="right_align">Right Align</string>
-    <string name="zero_radius">Zero Radius</string>
-    <string name="zero_margin">Zero Margin</string>
-    <string name="show_title">Show Title</string>
-
-    <string name="admob_app_id">ca-app-pub-9736354689104503~4386315533</string>
-    <string name="banner_ad_unit_id_donate">ca-app-pub-3940256099942544/6300978111</string>
-    <string name="banner_ad_unit_id_main_card">ca-app-pub-3940256099942544/6300978111</string>
-    <string name="banner_ad_unit_id_main_dialog">ca-app-pub-3940256099942544/6300978111</string>
-    <string name="banner_ad_unit_id_main_widget">ca-app-pub-3940256099942544/6300978111</string>
-    <string name="native_ad_unit_id_main">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="change_bottom_bar_text">更改底部工具栏属性：</string>
+    <string name="right_align">居右</string>
+    <string name="zero_radius">无圆角</string>
+    <string name="zero_margin">无边距</string>
+    <string name="show_title">显示标题</string>
 
 </resources>
