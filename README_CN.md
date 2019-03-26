@@ -18,6 +18,7 @@
 - BottomSheetDialog  
 - SharedElementTransitions  
 - BottomNavigationView  
+- ConstraintLayout  
 - Chips  
 - BottomAppBar  
 - Material Buttons  

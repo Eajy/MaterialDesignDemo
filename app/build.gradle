@@ -7,8 +7,8 @@ android {
         applicationId "com.eajy.materialdesigndemo"
         minSdkVersion 21
         targetSdkVersion 28
-        versionCode 42
-        versionName "5.0"
+        versionCode 43
+        versionName "5.1"
     }
 
     buildTypes {

@@ -36,4 +36,9 @@ public class Constant {
     public static String ALL_MESSENGER_DESCRIPTION = "Messengers all in one.";
     public static String ALL_MESSENGER_URL = "https://play.google.com/store/apps/details?id=messenger.all.messengerall";
     public static String ALL_MESSENGER_PACKAGE = "messenger.all.messengerall";
+
+    public static String GAME_2048 = "2048 Game";
+    public static String GAME_2048_DESCRIPTION = "Classic game - 2048";
+    public static String GAME_2048_URL = "https://play.google.com/store/apps/details?id=com.eajy.game.game2048";
+    public static String GAME_2048_PACKAGE = "com.eajy.game.game2048";
 }

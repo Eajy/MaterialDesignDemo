@@ -19,7 +19,7 @@
     <dimen name="card_margin_vertical">8dp</dimen>
     <dimen name="card_margin_horizontal_big_activity">8dp</dimen>
     <dimen name="card_margin_vertical_big_activity">4dp</dimen>
-    <dimen name="card_recycler_corner_radius">2dp</dimen>
+    <dimen name="card_recycler_corner_radius">4dp</dimen>
     <dimen name="card_recycler_elevation">2dp</dimen>
 
     <dimen name="main_card_margin_horizontal">8dp</dimen>
