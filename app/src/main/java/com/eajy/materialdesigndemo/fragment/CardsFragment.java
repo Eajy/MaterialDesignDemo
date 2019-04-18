@@ -77,7 +77,7 @@ public class CardsFragment extends Fragment implements View.OnClickListener, Vie
         card_main_1_4_1 = nestedScrollView.findViewById(R.id.card_main_1_4_1);
         card_main_1_4_2 = nestedScrollView.findViewById(R.id.card_main_1_4_2);
 
-        Glide.with(getContext()).load(R.drawable.material_design_2).apply(new RequestOptions().fitCenter()).into(img_main_card_1);
+        Glide.with(getContext()).load(R.drawable.material_design_5).apply(new RequestOptions().fitCenter()).into(img_main_card_1);
         Glide.with(getContext()).load(R.drawable.material_design_4).apply(new RequestOptions().fitCenter()).into(img_main_card_2);
         Glide.with(getContext()).load(R.drawable.material_design_11).apply(new RequestOptions().fitCenter()).into(img_card_main_3);
         Glide.with(getContext()).load(R.drawable.material_design_1).apply(new RequestOptions().fitCenter()).into(img_main_card_41);
