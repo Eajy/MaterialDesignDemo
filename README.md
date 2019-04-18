@@ -3,7 +3,7 @@
 ---  
 
 **This is a demo app designed with the fascinating and modern Google's Material Design.
-It created using design support library to show how to implement material design in apps.
+It was created using design support library to show how to implement material design in apps.
 It covers many material design components, such as:**  
 - NavigationView  
 - CoordinatorLayout  
@@ -27,6 +27,9 @@ It covers many material design components, such as:**
 - Adaptive icon  
 - App shortcuts  
 
+Please see my another App: [Material Design 2](https://github.com/Eajy/MaterialDesign2) which is designed with MD2 using Androidx Libraries and Material Components.  
+
+  
 #### Google Play:  
 https://play.google.com/store/apps/details?id=com.eajy.materialdesigndemo  
   

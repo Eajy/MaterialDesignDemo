@@ -25,6 +25,9 @@
 - Adaptive icon  
 - App shortcuts  
 
+请移步到我的另一款App: [Material Design 2](https://github.com/Eajy/MaterialDesign2)，它使用了 Androidx Libraries 和 Material Components。  
+
+  
 #### Google Play:  
 https://play.google.com/store/apps/details?id=com.eajy.materialdesigndemo  
   
