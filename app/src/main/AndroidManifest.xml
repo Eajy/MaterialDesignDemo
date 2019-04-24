@@ -103,10 +103,10 @@
             </intent-filter>
         </activity>
 
-        <meta-data android:name="insert_custom_url" android:value="https://device.stage.insert.io" />
-        <meta-data android:name="insert_custom_socket_url" android:value="https://ws.stage.insert.io" />
-        <meta-data android:name="insert_custom_analytics_url" android:value="https://data.stage.insert.io" />
-        <meta-data android:name="insert_cname_enabled" android:value="true" />
+        <meta-data android:name="insert_custom_url" android:value="https://us.device.stage.insert.io" />
+        <meta-data android:name="insert_custom_socket_url" android:value="https://mobile-websocket-dot-pendo-test.appspot.com" />
+        <meta-data android:name="insert_custom_analytics_url" android:value="https://us.data.stage.insert.io" />
+        <meta-data android:name="insert_cname_enabled" android:value="false" />
         <meta-data android:name="insert_debug_logging" android:value="true" />
 
     </application>
