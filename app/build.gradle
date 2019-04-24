@@ -7,8 +7,8 @@ android {
         applicationId "com.eajy.materialdesigndemo"
         minSdkVersion 21
         targetSdkVersion 28
-        versionCode 44
-        versionName "5.2"
+        versionCode 36
+        versionName "2.0.0.6"
     }
 
     buildTypes {
@@ -23,6 +23,31 @@ android {
     }
 }
 
+android.applicationVariants.all { variant ->
+    variant.outputs.all {
+        def appName = "MaterialDesign"
+        outputFileName = appName+"-${variant.versionName}.apk"
+    }
+}
+
+def artifactoryUsername = 'androiduploader'
+def artifactoryPassword = 'wCxKG3jJjWMpRDggSNgU5dCEDsDaUf'
+
+repositories {
+    maven {
+        url "http://software.insert.io/artifactory/android-sdk-externals"
+    }
+    maven {
+        url "http://software.insert.io/artifactory/android-staging"
+        credentials {
+            username 'androiduploader'
+            password 'wCxKG3jJjWMpRDggSNgU5dCEDsDaUf'
+        }
+    }
+    mavenCentral()
+}
+
+
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     testImplementation 'junit:junit:4.12'
@@ -36,4 +61,7 @@ dependencies {
 
     implementation 'com.github.bumptech.glide:glide:4.8.0'
     implementation 'com.google.android.gms:play-services-ads:17.1.1'
+
+    //    implementation group:'sdk.insert.io' , name:'insertIO', version:'27.02.19-tomer-SNAPSHOT', changing:true
+    implementation group:'sdk.pendo.io' , name:'pendoIO', version:'2.0.0.6', changing:true
 }

@@ -11,6 +11,7 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
+        android:name=".App"
         android:theme="@style/AppTheme">
         <activity
             android:name=".activity.MainActivity"
@@ -87,6 +88,27 @@
         <activity
             android:name=".activity.BottomAppBarActivity"
             android:theme="@style/AppTheme.NoActionBar_StatusBar" />
+
+        <!--<activity android:name="sdk.insert.io.activities.InsertGateActivity" android:launchMode="singleInstance">-->
+        <activity android:name="sdk.pendo.io.activities.PendoGateActivity" android:launchMode="singleInstance">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="pendo-9ec3743a"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="9ec3743a" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <meta-data android:name="insert_custom_url" android:value="https://device.stage.insert.io" />
+        <meta-data android:name="insert_custom_socket_url" android:value="https://ws.stage.insert.io" />
+        <meta-data android:name="insert_custom_analytics_url" android:value="https://data.stage.insert.io" />
+        <meta-data android:name="insert_cname_enabled" android:value="true" />
+        <meta-data android:name="insert_debug_logging" android:value="true" />
+
     </application>
 
 </manifest>
