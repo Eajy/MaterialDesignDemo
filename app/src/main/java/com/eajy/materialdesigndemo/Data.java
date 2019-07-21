@@ -19,6 +19,15 @@ public class Data {
         if (!model0.getPackageName().equals(BuildConfig.APPLICATION_ID))
             lists.add(model0);
 
+        MyAppsModel model7 = new MyAppsModel();
+        model7.setName("Tasks");
+        model7.setDescription("Simply create any task or goal or target, and to achieve it.");
+        model7.setPackageName("com.eajy.apps.tasks");
+        model7.setGooglePlayUrl("https://play.google.com/store/apps/details?id=com.eajy.apps.tasks");
+        model7.setImageUrl("tasks");
+        if (!model7.getPackageName().equals(BuildConfig.APPLICATION_ID))
+            lists.add(model7);
+
         MyAppsModel model6 = new MyAppsModel();
         model6.setName("Material Design 2");
         model6.setDescription("A beautiful app designed with Material Design 2.");

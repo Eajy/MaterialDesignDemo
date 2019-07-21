@@ -11,6 +11,7 @@
     <color name="gray_very_light">#E0E0E0</color>
     <color name="gray_deep">#666666</color>
     <color name="black_overlay">#66000000</color>
+    <color name="status_bar_overlay">#33000000</color>
     <color name="activity_background">#EEEEEE</color>
     <color name="transparent">#00000000</color>
     <color name="main_background">#EEEEEE</color>
