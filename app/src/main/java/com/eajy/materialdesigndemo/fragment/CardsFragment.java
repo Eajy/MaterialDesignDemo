@@ -18,14 +18,20 @@ import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.eajy.materialdesigndemo.R;
+import com.google.android.gms.ads.AdLoader;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.formats.MediaView;
+import com.google.android.gms.ads.formats.UnifiedNativeAd;
+import com.google.android.gms.ads.formats.UnifiedNativeAdView;
 
 import static android.content.Context.MODE_PRIVATE;
 
@@ -45,11 +51,12 @@ public class CardsFragment extends Fragment implements View.OnClickListener, Vie
     private AlphaAnimation alphaAnimation, alphaAnimationShowIcon;
     private AdView ad_view_card;
     private CardView card_ad_card;
+    private NestedScrollView nestedScrollView;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        NestedScrollView nestedScrollView = (NestedScrollView) inflater.inflate(R.layout.fragment_cards, container, false);
+        nestedScrollView = (NestedScrollView) inflater.inflate(R.layout.fragment_cards, container, false);
 
         btn_card_main1_action1 = nestedScrollView.findViewById(R.id.btn_card_main1_action1);
         btn_card_main1_action2 = nestedScrollView.findViewById(R.id.btn_card_main1_action2);
@@ -270,17 +277,47 @@ public class CardsFragment extends Fragment implements View.OnClickListener, Vie
         try {
             SharedPreferences sharedPreferences = getContext().getSharedPreferences("app", MODE_PRIVATE);
             if (!sharedPreferences.getBoolean("isDonated", false)) {
-                AdRequest adRequest = new AdRequest.Builder().build();
-                ad_view_card.loadAd(adRequest);
-
-                Animation animation = new AlphaAnimation(0.0f, 1.0f);
-                animation.setDuration(500);
-                card_ad_card.setVisibility(View.VISIBLE);
-                card_ad_card.startAnimation(animation);
+                // showBannerAd();
+                showNativeAd();
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    private void showBannerAd() {
+        AdRequest adRequest = new AdRequest.Builder().build();
+        ad_view_card.loadAd(adRequest);
+
+        Animation animation = new AlphaAnimation(0.0f, 1.0f);
+        animation.setDuration(500);
+        card_ad_card.setVisibility(View.VISIBLE);
+        card_ad_card.startAnimation(animation);
+    }
+
+    private void showNativeAd() {
+        AdLoader adLoader = new AdLoader.Builder(getContext(), getString(R.string.native_ad_unit_id_main_card))
+                .forUnifiedNativeAd(new UnifiedNativeAd.OnUnifiedNativeAdLoadedListener() {
+                    @Override
+                    public void onUnifiedNativeAdLoaded(UnifiedNativeAd unifiedNativeAd) {
+                        FrameLayout parent = nestedScrollView.findViewById(R.id.frame_native_ad);
+                        UnifiedNativeAdView adView = (UnifiedNativeAdView) getLayoutInflater().inflate(R.layout.ad_native_main_card, null);
+
+                        TextView headlineView = adView.findViewById(R.id.ad_headline);
+                        headlineView.setText(unifiedNativeAd.getHeadline());
+                        adView.setHeadlineView(headlineView);
+                        ImageView iconView = adView.findViewById(R.id.ad_app_icon);
+                        adView.setIconView(iconView);
+                        MediaView mediaView = adView.findViewById(R.id.ad_media);
+                        adView.setMediaView(mediaView);
+                        adView.setNativeAd(unifiedNativeAd);
+
+                        parent.removeAllViews();
+                        parent.addView(adView);
+                    }
+                })
+                .build();
+        adLoader.loadAd(new AdRequest.Builder().build());
     }
 
 }
