@@ -225,7 +225,7 @@
     <string name="donate_title_after">非常感谢您的捐赠！</string>
     <string name="donate_low">1.99 美元</string>
     <string name="donate_high">9.99 美元</string>
-    <string name="donate_exception">抱歉，无法操作！</string>
+    <string name="donate_exception">抱歉，失败！</string>
 
     <!-- String related to Ad -->
     <string name="banner_ad_title">广告</string>

@@ -20,3 +20,5 @@
 -keep class android.support.design.internal.BottomNavigationMenuView{
     private boolean mShiftingMode;
 }
+
+-keep class com.android.vending.billing.**

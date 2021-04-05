@@ -12,19 +12,19 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="@dimen/activity_vertical_margin"
         android:layout_marginTop="@dimen/activity_vertical_margin"
-        android:paddingBottom="@dimen/text_margin"
-        android:paddingTop="@dimen/text_margin">
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:paddingTop="@dimen/text_margin"
+        android:paddingBottom="@dimen/text_margin">
 
         <RelativeLayout
             android:id="@+id/relative_donate_low"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/text_margin"
-            android:layout_marginEnd="@dimen/zero_horizontal_margin"
             android:layout_marginStart="@dimen/zero_horizontal_margin"
-            android:layout_marginTop="@dimen/text_margin">
+            android:layout_marginTop="@dimen/text_margin"
+            android:layout_marginEnd="@dimen/zero_horizontal_margin"
+            android:layout_marginBottom="@dimen/text_margin">
 
             <ImageView
                 android:id="@+id/img_donate_low"
@@ -36,6 +36,7 @@
                 android:tint="@color/colorAccent" />
 
             <TextView
+                android:id="@+id/tv_donate_low"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
@@ -60,10 +61,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/relative_donate_low"
-            android:layout_marginBottom="100dp"
-            android:layout_marginEnd="@dimen/zero_horizontal_margin"
             android:layout_marginStart="@dimen/zero_horizontal_margin"
-            android:layout_marginTop="@dimen/text_margin">
+            android:layout_marginTop="@dimen/text_margin"
+            android:layout_marginEnd="@dimen/zero_horizontal_margin"
+            android:layout_marginBottom="100dp">
 
             <ImageView
                 android:id="@+id/img_donate_high"
@@ -75,6 +76,7 @@
                 android:tint="@color/colorAccent" />
 
             <TextView
+                android:id="@+id/tv_donate_high"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"

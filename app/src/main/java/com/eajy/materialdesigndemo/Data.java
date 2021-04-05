@@ -46,15 +46,6 @@ public class Data {
         if (!model3.getPackageName().equals(BuildConfig.APPLICATION_ID))
             lists.add(model3);
 
-        MyAppsModel model4 = new MyAppsModel();
-        model4.setName("All Messengers");
-        model4.setDescription("Messengers all in one.");
-        model4.setPackageName("messenger.all.messengerall");
-        model4.setGooglePlayUrl("https://play.google.com/store/apps/details?id=messenger.all.messengerall");
-        model4.setImageUrl("all_messenger");
-        if (!model4.getPackageName().equals(BuildConfig.APPLICATION_ID))
-            lists.add(model4);
-
         MyAppsModel model2 = new MyAppsModel();
         model2.setName("Flutter Demo");
         model2.setDescription("A beautiful app designed with Material Design by using Flutter.");

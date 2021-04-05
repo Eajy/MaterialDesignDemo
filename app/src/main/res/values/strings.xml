@@ -225,7 +225,7 @@
     <string name="donate_title_after">Thanks For Your Donations, I Am Very Grateful ! </string>
     <string name="donate_low">1.99 USD</string>
     <string name="donate_high">9.99 USD</string>
-    <string name="donate_exception">Sorry, can not do this!</string>
+    <string name="donate_exception">Sorry, Failed!</string>
 
     <!-- String related to Ad -->
     <string name="banner_ad_title">Advertise</string>
